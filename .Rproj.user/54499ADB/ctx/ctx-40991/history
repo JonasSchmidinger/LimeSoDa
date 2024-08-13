@@ -1,0 +1,235 @@
+library(available)
+install.packages("doofus")
+library(available)
+library(available)
+install.packages("doofus")
+install.packages(c("devtools", "usethis", "roxygen2"))
+library(devtools)
+library(usethis)
+library(roxygen2)
+readRDS("C:\Users\Jonas\Desktop\Benchmark_datasets\R\Benchmarks\R_script\Stored_dataset_files")
+readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_dataset_files/BB_250_data_table.rds")
+BB_250_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_dataset_files/BB_250_data_table.rds")
+BB_250_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_split_files/folds_BB_250_data_table.rds")
+folds_BB_250_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_split_files/folds_BB_250_data_table.rds")
+BB_250 <- list("Dataset" = BB_250_data_table.rds, "Folds" = folds_BB_250_data_table.rds)
+BB_250
+BB_250_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_dataset_files/BB_250_data_table.rds")
+folds_BB_250_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_split_files/folds_BB_250_data_table.rds")
+BB_250 <- list("Dataset" = BB_250_data_table.rds, "Folds" = folds_BB_250_data_table.rds)
+BB_250
+usethis::use_data(BB_250)
+BB_72_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_dataset_files/BB_72_data_table.rds")
+folds_BB_72_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_split_files/folds_BB_72_data_table.rds")
+BB_72 <- list("Dataset" = BB_72_data_table.rds, "Folds" = folds_BB_72_data_table.rds)
+usethis::use_data(BB_72)
+library(ggplo2)
+library(ggplot2)
+help(diamonds)
+BB_250_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_dataset_files/BB_250_data_table.rds")
+folds_BB_250_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_split_files/folds_BB_250_data_table.rds")
+BB.250 <- list("Dataset" = BB_250_data_table.rds, "Folds" = folds_BB_250_data_table.rds)
+usethis::use_data(BB.250)
+devtools::load_all()
+install.packages(c("devtools", "usethis", "roxygen2"))
+devtools::build()
+devtools::check()
+> devtools::check()
+devtools::check()
+?BB.250
+devtools::document()
+devtools::document()
+rm(BB.250)
+data("BB.250")
+?BB.250
+?BB.250
+?BB.250
+?BB.250
+?BB.250
+?BB.250
+?BB.250
+?BB.250
+?BB.250
+BB.250$Folds
+?BB.250
+?BB.250
+?BB.250
+?diamonds
+library(ggplot2)
+?diamons
+help(diamonds)
+?diamons
+?BB.250
+?BB.250
+?BB.250
+?BB.250
+?BB.250
+#' str(BB.250$dataset)
+#'
+#' # Access the dataset
+#' BB.250$dataset
+#'
+#' # Access the folds
+#' BB.250$folds
+#'
+#' @usage data(BB.250)
+#' @format A list with two elements: 'dataset' and 'folds'.
+"BB.250"
+?BB.250
+?BB.250
+?BB.250
+?BB.250
+?BB.250
+?BB.250
+?BB.250
+?BB.250
+?BB.250
+?BB.250
+?BB.250
+?BB.250
+#' str(BB.250$dataset)
+#'
+#' # Access the dataset
+#' BB.250$dataset
+#'
+#' # Access the folds
+#' BB.250$folds
+#'
+#' @usage data(BB.250)
+#' @format A list with two elements: 'dataset' and 'folds'.
+"BB.250"
+?BB.250
+?BB.250
+?BB.250
+?BB.250
+?BB.250
+BB_250
+?BB.250
+BB_250
+BB_250
+BB_250
+?BB.250
+?BB.250
+?BB.250
+?BB.250
+?BB.250
+#'
+#' # Access the folds
+#' BB.250$Folds
+#'
+#' # How to split the dataset into training and testing folds for the example of the first fold
+#' training_data_BB.250 <- BB.250$Dataset[folds != 1,]
+#' testing_data_BB.250 <- BB.250$Dataset[folds == 1,]
+#'
+#' @usage data(BB.250)
+#' @format A list with two elements: 'Dataset' and 'Folds'.
+"BB.250"
+?BB.250
+data(BB.250)
+data(BB.250)
+training_data_BB.250 <- BB.250$Dataset[folds != 1,]
+training_data_BB.250 <- BB.250$Dataset[BB.250$Folds != 1,]
+training_data_BB.250
+?BB.250
+?BB.250
+roxygenize()
+devtools::install()
+library(LimeSoDa)
+?BB.250
+?BB.250
+?BB.250
+roxygenize()
+?BB.250
+# install.packages(c("devtools", "usethis", "roxygen2"))
+library(devtools)
+library(usethis)
+library(roxygen2)
+BB_72_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_dataset_files/BB_72_data_table.rds")
+folds_BB_72_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_split_files/folds_BB_72_data_table.rds")
+BB.72 <- list("Dataset" = BB_72_data_table.rds, "Folds" = folds_BB_72_data_table.rds)
+usethis::use_data(BB.72)
+usethis::use_r("data")
+RP_62_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_dataset_files/RP_62_data_table.rds")
+folds_RP_62_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_split_files/folds_RP_62_data_table.rds")
+BB.72 <- list("Dataset" = RP_62_data_table.rds, "Folds" = folds_RP_62_data_table.rds)
+usethis::use_data(BB.72)
+usethis::use_r("data")
+# install.packages(c("devtools", "usethis", "roxygen2"))
+library(devtools)
+library(usethis)
+library(roxygen2)
+#
+BB_250_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_dataset_files/BB_250_data_table.rds")
+folds_BB_250_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_split_files/folds_BB_250_data_table.rds")
+BB.250 <- list("Dataset" = BB_250_data_table.rds, "Folds" = folds_BB_250_data_table.rds)
+usethis::use_data(BB.250)
+usethis::use_r("data")
+#' # Access the folds
+#' RP.62$Folds
+#'
+#' # How to split the dataset into training and testing folds for the example of the first fold
+#' training_data_RP.62 <- RP.62$Dataset[RP.62$Folds != 1,]
+#' testing_data_RP.62 <- RP.62$Dataset[RP.62$Folds == 1,]
+#'
+#' @usage data(RP.62)
+#' @format A list with two elements: 'Dataset' and 'Folds'.
+#' @docType data
+"RP.62"
+BB_72_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_dataset_files/BB_72_data_table.rds")
+folds_BB_72_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_split_files/folds_BB_72_data_table.rds")
+BB.72 <- list("Dataset" = BB_72_data_table.rds, "Folds" = folds_BB_72_data_table.rds)
+usethis::use_data(BB.72)
+usethis::use_r("data")
+#
+BB_250_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_dataset_files/BB_250_data_table.rds")
+folds_BB_250_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_split_files/folds_BB_250_data_table.rds")
+BB.250 <- list("Dataset" = BB_250_data_table.rds, "Folds" = folds_BB_250_data_table.rds)
+usethis::use_data(BB.250)
+usethis::use_data(BB.250)
+usethis::use_data(BB.250,overwrite = TRUE)
+usethis::use_r("data")
+BB_72_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_dataset_files/BB_72_data_table.rds")
+folds_BB_72_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_split_files/folds_BB_72_data_table.rds")
+BB.72 <- list("Dataset" = BB_72_data_table.rds, "Folds" = folds_BB_72_data_table.rds)
+usethis::use_data(BB.72,overwrite = TRUE)
+usethis::use_r("data")
+RP_62_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_dataset_files/RP_62_data_table.rds")
+folds_RP_62_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_split_files/folds_RP_62_data_table.rds")
+RP.62 <- list("Dataset" = RP_62_data_table.rds, "Folds" = folds_RP_62_data_table.rds)
+usethis::use_data(RP.62,overwrite = TRUE)
+roxygenize()
+BB.250
+RP.62
+?RP.62
+devtools::install()
+detach("package:LimeSoDa", unload = TRUE)
+library(LimeSoDa)
+browseVignettes("tidyr")
+usethis::use_vignette("LimeSoda vignette")
+usethis::use_vignette("LimeSoDa_vignette")
+library(LimeSoDa)
+detach("package:LimeSoDa", unload = TRUE)
+install.packages("C:/Users/Jonas/Desktop/Benchmark_datasets/LimeSoDa_R_Package/LimeSoDa_0.1.0.tar.gz", repos = NULL, type = "source")
+help(package="LimeSoDa")
+detach("package:LimeSoDa", unload = TRUE)
+install.packages("C:/Users/Jonas/Desktop/Benchmark_datasets/LimeSoDa_R_Package/LimeSoDa_0.1.0.tar.gz", repos = NULL, type = "source")
+install.packages("C:/Users/Jonas/Desktop/Benchmark_datasets/LimeSoDa_R_Package/LimeSoDa_0.1.0.tar.gz", repos = NULL, type = "source")
+data(package = "LimeSoDa")
+print(data(package = "LimeSoDa"))
+LimeSoDa
+package="LimeSoDa"
+data(package = "LimeSoDa")
+LimeSoDa
+library(LimeSoDa)
+LimeSoDa
+data(LimeSoDa)
+help(data)
+Dataset_packages <- data(package = "LimeSoDa")
+Dataset_packages
+Dataset_packages$title
+Dataset_packages$header
+Dataset_packages$footer
+Dataset_packages$results
+Dataset_packages$results$Item
+Dataset_packages$results[,3]
+data(package = "LimeSoDa")$results[,3]

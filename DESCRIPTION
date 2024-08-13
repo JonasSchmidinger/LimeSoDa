@@ -1,0 +1,25 @@
+Package: Lime.SoDa
+Type: Package
+Title: Precision Liming Soil Datasets: Lime.SoDa
+Version: 0.1.0
+Authors@R: 
+  c(person(given = "Jonas",
+              family = "Schmidinger",
+              role = c("aut", "cre"),
+              email = "Jonas.Schmidinger@uni-osnabrueck.de"))
+Description: This R-packages contains field- and farm-scale datasets for digital soil mapping purposes.
+License: CC BY-NC-SA 4.0 
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/JonasSchmidinger/Lime.SoDa
+Depends: 
+    R (>= 2.10),
+RoxygenNote: 7.3.2
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+VignetteBuilder: knitr
+Imports:
+    sf
+Config/testthat/edition: 3
