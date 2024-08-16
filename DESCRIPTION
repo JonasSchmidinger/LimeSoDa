@@ -21,5 +21,5 @@ Suggests:
     testthat (>= 3.0.0)
 VignetteBuilder: knitr
 Imports:
-    sf
-Config/testthat/edition: 3
+    sf,
+    remotes

@@ -18,10 +18,11 @@ SSP.58
  \item Number of Features: 351
  \item Coordinates: Without coordinates because dataset was not georeferenced
  \item Location: Sao Paulo State, Brazil
- \item Sampling Design: Regular Grid Sampling
- \item Study Area: 0.7 ha
+ \item Sampling Design: Regular grid sampling
+ \item Study Area Size: 0.7 ha
  \item Publication/Modification Date (d/m/y): 02.08.2024, version 1.0
  \item Contact Information: tiagosrt@usp.br
+ \item License: CC BY-NC-SA 4.0
 }
 \cr
 }

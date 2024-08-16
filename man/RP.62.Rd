@@ -13,15 +13,16 @@ RP.62
 \description{
 \itemize{
  \item Target Soil Properties: SOC_target, pH_target, Clay_target
- \item Groups of Features: ER, Gamma, ISE.pH, NIR
+ \item Groups of Features: ER, Gamma, pH_ISE, NIR
  \item Sample size: 62
  \item Number of Features: 1408
  \item Coordinates: With coordinates (EPSG: 32632)
  \item Location: Rhineland-Palatinate, Germany
- \item Sampling Design: Regular Grid Sampling
- \item Study Area: 3.3 ha
+ \item Sampling Design: Regular grid sampling
+ \item Study Area Size: 3.3 ha
  \item Publication/Modification Date (d/m/y): 02.08.2024, version 1.0
  \item Contact Information: SVogel@atb-potsdam.de
+ \item License: CC BY-NC-SA 4.0
 }
 \cr
 }
@@ -29,7 +30,7 @@ RP.62
 \strong{Target Soil Properties:}
 \describe{
   \item{\code{SOC_target}}{Unit: \% \cr
-   Protocol: Dry combustion after removing inorganic carbon (DIN ISO 10694)\cr
+   Protocol: Measuring CO2 release during dry combustion after removing inorganic carbon (DIN ISO 10694)\cr
    Sampling Date: XXX 2017\cr
    Sampling Depth: 0 - 30 cm}
   \item{\code{clay_target}}{Unit: \% \cr

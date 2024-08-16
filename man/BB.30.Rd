@@ -18,10 +18,11 @@ BB.30
  \item Number of Features: 8
  \item Coordinates: With coordinates (EPSG: 25833)
  \item Location: Brandenburg, Germany
- \item Sampling Design: Regular Grid Sampling
- \item Study Area: 1.4 ha
+ \item Sampling Design: Regular grid sampling
+ \item Study Area Size: 1.4 ha
  \item Publication/Modification Date (d/m/y): 02.08.2024, version 1.0
  \item Contact Information: SVogel@atb-potsdam.de
+ \item License: CC BY-NC-SA 4.0
 }
 \cr
 }
@@ -29,7 +30,7 @@ BB.30
 \strong{Target Soil Properties:}
 \describe{
   \item{\code{SOC_target}}{Unit: \% \cr
-   Protocol: Dry combustion after removing inorganic carbon (DIN ISO 10694)\cr
+   Protocol: Measuring CO2 release during dry combustion after removing inorganic carbon (DIN ISO 10694)\cr
    Sampling Date: September 2022\cr
    Sampling Depth: 0 - 30 cm}
   \item{\code{clay_target}}{Unit: \% \cr
@@ -66,17 +67,17 @@ BB.30
   No. Features: 3 \cr
   Feature Code(s): B04, B08, B11 \cr
   Unit: unitless \cr
-  Sensing: Sentinel-2 bare soil Image (Level-2A), with selected bands based on correlation\cr
+  Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”, with selected bands based on correlation\cr
   Processing: Extracting RSS values from raster at soil sampling locations \cr
   Sensing Date: September 2022
   }
   \item{\code{DEM}}{
   No. Features: 3 \cr
-  Feature Code(s): Altitude, Slope, TDI \cr
-  Unit: Altitude (m), Slope (°), TDI (unitless) \cr
-  Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from the “State office for Land Surveying and Geoinformation Brandenburg”\cr
+  Feature Code(s): Altitude, Slope, TPI \cr
+  Unit: Altitude (m), Slope (°), TPI (unitless) \cr
+  Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from “GeoBasis-DE/LGB”\cr
   Processing: Slope and TPI through \code{\link[raster]{terrain}} function of the \pkg{raster} package \cr
-  Sensing Date: LiDAR April 2011, Images for photogrammetry April 2019
+  Sensing Date: LiDAR April 2011, images for photogrammetry April 2019
   }
 }
 

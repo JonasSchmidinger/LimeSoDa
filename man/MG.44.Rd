@@ -18,10 +18,11 @@ MG.44
  \item Number of Features: 351
  \item Coordinates: With coordinates (EPSG: 32721)
  \item Location: Mato Grosso, Brazil
- \item Sampling Design: Random subsample from a larger grid sampling campaign
- \item Study Area: 13 ha
+ \item Sampling Design: Random subsample from a larger Grid sampling campaign
+ \item Study Area Size: 13 ha
  \item Publication/Modification Date (d/m/y): 02.08.2024, version 1.0
  \item Contact Information: tiagosrt@usp.br
+ \item License: CC BY-NC-SA 4.0
 }
 \cr
 }

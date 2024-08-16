@@ -19,9 +19,10 @@ NSW.52
  \item Coordinates: With coordinates (EPSG: 32755)
  \item Location: New South Wales, Australia
  \item Sampling Design: K-means (30 samples) & XXX (22 sampples)
- \item Study Area: 1,070 ha
+ \item Study Area Size: 1,070 ha
  \item Publication/Modification Date (d/m/y): 02.08.2024, version 1.0
  \item Contact Information: patrick.filippi@sydney.edu.au
+ \item License: CC BY-NC-SA 4.0
 }
 \cr
 }
@@ -39,14 +40,14 @@ NSW.52
   No. Features: 3 \cr
   Feature Code(s): B04, B08, B11 \cr
   Unit: unitless \cr
-  Sensing: Sentinel-2 bare soil Image (Level-2A), with selected bands based on correlation\cr
+  Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”, with selected bands based on correlation\cr
   Processing: Extracting RSS values from raster at soil sampling locations \cr
   Sensing Date: July 2018
   }
   \item{\code{DEM}}{
   No. Features: 3 \cr
-  Feature Code(s): Altitude, Slope, TDI \cr
-  Unit: Altitude (m), Slope (°), TDI (unitless) \cr
+  Feature Code(s): Altitude, Slope, TPI \cr
+  Unit: Altitude (m), Slope (°), TPI (unitless) \cr
   Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from the “Elevation and Depth – Foundation Spatial Data (ELVIS)”\cr
   Processing: Slope and TPI through \code{\link[raster]{terrain}} function of the \pkg{raster} package \cr
   Sensing Date: April 2016

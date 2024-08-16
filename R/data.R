@@ -2,15 +2,20 @@
 #' @description
 #' \itemize{
 #'  \item Target Soil Properties: SOC_target, pH_target, Clay_target
-#'  \item Groups of Features: ER, Gamma, ISE.pH, RSS, DEM
+#'  \item Groups of Features: ER, Gamma, pH_ISE, RSS, DEM
 #'  \item Sample size: 250
 #'  \item Number of Features: 16
 #'  \item Coordinates: With coordinates (EPSG: 25833)
 #'  \item Location: Brandenburg, Germany
-#'  \item Sampling Design: Triangular Grid Sampling
-#'  \item Study Area: 52 ha
-#'  \item Publication/Modification Date (d/m/y): 02.08.2024, version 1.0
+#'  \item Sampling Design: Triangular grid sampling
+#'  \item Study Area Size: 52 ha
 #'  \item Contact Information: SVogel@atb-potsdam.de
+#'  \item License: CC BY-NC-SA 4.0
+#'  \item Publication/Modification Date (d/m/y): XXX.2024, version 1.0
+#'  \item \strong{Changelog:}
+#'    \itemize{
+#'      \item Version 1.0 (XXX.2024): Initial release.
+#'    }
 #' }
 #' \cr
 #' @details
@@ -18,7 +23,7 @@
 #' \strong{Target Soil Properties:}
 #' \describe{
 #'   \item{\code{SOC_target}}{Unit: \% \cr
-#'    Protocol: Dry combustion after removing inorganic carbon (DIN ISO 10694)\cr
+#'    Protocol: Measuring CO2 release during dry combustion after removing inorganic carbon (DIN ISO 10694)\cr
 #'    Sampling Date: May 2020\cr
 #'    Sampling Depth: 0 - 30 cm}
 #'   \item{\code{clay_target}}{Unit: \% \cr
@@ -46,7 +51,7 @@
 #'   No. Features: 1 \cr
 #'   Feature Code(s): pH_ISE \cr
 #'   Unit: unitless \cr
-#'   Sensing: Soil pH Manager from VerisMSP3 (in-situ)\cr
+#'   Sensing: Soil pH Manager (VERIS Technologies, Salinas, USA ) from VerisMSP3 (in-situ)\cr
 #'   Processing: Kriging to align sensing- with soil sampling locations \cr
 #'   Sensing Date: August 2021
 #'   }
@@ -64,17 +69,17 @@
 #'   No. Features: 10 \cr
 #'   Feature Code(s): B02, B03, B04, B05, B06, B07, B08, B08A, B11, B12 \cr
 #'   Unit: unitless \cr
-#'   Sensing: Sentinel-2 bare soil Image (Level-2A), with bands of 10 - 20 m spatial resolution\cr
+#'   Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”, with bands of 10 - 20 m spatial resolution\cr
 #'   Processing: Extracting RSS values from raster at soil sampling locations \cr
 #'   Sensing Date: April 2020
 #'   }
 #'   \item{\code{DEM}}{
 #'   No. Features: 3 \cr
-#'   Feature Code(s): Altitude, Slope, TDI \cr
-#'   Unit: Altitude (m), Slope (°), TDI (unitless) \cr
-#'   Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from the “State office for Land Surveying and Geoinformation Brandenburg”\cr
+#'   Feature Code(s): Altitude, Slope, TPI \cr
+#'   Unit: Altitude (m), Slope (°), TPI (unitless) \cr
+#'   Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from “GeoBasis-DE/LGB”\cr
 #'   Processing: Slope and TPI through \code{\link[raster]{terrain}} function of the \pkg{raster} package \cr
-#'   Sensing Date: LiDAR March 2009, Images for photogrammetry May 2018
+#'   Sensing Date: LiDAR March 2009, images for photogrammetry May 2018
 #'   }
 #' }
 #'
@@ -114,15 +119,20 @@
 #' @description
 #' \itemize{
 #'  \item Target Soil Properties: SOC_target, pH_target, Clay_target
-#'  \item Groups of Features: ER, Gamma, ISE.pH, RSS, DEM
+#'  \item Groups of Features: ER, Gamma, pH_ISE, RSS, DEM
 #'  \item Sample size: 72
 #'  \item Number of Features: 16
 #'  \item Coordinates: With coordinates (EPSG: 25833)
 #'  \item Location: Brandenburg, Germany
-#'  \item Sampling Design: Regular Grid Sampling
-#'  \item Study Area: 3.4 ha
-#'  \item Publication/Modification Date (d/m/y): 02.08.2024, version 1.0
+#'  \item Sampling Design: Regular grid sampling
+#'  \item Study Area Size: 3.4 ha
 #'  \item Contact Information: SVogel@atb-potsdam.de
+#'  \item License: CC BY-NC-SA 4.0
+#'  \item Publication/Modification Date (d/m/y): XXX.2024, version 1.0
+#'  \item \strong{Changelog:}
+#'    \itemize{
+#'      \item Version 1.0 (XXX.2024): Initial release.
+#'    }
 #' }
 #' \cr
 #' @details
@@ -130,7 +140,7 @@
 #' \strong{Target Soil Properties:}
 #' \describe{
 #'   \item{\code{SOC_target}}{Unit: \% \cr
-#'    Protocol: Dry combustion after removing inorganic carbon (DIN ISO 10694)\cr
+#'    Protocol: Measuring CO2 release during dry combustion after removing inorganic carbon (DIN ISO 10694)\cr
 #'    Sampling Date: August 2022\cr
 #'    Sampling Depth: 0 - 30 cm}
 #'   \item{\code{clay_target}}{Unit: \% \cr
@@ -158,7 +168,7 @@
 #'   No. Features: 1 \cr
 #'   Feature Code(s): pH_ISE \cr
 #'   Unit: unitless \cr
-#'   Sensing: Soil pH Manager from VerisMSP3 (in-situ)\cr
+#'   Sensing: Soil pH Manager (VERIS Technologies, Salinas, USA ) from VerisMSP3 (in-situ)\cr
 #'   Processing: Kriging to align sensing- with soil sampling locations \cr
 #'   Sensing Date: August 2021
 #'   }
@@ -176,17 +186,17 @@
 #'   No. Features: 10 \cr
 #'   Feature Code(s): B02, B03, B04, B05, B06, B07, B08, B08A, B11, B12 \cr
 #'   Unit: unitless \cr
-#'   Sensing: Sentinel-2 bare soil Image (Level-2A), with bands of 10 - 20 m spatial resolution\cr
+#'   Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”, with bands of 10 - 20 m spatial resolution\cr
 #'   Processing: Extracting RSS values from raster at soil sampling locations \cr
 #'   Sensing Date: August 2022
 #'   }
 #'   \item{\code{DEM}}{
 #'   No. Features: 3 \cr
-#'   Feature Code(s): Altitude, Slope, TDI \cr
-#'   Unit: Altitude (m), Slope (°), TDI (unitless) \cr
-#'   Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from the “State office for Land Surveying and Geoinformation Brandenburg”\cr
+#'   Feature Code(s): Altitude, Slope, TPI \cr
+#'   Unit: Altitude (m), Slope (°), TPI (unitless) \cr
+#'   Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from “GeoBasis-DE/LGB”\cr
 #'   Processing: Slope and TPI through \code{\link[raster]{terrain}} function of the \pkg{raster} package \cr
-#'   Sensing Date: LiDAR March 2011, Images for photogrammetry May 2022
+#'   Sensing Date: LiDAR March 2011, images for photogrammetry May 2022
 #'   }
 #' }
 #'
@@ -231,15 +241,20 @@
 #' @description
 #' \itemize{
 #'  \item Target Soil Properties: SOC_target, pH_target, Clay_target
-#'  \item Groups of Features: ER, Gamma, ISE.pH, NIR
+#'  \item Groups of Features: ER, Gamma, pH_ISE, NIR
 #'  \item Sample size: 62
 #'  \item Number of Features: 1408
 #'  \item Coordinates: With coordinates (EPSG: 32632)
 #'  \item Location: Rhineland-Palatinate, Germany
-#'  \item Sampling Design: Regular Grid Sampling
-#'  \item Study Area: 3.3 ha
-#'  \item Publication/Modification Date (d/m/y): 02.08.2024, version 1.0
+#'  \item Sampling Design: Regular grid sampling
+#'  \item Study Area Size: 3.3 ha
 #'  \item Contact Information: SVogel@atb-potsdam.de
+#'  \item License: CC BY-NC-SA 4.0
+#'  \item Publication/Modification Date (d/m/y): XXX.2024, version 1.0
+#'  \item \strong{Changelog:}
+#'    \itemize{
+#'      \item Version 1.0 (XXX.2024): Initial release.
+#'    }
 #' }
 #' \cr
 #' @details
@@ -247,7 +262,7 @@
 #' \strong{Target Soil Properties:}
 #' \describe{
 #'   \item{\code{SOC_target}}{Unit: \% \cr
-#'    Protocol: Dry combustion after removing inorganic carbon (DIN ISO 10694)\cr
+#'    Protocol: Measuring CO2 release during dry combustion after removing inorganic carbon (DIN ISO 10694)\cr
 #'    Sampling Date: XXX 2017\cr
 #'    Sampling Depth: 0 - 30 cm}
 #'   \item{\code{clay_target}}{Unit: \% \cr
@@ -338,10 +353,15 @@
 #'  \item Number of Features: 8
 #'  \item Coordinates: With coordinates (EPSG: 25833)
 #'  \item Location: Brandenburg, Germany
-#'  \item Sampling Design: Regular Grid Sampling
-#'  \item Study Area: 1.4 ha
-#'  \item Publication/Modification Date (d/m/y): 02.08.2024, version 1.0
+#'  \item Sampling Design: Regular grid sampling
+#'  \item Study Area Size: 1.4 ha
 #'  \item Contact Information: SVogel@atb-potsdam.de
+#'  \item License: CC BY-NC-SA 4.0
+#'  \item Publication/Modification Date (d/m/y): XXX.2024, version 1.0
+#'  \item \strong{Changelog:}
+#'    \itemize{
+#'      \item Version 1.0 (XXX.2024): Initial release.
+#'    }
 #' }
 #' \cr
 #' @details
@@ -349,7 +369,7 @@
 #' \strong{Target Soil Properties:}
 #' \describe{
 #'   \item{\code{SOC_target}}{Unit: \% \cr
-#'    Protocol: Dry combustion after removing inorganic carbon (DIN ISO 10694)\cr
+#'    Protocol: Measuring CO2 release during dry combustion after removing inorganic carbon (DIN ISO 10694)\cr
 #'    Sampling Date: September 2022\cr
 #'    Sampling Depth: 0 - 30 cm}
 #'   \item{\code{clay_target}}{Unit: \% \cr
@@ -386,17 +406,17 @@
 #'   No. Features: 3 \cr
 #'   Feature Code(s): B04, B08, B11 \cr
 #'   Unit: unitless \cr
-#'   Sensing: Sentinel-2 bare soil Image (Level-2A), with selected bands based on correlation\cr
+#'   Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”, with selected bands based on correlation\cr
 #'   Processing: Extracting RSS values from raster at soil sampling locations \cr
 #'   Sensing Date: September 2022
 #'   }
 #'   \item{\code{DEM}}{
 #'   No. Features: 3 \cr
-#'   Feature Code(s): Altitude, Slope, TDI \cr
-#'   Unit: Altitude (m), Slope (°), TDI (unitless) \cr
-#'   Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from the “State office for Land Surveying and Geoinformation Brandenburg”\cr
+#'   Feature Code(s): Altitude, Slope, TPI \cr
+#'   Unit: Altitude (m), Slope (°), TPI (unitless) \cr
+#'   Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from “GeoBasis-DE/LGB”\cr
 #'   Processing: Slope and TPI through \code{\link[raster]{terrain}} function of the \pkg{raster} package \cr
-#'   Sensing Date: LiDAR April 2011, Images for photogrammetry April 2019
+#'   Sensing Date: LiDAR April 2011, images for photogrammetry April 2019
 #'   }
 #' }
 #'
@@ -442,10 +462,15 @@
 #'  \item Number of Features: 351
 #'  \item Coordinates: Without coordinates because dataset was not georeferenced
 #'  \item Location: Sao Paulo State, Brazil
-#'  \item Sampling Design: Regular Grid Sampling
-#'  \item Study Area: 0.7 ha
-#'  \item Publication/Modification Date (d/m/y): 02.08.2024, version 1.0
+#'  \item Sampling Design: Regular grid sampling
+#'  \item Study Area Size: 0.7 ha
 #'  \item Contact Information: tiagosrt@usp.br
+#'  \item License: CC BY-NC-SA 4.0
+#'  \item Publication/Modification Date (d/m/y): XXX.2024, version 1.0
+#'  \item \strong{Changelog:}
+#'    \itemize{
+#'      \item Version 1.0 (XXX.2024): Initial release.
+#'    }
 #' }
 #' \cr
 #' @details
@@ -504,10 +529,15 @@
 #'  \item Number of Features: 351
 #'  \item Coordinates: With coordinates (EPSG: 32721)
 #'  \item Location: Mato Grosso, Brazil
-#'  \item Sampling Design: Random subsample from a larger grid sampling campaign
-#'  \item Study Area: 13 ha
-#'  \item Publication/Modification Date (d/m/y): 02.08.2024, version 1.0
+#'  \item Sampling Design: Random subsample from a larger Grid sampling campaign
+#'  \item Study Area Size: 13 ha
 #'  \item Contact Information: tiagosrt@usp.br
+#'  \item License: CC BY-NC-SA 4.0
+#'  \item Publication/Modification Date (d/m/y): XXX.2024, version 1.0
+#'  \item \strong{Changelog:}
+#'    \itemize{
+#'      \item Version 1.0 (XXX.2024): Initial release.
+#'    }
 #' }
 #' \cr
 #' @details
@@ -568,9 +598,14 @@
 #'  \item Coordinates: With coordinates (EPSG: 32755)
 #'  \item Location: New South Wales, Australia
 #'  \item Sampling Design: K-means (30 samples) & XXX (22 sampples)
-#'  \item Study Area: 1,070 ha
-#'  \item Publication/Modification Date (d/m/y): 02.08.2024, version 1.0
+#'  \item Study Area Size: 1,070 ha
 #'  \item Contact Information: patrick.filippi@sydney.edu.au
+#'  \item License: CC BY-NC-SA 4.0
+#'  \item Publication/Modification Date (d/m/y): XXX.2024, version 1.0
+#'  \item \strong{Changelog:}
+#'    \itemize{
+#'      \item Version 1.0 (XXX.2024): Initial release.
+#'    }
 #' }
 #' \cr
 #' @details
@@ -588,14 +623,14 @@
 #'   No. Features: 3 \cr
 #'   Feature Code(s): B04, B08, B11 \cr
 #'   Unit: unitless \cr
-#'   Sensing: Sentinel-2 bare soil Image (Level-2A), with selected bands based on correlation\cr
+#'   Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”, with selected bands based on correlation\cr
 #'   Processing: Extracting RSS values from raster at soil sampling locations \cr
 #'   Sensing Date: July 2018
 #'   }
 #'   \item{\code{DEM}}{
 #'   No. Features: 3 \cr
-#'   Feature Code(s): Altitude, Slope, TDI \cr
-#'   Unit: Altitude (m), Slope (°), TDI (unitless) \cr
+#'   Feature Code(s): Altitude, Slope, TPI \cr
+#'   Unit: Altitude (m), Slope (°), TPI (unitless) \cr
 #'   Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from the “Elevation and Depth – Foundation Spatial Data (ELVIS)”\cr
 #'   Processing: Slope and TPI through \code{\link[raster]{terrain}} function of the \pkg{raster} package \cr
 #'   Sensing Date: April 2016
@@ -642,10 +677,15 @@
 #'  \item Coordinates: With coordinates (EPSG: 32654)
 #'  \item Location: Saitama Prefecture, Japan
 #'  \item Sampling Design: Random
-#'  \item Study Area: 3.1 ha
-#'  \item Publication/Modification Date (d/m/y): 02.08.2024, version 1.0
+#'  \item Study Area Size: 3.1 ha
 #'  \item Contact Information: kodaira@cc.tuat.ac.jp
+#'  \item License: CC BY-NC-SA 4.0
 #'  \item Extra Note: Pre-processing (e.g. Savitzky-Golay filter) needed for proper modelling, dimensionality reduction encouraged
+#'  \item Publication/Modification Date (d/m/y): XXX.2024, version 1.0
+#'  \item \strong{Changelog:}
+#'    \itemize{
+#'      \item Version 1.0 (XXX.2024): Initial release.
+#'    }
 #' }
 #' \cr
 #' @details

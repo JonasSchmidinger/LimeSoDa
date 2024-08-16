@@ -13,15 +13,21 @@ BB.250
 \description{
 \itemize{
  \item Target Soil Properties: SOC_target, pH_target, Clay_target
- \item Groups of Features: ER, Gamma, ISE.pH, RSS, DEM
+ \item Groups of Features: ER, Gamma, pH_ISE, RSS, DEM
  \item Sample size: 250
  \item Number of Features: 16
  \item Coordinates: With coordinates (EPSG: 25833)
  \item Location: Brandenburg, Germany
- \item Sampling Design: Triangular Grid Sampling
- \item Study Area: 52 ha
- \item Publication/Modification Date (d/m/y): 02.08.2024, version 1.0
+ \item Sampling Design: Triangular grid sampling
+ \item Study Area Size: 52 ha
  \item Contact Information: SVogel@atb-potsdam.de
+ \item License: CC BY-NC-SA 4.0
+ \item Publication/Modification Date (d/m/y): 02.08.2024, version 1.0
+ \item \strong{Changelog:}
+   \itemize{
+     \item Version 1.1 (15.08.2024): Updated sampling date for \code{ER} group.
+     \item Version 1.0 (02.08.2024): Initial release.
+   }
 }
 \cr
 }
@@ -29,7 +35,7 @@ BB.250
 \strong{Target Soil Properties:}
 \describe{
   \item{\code{SOC_target}}{Unit: \% \cr
-   Protocol: Dry combustion after removing inorganic carbon (DIN ISO 10694)\cr
+   Protocol: Measuring CO2 release during dry combustion after removing inorganic carbon (DIN ISO 10694)\cr
    Sampling Date: May 2020\cr
    Sampling Depth: 0 - 30 cm}
   \item{\code{clay_target}}{Unit: \% \cr
@@ -57,7 +63,7 @@ BB.250
   No. Features: 1 \cr
   Feature Code(s): pH_ISE \cr
   Unit: unitless \cr
-  Sensing: Soil pH Manager from VerisMSP3 (in-situ)\cr
+  Sensing: Soil pH Manager (VERIS Technologies, Salinas, USA ) from VerisMSP3 (in-situ)\cr
   Processing: Kriging to align sensing- with soil sampling locations \cr
   Sensing Date: August 2021
   }
@@ -75,17 +81,17 @@ BB.250
   No. Features: 10 \cr
   Feature Code(s): B02, B03, B04, B05, B06, B07, B08, B08A, B11, B12 \cr
   Unit: unitless \cr
-  Sensing: Sentinel-2 bare soil Image (Level-2A), with bands of 10 - 20 m spatial resolution\cr
+  Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”, with bands of 10 - 20 m spatial resolution\cr
   Processing: Extracting RSS values from raster at soil sampling locations \cr
   Sensing Date: April 2020
   }
   \item{\code{DEM}}{
   No. Features: 3 \cr
-  Feature Code(s): Altitude, Slope, TDI \cr
-  Unit: Altitude (m), Slope (°), TDI (unitless) \cr
-  Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from the “State office for Land Surveying and Geoinformation Brandenburg”\cr
+  Feature Code(s): Altitude, Slope, TPI \cr
+  Unit: Altitude (m), Slope (°), TPI (unitless) \cr
+  Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from “GeoBasis-DE/LGB”\cr
   Processing: Slope and TPI through \code{\link[raster]{terrain}} function of the \pkg{raster} package \cr
-  Sensing Date: LiDAR March 2009, Images for photogrammetry May 2018
+  Sensing Date: LiDAR March 2009, images for photogrammetry May 2018
   }
 }
 

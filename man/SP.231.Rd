@@ -19,9 +19,10 @@ SP.231
  \item Coordinates: With coordinates (EPSG: 32654)
  \item Location: Saitama Prefecture, Japan
  \item Sampling Design: Random
- \item Study Area: 3.1 ha
+ \item Study Area Size: 3.1 ha
  \item Publication/Modification Date (d/m/y): 02.08.2024, version 1.0
  \item Contact Information: kodaira@cc.tuat.ac.jp
+ \item License: CC BY-NC-SA 4.0
  \item Extra Note: Pre-processing (e.g. Savitzky-Golay filter) needed for proper modelling, dimensionality reduction encouraged
 }
 \cr
