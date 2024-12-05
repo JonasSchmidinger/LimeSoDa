@@ -12,57 +12,99 @@ NSW.52
 }
 \description{
 \itemize{
- \item Target Soil Properties: SOM_target, pH_target, Cay_target
- \item Groups of Features: RSS, DEM
+ \item Target Soil Properties: SOC, pH, Clay
+ \item Groups of Features: DEM, RSS
  \item Sample size: 52
- \item Number of Features: 6
+ \item Number of Features: 5
  \item Coordinates: With coordinates (EPSG: 32755)
  \item Location: New South Wales, Australia
- \item Sampling Design: K-means (30 samples) & XXX (22 sampples)
- \item Study Area Size: 1,070 ha
- \item Publication/Modification Date (d/m/y): 02.08.2024, version 1.0
- \item Contact Information: patrick.filippi@sydney.edu.au
+ \item Sampling Design: Two sampling designs and campaigns over multiple fields: (1) Random Sampling from k-means clustering based on digital soil maps, digital elevation model, air-borne gamma radiometric data and remote sensing satellite images, and (2) Stratified Random Sampling based on soil type and land use parameters
+ \item Study Area Size: 1,158 ha
+ \item Geological Setting: Alluvial deposits of basaltic sediments
+ \item Previous Data Publication: None
+ \item Contact Information:
+    \itemize{
+     \item Patrick Filippi (patrick.filippi@sydney.edu.au), University of Sydney
+     \item Edward Jones (edjones1684@gmail.com), University of Sydney
+     }
  \item License: CC BY-NC-SA 4.0
+ \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
+ \item Changelog:
+   \itemize{
+     \item Version 1.0 (XXX.2025): Initial release
+   }
 }
 \cr
 }
 \details{
-\strong{Target Soil Properties:}
 \describe{
-  \item{\code{SOM_target}}{XXX}
-  \item{\code{clay_target}}{XXX}
-  \item{\code{pH_target}}{XXX} \cr
+\strong{Dataset:}
+Dataframe which contains the tabular dataset with the target soil properties and features}
+\describe{
+Target Soil Properties:
+
+   SOC - Soil Organic Carbon
+   \itemize{
+   \item Code: \code{SOC_target}
+   \item Unit: \%
+   \item Protocol: Measured through titration after oxidization of the organic carbon (Walkley & Black 1934)
+   \item Sampling Date: July 2018 & December 2018
+   \item Sampling Depth: 0 - 10 cm
+   }
+
+   pH
+   \itemize{
+   \item Code: \code{pH_target}
+   \item Unit: Unitless
+   \item Protocol: Measured in CaCl\eqn{_2} suspension with a glass electrode with a 5:1 liquid:soil volumetric ratio
+   \item Sampling Date: July 2018 & December 2018
+   \item Sampling Depth: 0 – 10 cm
+   }
+
+   Clay
+   \itemize{
+   \item Code: \code{Clay_target}
+   \item Unit: \%
+   \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water (Gee and Bauder 1986)
+   \item Sampling Date: July 2018 & December 2018
+   \item Sampling Depth: 0 - 10 cm
+   }
 }
 
-\strong{Groups of Features:}
+\cr
+Groups of Features:
 \describe{
-  \item{\code{RSS}}{
-  No. Features: 3 \cr
-  Feature Code(s): B04, B08, B11 \cr
-  Unit: unitless \cr
-  Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”, with selected bands based on correlation\cr
-  Processing: Extracting RSS values from raster at soil sampling locations \cr
-  Sensing Date: July 2018
+  DEM – Digital Elevation Model and Terrain Parameters
+  \itemize{
+  \item Number Features: 2
+  \item Code(s): \code{Altitude, Slope}
+  \item Unit: \code{Altitude} (m), \code{Slope } (°)
+  \item Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from the “Elevation and Depth – Foundation Spatial Data (ELVIS)”
+  \item Processing: Calculating \code{Slope} with \code{\link[raster]{terrain}} function of the \pkg{raster} package, extracting DEM values from raster at soil sampling locations
+  \item Sensing Date: April 2016
   }
-  \item{\code{DEM}}{
-  No. Features: 3 \cr
-  Feature Code(s): Altitude, Slope, TPI \cr
-  Unit: Altitude (m), Slope (°), TPI (unitless) \cr
-  Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from the “Elevation and Depth – Foundation Spatial Data (ELVIS)”\cr
-  Processing: Slope and TPI through \code{\link[raster]{terrain}} function of the \pkg{raster} package \cr
-  Sensing Date: April 2016
-  }
-}
 
+  RSS – Remote Sensing Derived Spectral Data
+  \itemize{
+  \item Number Features: 3
+  \item Code(s): \code{B02, B8A, B11}
+  \item Unit: Unitless
+  \item Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”, with bands of 10 - 20 m spatial resolution
+  \item Processing: Extracting RSS values from raster at soil sampling locations, selecting bands spread throughout the spectral range with lower intercorrelation
+  \item Sensing Date: July 2018
+  }
+
+}
+\cr
 
 \strong{Folds:}
-Vector with 52 entries in which numbers from 1 to 10 were randomly assigned to every entry. Each number refers to a fold out of the ten folds of equal size.
+Vector which contains numerical entries from 1 to 10, each number can be used to index the folds for cross validation \cr
 
 \strong{Coordinates:}
 Dataframe with coordinates (EPSG: 32755)
 }
 \examples{
-# Load the dataset & folds
+# Load the dataset list
 NSW.52
 
 # Access the dataset
@@ -78,5 +120,10 @@ NSW.52$Coordinates
 training_data_NSW.52 <- NSW.52$Dataset[NSW.52$Folds != 1,]
 testing_data_NSW.52 <- NSW.52$Dataset[NSW.52$Folds == 1,]
 
+}
+\references{
+Gee, G.W. & Bauder, J.W. (1986) Particle-Size Analysis. In: Klute, A., Ed., Methods of Soil Analysis, Part 1. Physical and Mineralogical Methods, Agronomy Monograph No. 9, 2nd Edition, American Society of Agronomy/Soil Science Society of America, Madison, WI, 383-411.\cr
+\cr
+Walkley, A. & Black, I. A. (1934). An examination of the Degtjareff method for determining soil organic matter, and a proposed modification of the chromic acid titration method. Soil science, 37(1), 29-38.
 }
 \keyword{datasets}

@@ -12,98 +12,140 @@ BB.250
 }
 \description{
 \itemize{
- \item Target Soil Properties: SOC_target, pH_target, Clay_target
- \item Groups of Features: ER, Gamma, pH_ISE, RSS, DEM
+ \item Target Soil Properties: SOC, pH, Clay
+ \item Groups of Features: DEM, ERa, Gamma, pH_ISE, RSS, VI
  \item Sample size: 250
- \item Number of Features: 16
+ \item Number of Features: 17
  \item Coordinates: With coordinates (EPSG: 25833)
  \item Location: Brandenburg, Germany
- \item Sampling Design: Triangular grid sampling
+ \item Sampling Design: Triangular Grid Sampling
  \item Study Area Size: 52 ha
- \item Contact Information: SVogel@atb-potsdam.de
- \item License: CC BY-NC-SA 4.0
- \item Publication/Modification Date (d/m/y): 02.08.2024, version 1.0
- \item \strong{Changelog:}
+ \item Geological Setting: Pleistocene young morainic landscape of the Weichselian glaciation with predominantly glacial sand
+ \item Previous Data Publication: Target soil properties published but under boycott in Vogel et al. 2022
+ \item Contact Information:
    \itemize{
-     \item Version 1.1 (15.08.2024): Updated sampling date for \code{ER} group.
-     \item Version 1.0 (02.08.2024): Initial release.
+     \item Sebastian Vogel (SVogel@atb-potsdam.de), Leibniz Institute for Agricultural Engineering and Bioeconomy (ATB)
+     \item Joerg Ruehlmann (ruehlmann@igzev.de), Leibniz Institute of Vegetable and Ornamental Crops (IGZ)
+     }
+ \item License: CC BY-NC-SA 4.0
+ \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
+ \item Changelog:
+   \itemize{
+     \item Version 1.0 (XXX.2025): Initial release
    }
 }
 \cr
 }
 \details{
-\strong{Target Soil Properties:}
 \describe{
-  \item{\code{SOC_target}}{Unit: \% \cr
-   Protocol: Measuring CO2 release during dry combustion after removing inorganic carbon (DIN ISO 10694)\cr
-   Sampling Date: May 2020\cr
-   Sampling Depth: 0 - 30 cm}
-  \item{\code{clay_target}}{Unit: \% \cr
-   Protocol: Wet sieving and sedimentation after removal of organic matter (DIN ISO 11277)\cr
-   Sampling Date: May 2020\cr
-   Sampling Depth: 0 - 30 cm}
-  \item{\code{pH_target}}{Unit: Unitless \cr
-   Protocol: In CaCl\eqn{_2} solution with a glass electrode (DIN ISO 10390)\cr
-   Sampling Date: May 2020\cr
-   Sampling Depth: 0 - 30 cm} \cr
+\strong{Dataset:}
+Dataframe which contains the tabular dataset with the target soil properties and features}
+\describe{
+Target Soil Properties:
+
+   SOC - Soil Organic Carbon
+   \itemize{
+   \item Code: \code{SOC_target}
+   \item Unit: \%
+   \item Protocol: Measured CO\eqn{_2} release during dry combustion after removing inorganic carbon with an acid (DIN ISO 10694)
+   \item Sampling Date: May 2020
+   \item Sampling Depth: 0 - 30 cm
+   }
+
+   pH
+   \itemize{
+   \item Code: \code{pH_target}
+   \item Unit: Unitless
+   \item Protocol: Measured in CaCl\eqn{_2} suspension with a glass electrode with a 5:1 liquid:soil volumetric ratio (DIN ISO 10390)
+   \item Sampling Date: May 2020
+   \item Sampling Depth: 0 - 30 cm
 }
 
-\strong{Groups of Features:}
-\describe{
-  \item{\code{ER}}{
-  No. Features: 1 \cr
-  Feature Code(s): ER \cr
-  Unit: \eqn{\Omega} m \cr
-  Sensing: Array of multiple rolling electrodes(Geophilus company, Caputh, Germany) on Geophilus platform with 0 - 25 cm measuring depth (in-situ)\cr
-  Processing: Kriging to align sensing- with soil sampling locations \cr
-  Sensing Date: August 2021
-  }
+   Clay
+   \itemize{
+   \item Code: \code{Clay_target}
+   \item Unit: \%
+   \item Protocol: Measured through a combination of wet sieving and sedimentation after dispersion and removal of organic matter through oxidation (DIN ISO 11277)
+   \item Sampling Date: May 2020
+   \item Sampling Depth: 0 - 30 cm
+   }
 
-  \item{\code{pH_ISE}}{
-  No. Features: 1 \cr
-  Feature Code(s): pH_ISE \cr
-  Unit: unitless \cr
-  Sensing: Soil pH Manager (VERIS Technologies, Salinas, USA ) from VerisMSP3 (in-situ)\cr
-  Processing: Kriging to align sensing- with soil sampling locations \cr
-  Sensing Date: August 2021
-  }
-
-  \item{\code{Gamma}}{
-  No. Features: 1 \cr
-  Feature Code(s): G_Total_Counts \cr
-  Unit: unitless \cr
-  Sensing: Gamma sensor on Geophilus platform (in-situ)\cr
-  Processing: Kriging to align sensing- with soil sampling locations \cr
-  Sensing Date: August 2021
-  }
-
-  \item{\code{RSS}}{
-  No. Features: 10 \cr
-  Feature Code(s): B02, B03, B04, B05, B06, B07, B08, B08A, B11, B12 \cr
-  Unit: unitless \cr
-  Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”, with bands of 10 - 20 m spatial resolution\cr
-  Processing: Extracting RSS values from raster at soil sampling locations \cr
-  Sensing Date: April 2020
-  }
-  \item{\code{DEM}}{
-  No. Features: 3 \cr
-  Feature Code(s): Altitude, Slope, TPI \cr
-  Unit: Altitude (m), Slope (°), TPI (unitless) \cr
-  Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from “GeoBasis-DE/LGB”\cr
-  Processing: Slope and TPI through \code{\link[raster]{terrain}} function of the \pkg{raster} package \cr
-  Sensing Date: LiDAR March 2009, images for photogrammetry May 2018
-  }
 }
+\cr
+Groups of Features:
+\describe{
+  DEM – Digital Elevation Model and Terrain Parameters
+  \itemize{
+  \item Number Features: 2
+  \item Code(s): \code{Altitude, Slope}
+  \item Unit: \code{Altitude} (m), \code{Slope } (°)
+  \item Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from “GeoBasis-DE/LGB”
+  \item Processing: Calculating \code{Slope} with \code{\link[raster]{terrain}} function of the \pkg{raster} package, extracting DEM values from raster at soil sampling locations
+  \item Sensing Date: LiDAR March 2009, images for photogrammetry May 2018
+  }
 
+  ERa – Apparent Electrical Resistivity
+  \itemize{
+  \item Number Features: 1
+  \item Code(s): \code{ERa}
+  \item Unit: \eqn{\Omega} m
+  \item Sensing: Array of multiple rolling electrodes(Geophilus company, Caputh, Germany) on Geophilus platform with exploration depth of 0 - 25 cm, in-situ
+  \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
+  \item Sensing Date: August 2021
+  }
+
+  Gamma
+  \itemize{
+  \item Number Features: 1
+  \item Code(s): \code{G_Total_Counts}
+  \item Unit: Unitless
+  \item Sensing: Gamma sensor (gamma sensor model is not commercially available) on Geophilus platform, in-situ
+  \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
+  \item Sensing Date: August 2021
+  }
+
+  pH_ISE – Ion Selective Electrodes for pH Determination
+  \itemize{
+  \item Number Features: 1
+  \item Code(s): \code{pH_ISE}
+  \item Unit: Unitless
+  \item Sensing: Soil pH Manager (VERIS Technologies, Salinas, USA) from VerisMSP3, in-situ
+  \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
+  \item Sensing Date: August 2021
+  }
+
+
+  RSS – Remote Sensing Derived Spectral Data
+  \itemize{
+  \item Number Features: 10
+  \item Code(s): \code{B02, B03, B04, B05, B06, B07, B08, B8A, B11, B12}
+  \item Unit: Unitless
+  \item Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”, with bands of 10 - 20 m spatial resolution
+  \item Processing: Extracting RSS values from raster at soil sampling locations
+  \item Sensing Date: April 2020
+  }
+
+  VI - Vegetation Indices
+  \itemize{
+  \item Number Features: 2
+  \item Code(s): \code{NDVI, GNDVI}
+  \item Unit: Unitless
+  \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
+  \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04) and \code{GNDVI} as (B08 - B03) / (B08 + B03), extracting VI values from raster at soil sampling locations
+  \item Sensing Date: August 2020
+  }
+
+}
+\cr
 
 \strong{Folds:}
-Vector with 250 entries in which numbers from 1 to 10 were randomly assigned to every entry. Each number refers to a fold out of the ten folds of equal size.
+ Vector which contains numerical entries from 1 to 10, each number can be used to index the folds for cross validation \cr
 
 \strong{Coordinates:}
 Dataframe with coordinates (EPSG: 25833)
 }
 \examples{
-# Load the dataset & folds
+# Load the dataset list
 BB.250
 
 # Access the dataset
@@ -119,5 +161,8 @@ BB.250$Coordinates
 training_data_BB.250 <- BB.250$Dataset[BB.250$Folds != 1,]
 testing_data_BB.250 <- BB.250$Dataset[BB.250$Folds == 1,]
 
+}
+\references{
+Vogel S., Bönecke E., Kling C., Kramer E., Lück K., Nagel A., Philipp G., Rühlmann J., Schröter I. & Gebbers, R. (2022), Base neutralizing capacity from agricultural fields in the quaternary landscape of North-East Germany, BONARES Repository, https://doi.org/10.20387/bonares-zh3x-nd80
 }
 \keyword{datasets}
