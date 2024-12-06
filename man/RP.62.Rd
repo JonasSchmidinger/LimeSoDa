@@ -13,7 +13,7 @@ RP.62
 \description{
 \itemize{
  \item Target Soil Properties: SOC, pH, Clay
- \item Groups of Features: ERa, Gamma, NIR, pH_ISE, VI
+ \item Groups of Features: ERa, Gamma, NIR, pH-ISE, VI
  \item Sample size: 62
  \item Number of Features: 1,410
  \item Coordinates: Without coordinates because of privacy concerns
@@ -109,10 +109,10 @@ Groups of Features:
      \item Spectral Range: 1,000 - 2,400 nm
    }
   }
-  pH_ISE – Ion Selective Electrodes for pH Determination
+  pH-ISE – Ion Selective Electrodes for pH Determination
   \itemize{
   \item Number Features: 1
-  \item Code(s): \code{pH_ISE}
+  \item Code(s): \code{pH-ISE}
   \item Unit: Unitless
   \item Sensing: Soil pH Manager (VERIS Technologies, Salinas, USA) on RapidMapper platform, in-situ
   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations

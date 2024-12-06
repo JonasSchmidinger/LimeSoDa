@@ -18,7 +18,7 @@ SSP.58
  \item Number of Features: 351
  \item Coordinates: Without coordinates because dataset was not georeferenced
  \item Location: State of Sao Paulo, Brazil
- \item Sampling Design:  Random Stratified sampling based on treatment doses of K\eqn{_2}O and CaO
+ \item Sampling Design: Random Stratified sampling based on treatment doses of K\eqn{_2}O and CaO
  \item Study Area Size: 0.7 ha
  \item Geological Setting: Heavily weathered soils originating from diabase
  \item Previous Data Publication: Full dataset published in Tavares et al. (2022)

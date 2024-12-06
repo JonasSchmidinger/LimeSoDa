@@ -13,34 +13,37 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
-Precision Liming Soil Datasets (Lime.SoDa) is a collection of datasets in the context of field- and farm-scale soil mapping. In the following, we will provide a guideline on how to use `Lime.SoDa`.
-
-
+Precision Liming Soil Datasets (Lime.SoDa) is a collection of datasets from a field- and farm-scale soil mapping context. Datasets are ready “ready-to-go” for modelling, meaning they contain target soil properties and features in a tabular format. Target soil properties for all datasets are; soil organic matter (SOM) or -carbon (SOC), pH and clay. Features for modelling are dataset-specific. The goal of `Lime.SoDa` is to make benchmarking and comparison of different modelling approaches in Digital Soil Mapping and Pedometrics more trustworthy by providing an open collection of datasets. This vignette provides an overview of the `Lime.SoDa` package and how to use it for modelling purposes.
 
 ### Installation
 Installing `Lime.SoDa` from GitHub by: 
 
 ```{r setup}
-#remotes::install_github("JonasSchmidinger/Lime.SoDa")
+#remotes::install_github("JonasSchmidinger/Lime.SoDa") 
 
 library(Lime.SoDa)
-library(sf) # For visualizing spatial data later on
 ```
 
 ### Lime.SoDa package structure
-`Lime.SoDa` consists of 29 tabular datasets that are ready-to-go for modelling purposes:
+`Lime.SoDa` contains 31 entries. This inclues 30 datasets and an overview table.
 
 ```{r}
-data(package = "Lime.SoDa")$results[,3] # List datasets from Lime.SoDa
+data(package = "Lime.SoDa")$results[,3] # All entries in Lime.SoDa
+```
+`Overview_Datasets` provides an overview of the 30 datasets, including the dataset name, number of samples, number of features and further specifics:
+
+
+```{r}
+head(Overview_Datasets)
 ```
 
-The dataset codes are named according to the geographic region and sample size. For example, `BB.250` refers to a dataset from Brandenburg (BB), Germany, which includes 250 reference soil samples. Additional information about the methodology, sampling procedures, feature codes, and more can be found in the metadata of each dataset:
+Datasets are named according to the geographic region and sample size. For example, `BB.250` refers to a dataset from Brandenburg (BB), Germany, which includes 250 reference soil samples. Additional information about the methodology, sampling procedures, feature codes, and more can be found in the metadata of each dataset which can be accessed through:
 
 ```{r}
 ?BB.250 #Access metadata
 ```
 
-Datasets are stored as a list. This list contains the tabular dataset (`$Dataset`), pre-defined folds (`$Folds`) for a 10-fold cross-validation  and, if available, the coordinates (`$Coordinates`):
+Datasets are stored as a list. This list contains the tabular dataset (`$Dataset`), pre-defined folds (`$Folds`) for a 10-fold cross-validation  and, if available, the spatial coordinates of the soil samples (`$Coordinates`):
 
 ```{r}
 head(BB.250$Dataset)
@@ -50,20 +53,22 @@ BB.250$Folds
 head(BB.250$Coordinates)
 ```
 
-Each dataset has SOM or SOC, pH and Clay as target soil properties, which are stored in the first three columns of the `$Dataset`. They can be recognized by their suffix `_target` e.g., `Clay_target`:
+Each dataset has SOM or SOC, pH and Clay as target soil properties, which are always stored in the first three columns of the `$Dataset`. They can be recognized by their suffix `_target` e.g., `Clay_target`:
 
 ```{r}
 str(BB.250$Dataset[1:3]) 
 ```
 
-Features are specific to each dataset and may consist of lab-based spectroscopy, in-situ proximal soil sensors or remote sensing derived environmental data, depending on the context of the dataset:
+Features for modelling are dataset-specific and originate from laboratory-based spectroscopy, in-situ proximal soil sensing and remote sensing. They are stored in the columns of the `$Dataset` after the target soil properties:
 
 ```{r}
+#Features in BB.250
 colnames(BB.250$Dataset[-c(1:3)])
+#Features in W.50
 colnames(W.50$Dataset[-c(1:3)])
 ```
 
-Spatial coordinates are available for many datasets. For some datasets they could not be provided (e.g., `SSP.58`) or only dummy coordinates are available (e.g., `UL.120`), for reasons specified in the metadata. For example, in `BB.250` coordinates are included and it can be accessed through `$Coordinates`. The EPSG code is provided in the column name and metadata. Conversely, in `SSP.58` coordinates were excluded, so that `$Coordinates` returns an `NA` value. In the case of `UL.120`, `$Coordinates` returns dummy coordinates which is highlighted by the column names:
+Spatial coordinates where either (1) included, (2) excluded or (3) dummy covariates were added. Reasons on why they were not included are specified in the metadata. For example, in `BB.250` coordinates are included and it can be accessed through `$Coordinates`. The EPSG code is provided in the column name. Conversely, in `SSP.58` coordinates were excluded, so that `$Coordinates` returns an `NA` value. In the case of `UL.120`, `$Coordinates` returns dummy coordinates which is highlighted by the column names:
 
 ```{r}
 #When coordinates are included:
@@ -76,11 +81,12 @@ head(SSP.58$Coordinates)
 head(UL.120$Coordinates)
 ```
 
-The coordinates are arranged in the same order as the tabular dataset. This allows them to be easily merged with the dataset using a simple `cbind()`:
+The coordinates are arranged in the same order as the tabular dataset. This allows them to be merged with the dataset using a simple `cbind()`:
 
 ```{r}
 BB.250_dataset.with.coordinates <- cbind(BB.250$Coordinates,BB.250$Dataset) # Merge coordinates with dataset
 
+library(sf) # For visualizing spatial data 
 BB.250_dataset.with.coordinates.sf <- st_as_sf(x = BB.250_dataset.with.coordinates, 
                          coords = c("x_25833", "y_25833")) # Make it spatial
 st_crs(BB.250_dataset.with.coordinates.sf) <- 25833 
@@ -93,16 +99,16 @@ plot(BB.250_dataset.with.coordinates.sf[c(1:3)])
 To ensure comparability between different studies using Lime.SoDa, the pre-defined folds should be used for validation purposes. These folds were created by randomly partitioning of the dataset into 10 equally sized folds, allowing for a 10-fold cross-validation. The training and testing data can be indexed through the `$Folds` vector:
 
 ```{r}
-table(BB.250$Folds) # Folds are defined through a vector with numbers from 1 - 10
+BB.250$Folds # Folds are defined through a vector with numbers from 1 - 10 with 1/10 of the data in each fold
 
 # Splitting the dataset into training and testing folds for the example of the first fold
 training_data_BB.250 <- BB.250$Dataset[BB.250$Folds != 1,] 
-nrow(training_data_BB.250)
+nrow(training_data_BB.250) # Show size of training 9-fold 
 testing_data_BB.250 <- BB.250$Dataset[BB.250$Folds == 1,]
-nrow(testing_data_BB.250)
+nrow(testing_data_BB.250) # Show size of validation fold
 ```
 
-Although not specifically defined for this purpose, the same folds can also be used for a simple train-test split instead of cross-validation. For example, the first 9 folds can be used as training data and the 10th fold as testing data for a 90/10 train-test split. Similarly, one can use 8 folds for training and 2 folds for testing to achieve an 80/20 split, and so on:
+Although not specifically defined for this purpose, the same folds can also be used for a simple train-test split instead of cross-validation. For example, the first 9 folds can be used as training data and the 10th fold as testing data for a 90/10 train-test split. Similarly, one can use 8 folds for training and 2 folds for testing to achieve an 80/20 split, and so on. This also allows comparability when using single-split validation:
 
 ```{r}
 # Splitting the dataset into training and testing sets for a 70:30 split:
@@ -139,7 +145,7 @@ for (i in 1:10){
 sqrt(mean((predicted_values - testing_values)^2))
 ```
 
-In this simple example, an R-squared of 0.75 and an RMSE of 0.24 were achieved. Using the same pre-defined folds, it is now possible to evaluate how other learning algorithms perform on the same dataset in comparison to MLR, without needing to rerun the code. This is particularly useful when comparing more complex algorithms or methods that are difficult to reproduce.
+In this simple example, an R-squared of 0.75 and an RMSE of 0.24 were achieved. Using the same pre-defined folds, it is now possible to evaluate how other learning algorithms perform on the same dataset in comparison to MLR, without the necessity to rerun the code. This is particularly useful when comparing more complex algorithms or methods that are difficult to reproduce.
 
 ### How to cite Lime.SoDa
 

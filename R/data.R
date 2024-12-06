@@ -1,3 +1,40 @@
+#' @title Overview of Datasets in Lime.SoDa
+#' @description
+#' This table gives an overview of datasets used in Lime.SoDa and containts:
+#' \itemize{
+#'  \item Dataset: The name of the dataset
+#'  \item Number_of_samples: The number of analysed soil samples (i.e. rows) in the dataset
+#'  \item Number_of_features: The number of features (i.e. columns) in the dataset
+#'  \item Sensors: The type of sensors used to create the features in the dataset, see abbrevations below
+#'  \item Coordinates: Specifies whether coordinates or dummy covariates are available for the dataset
+#'  \item Location: The location where the dataset was collected
+#'  \item Study_area_in_ha: The size of the study area in ha
+#'  \item Sampling_Design: The sampling design used to collect the dataset
+#'  }
+#'  Abbreviations for sensors:
+#' \itemize{
+#'  \item CSMoisture - Capacitive soil moisture
+#'  \item DEM - Digital elevation model and terrain parameters
+#'  \item ERa - Apparent electrical resistivity
+#'  \item Gamma - Gamma-ray activity
+#'  \item MIR - Mid infrared spectroscopy
+#'  \item NIR - Near infrared spectroscopy
+#'  \item pH-ISE - Ion selective electrodes for pH determination
+#'  \item RSS - Remote sensing derived spectral data
+#'  \item VI - Vegetation indices
+#'  \item vis-NIR - Visible and near infrared spectroscopy
+#'  \item XRF - X-ray fluorescence derived elemental concentrations
+#'  }
+#' @docType data
+"Overview_Datasets"
+
+
+
+
+
+
+
+
 #' @title SSP.460 Dataset
 #' @description
 #' \itemize{
@@ -11,7 +48,7 @@
 #' @description
 #' \itemize{
 #'  \item Target Soil Properties: SOC, pH, Clay
-#'  \item Groups of Features: DEM, ERa, Gamma, pH_ISE, RSS, VI
+#'  \item Groups of Features: DEM, ERa, Gamma, pH-ISE, RSS, VI
 #'  \item Sample size: 250
 #'  \item Number of Features: 17
 #'  \item Coordinates: With coordinates (EPSG: 25833)
@@ -101,10 +138,10 @@
 #'   \item Sensing Date: August 2021
 #'   }
 #'
-#'   pH_ISE – Ion Selective Electrodes for pH Determination
+#'   pH-ISE – Ion Selective Electrodes for pH Determination
 #'   \itemize{
 #'   \item Number Features: 1
-#'   \item Code(s): \code{pH_ISE}
+#'   \item Code(s): \code{pH-ISE}
 #'   \item Unit: Unitless
 #'   \item Sensing: Soil pH Manager (VERIS Technologies, Salinas, USA) from VerisMSP3, in-situ
 #'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
@@ -319,20 +356,19 @@
 #' @title H.138 Dataset
 #' @description
 #' \itemize{
-#' METADATA NOT YET RECEIVED ONLY PRILIMINARY ENTRIES
 #'  \item Target Soil Properties: SOC, pH, Clay
 #'  \item Groups of Features: MIR
 #'  \item Sample size: 138
 #'  \item Number of Features: 2,489
-#'  \item Coordinates: XXX
+#'  \item Coordinates: With coordinates (EPSG: 32649)
 #'  \item Location: Hubei, China
 #'  \item Sampling Design: XXX
 #'  \item Study Area Size: 420 ha
 #'  \item Geological Setting: Sedimentary rocks, mainly dolomite with silt and limestone formed in the middle and lower Jurassic
-#'  \item Previous Data Publication: None
+#'  \item Previous Data Publication: Full dataset published in Wadoux et al. (2025) [?Not yet published?]
 #'  \item Contact Information:
 #'    \itemize{
-#'      \item Alexandre M.J.-C- Wadoux  (Alexandre.Wadoux@inrae.fr), University of Montpellier
+#'      \item Alexandre M.J.-C- Wadoux (Alexandre.Wadoux@inrae.fr), University of Montpellier
 #'      }
 #'  \item License: CC BY-NC-SA 4.0
 #'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
@@ -353,7 +389,7 @@
 #'    \itemize{
 #'    \item Code: \code{SOC_target}
 #'    \item Unit: \%
-#'    \item Protocol: XXX
+#'    \item Protocol: Determined by the difference of total carbon and inorganic carbon, where total carbon was obtained through elemental analysis by measuring the CO2 release during dry combustion (DIN ISO 10694  ) without acid pretreatment and inorganic carbon as 0.12 x the calcium carbonate content,  determined by the gas-volumetric Scheibler Method (ISO 10693)
 #'    \item Sampling Date: June 2013, May, 2014 & November 2014
 #'    \item Sampling Depth: 0 - 20 cm
 #'    }
@@ -386,8 +422,8 @@
 #'   \item Number Features: 2,489 \cr
 #'   \item Code(s): \code{wn_5397.9, wn_5396, wn_5394} ... \code{wn_599.8}
 #'   \item Unit: Unitless
-#'   \item Sensing: XXX
-#'   \item Processing: XXX
+#'   \item Sensing: VERTEX 70v FT-IR Spektrometer (Bruker Optik, Ettlingen, Germany), on dried and sieved samples (<2 mm) in the laboratory, spectral range was 7,500 - 370 cm\eqn{^{-1}} at 0.4 cm\eqn{^{-1}} intervals
+#'   \item Processing: Discarding irrelevant spectral data of the spectrum (7,500 - 5,397.9 cm\eqn{^{-1}}) and noisy edges of the spectrum (599.8 - 370 cm\eqn{^{-1}})
 #'   \item Sensing Date: June 2013, May, 2014 & November 2014
 #'   \item Spectral Information (after data processing):
 #'    \itemize{
@@ -406,7 +442,7 @@
 #' Vector which contains numerical entries from 1 to 10, each number can be used to index the folds for cross validation \cr
 #'
 #' \strong{Coordinates:}
-#' XXX
+#' Dataframe with coordinates (EPSG: 32649)
 #'
 #'
 #' @examples
@@ -429,7 +465,7 @@
 #' @usage H.138
 #' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'.
 #' @docType data
-#' @references XXX
+#' @references [ ? Add data publication ?]
 "H.138"
 
 
@@ -938,10 +974,10 @@
 #'    }
 #'   }
 #'
-#'   pH_ISE – Ion Selective Electrodes for pH Determination
+#'   pH-ISE – Ion Selective Electrodes for pH Determination
 #'   \itemize{
 #'   \item Number Features: 1
-#'   \item Code(s): \code{pH_ISE}
+#'   \item Code(s): \code{pH-ISE}
 #'   \item Unit: Unitless
 #'   \item Sensing: Soil pH Manager (VERIS Technologies, Salinas, USA) on RapidMapper platform, in-situ
 #'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
@@ -1507,7 +1543,7 @@
 #' @description
 #' \itemize{
 #'  \item Target Soil Properties: SOC, pH, Clay
-#'  \item Groups of Features: DEM, ERa, Gamma, pH_ISE, RSS, VI
+#'  \item Groups of Features: DEM, ERa, Gamma, pH-ISE, RSS, VI
 #'  \item Sample size: 72
 #'  \item Number of Features: 17
 #'  \item Coordinates: With coordinates (EPSG: 25833)
@@ -1599,10 +1635,10 @@
 #'   \item Sensing Date: August 2021
 #'   }
 #'
-#'   pH_ISE – Ion Selective Electrodes for pH Determination
+#'   pH-ISE – Ion Selective Electrodes for pH Determination
 #'   \itemize{
 #'   \item Number Features: 1
-#'   \item Code(s): \code{pH_ISE}
+#'   \item Code(s): \code{pH-ISE}
 #'   \item Unit: Unitless
 #'   \item Sensing: Soil pH Manager (VERIS Technologies, Salinas, USA) from VerisMSP3, in-situ
 #'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
@@ -1787,7 +1823,7 @@
 #' @description
 #' \itemize{
 #'  \item Target Soil Properties: SOC, pH, Clay
-#'  \item Groups of Features: ERa, Gamma, NIR, pH_ISE, VI
+#'  \item Groups of Features: ERa, Gamma, NIR, pH-ISE, VI
 #'  \item Sample size: 62
 #'  \item Number of Features: 1,410
 #'  \item Coordinates: Without coordinates because of privacy concerns
@@ -1882,10 +1918,10 @@
 #'      \item Spectral Range: 1,000 - 2,400 nm
 #'    }
 #'   }
-#'   pH_ISE – Ion Selective Electrodes for pH Determination
+#'   pH-ISE – Ion Selective Electrodes for pH Determination
 #'   \itemize{
 #'   \item Number Features: 1
-#'   \item Code(s): \code{pH_ISE}
+#'   \item Code(s): \code{pH-ISE}
 #'   \item Unit: Unitless
 #'   \item Sensing: Soil pH Manager (VERIS Technologies, Salinas, USA) on RapidMapper platform, in-situ
 #'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
@@ -1964,7 +2000,7 @@
 #'  \item Number of Features: 351
 #'  \item Coordinates: Without coordinates because dataset was not georeferenced
 #'  \item Location: State of Sao Paulo, Brazil
-#'  \item Sampling Design:  Random Stratified sampling based on treatment doses of K\eqn{_2}O and CaO
+#'  \item Sampling Design: Random Stratified sampling based on treatment doses of K\eqn{_2}O and CaO
 #'  \item Study Area Size: 0.7 ha
 #'  \item Geological Setting: Heavily weathered soils originating from diabase
 #'  \item Previous Data Publication: Full dataset published in Tavares et al. (2022)
@@ -2214,7 +2250,7 @@
 #'  \item Number of Features: 4
 #'  \item Coordinates: With coordinates (EPSG: 25833)
 #'  \item Location: Brandenburg, Germany
-#'  \item Sampling Design: Multi Criteria Sampling based on quantile coverage of the sensing-features (ECa and pH_ISE), clustering of large and low values of sensing-features and spatial coverage
+#'  \item Sampling Design: Multi Criteria Sampling based on quantile coverage of the sensing-features (ECa and pH-ISE), clustering of large and low values of sensing-features and spatial coverage
 #'  \item Study Area Size: 40 ha
 #'  \item Geological Setting: Pleistocene young morainic landscape of the Weichselian glaciation with predominantly glacial sand
 #'  \item Previous Data Publication: Target soil properties published but under boycott in Vogel et al. 2022
@@ -2288,10 +2324,10 @@
 #'   \item Sensing Date: September 2017
 #'   }
 #'
-#'   pH_ISE – Ion Selective Electrodes for pH Determination
+#'   pH-ISE – Ion Selective Electrodes for pH Determination
 #'   \itemize{
 #'   \item Number Features: 1
-#'   \item Code(s): \code{pH_ISE}
+#'   \item Code(s): \code{pH-ISE}
 #'   \item Unit: Unitless
 #'   \item Sensing: Soil pH Manager (VERIS Technologies, Salinas, USA) from VerisMSP3, in-situ
 #'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
@@ -3255,10 +3291,10 @@
 #'  \item Target Soil Properties: SOC, pH, Clay
 #'  \item Groups of Features: DEM, ERa, pH-ISE. VI
 #'  \item Sample size: 30
-#'  \item Number of Features: 5
+#'  \item Number of Features: 8
 #'  \item Coordinates: With coordinates (EPSG: 25833)
 #'  \item Location: Brandenburg, Germany
-#'  \item Sampling Design: Multi Criteria Sampling based on quantile coverage of the sensing-features (ERa and pH_ISE), clustering of large and low values of sensing-features and spatial coverage
+#'  \item Sampling Design: Multi Criteria Sampling based on quantile coverage of the sensing-features (ERa and pH-ISE), clustering of large and low values of sensing-features and spatial coverage
 #'  \item Study Area Size: 19 ha
 #'  \item Geological Setting: Pleistocene young morainic landscape of the Weichselian glaciation with predominantly glacial sand
 #'  \item Previous Data Publication: Target soil properties published but under boycott in Vogel et al. 2022
@@ -3332,10 +3368,10 @@
 #'   \item Sensing Date: August 2017
 #'   }
 #'
-#'   pH_ISE – Ion Selective Electrodes for pH Determination
+#'   pH-ISE – Ion Selective Electrodes for pH Determination
 #'   \itemize{
 #'   \item Number Features: 1
-#'   \item Code(s): \code{pH_ISE}
+#'   \item Code(s): \code{pH-ISE}
 #'   \item Unit: Unitless
 #'   \item Sensing: Soil pH Manager (VERIS Technologies, Salinas, USA) from VerisMSP3, in-situ
 #'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
@@ -3391,7 +3427,7 @@
 #'  \item Target Soil Properties: SOC, pH, Clay
 #'  \item Groups of Features: DEM, ERa, Gamma, RSS, VI
 #'  \item Sample size: 30
-#'  \item Number of Features: 10
+#'  \item Number of Features: 13
 #'  \item Coordinates: With coordinates (EPSG: 25833)
 #'  \item Location: Brandenburg, Germany
 #'  \item Sampling Design: Regular Grid Sampling

@@ -13,7 +13,7 @@ BB.72
 \description{
 \itemize{
  \item Target Soil Properties: SOC, pH, Clay
- \item Groups of Features: DEM, ERa, Gamma, pH_ISE, RSS, VI
+ \item Groups of Features: DEM, ERa, Gamma, pH-ISE, RSS, VI
  \item Sample size: 72
  \item Number of Features: 17
  \item Coordinates: With coordinates (EPSG: 25833)
@@ -106,10 +106,10 @@ Groups of Features:
   \item Sensing Date: August 2021
   }
 
-  pH_ISE – Ion Selective Electrodes for pH Determination
+  pH-ISE – Ion Selective Electrodes for pH Determination
   \itemize{
   \item Number Features: 1
-  \item Code(s): \code{pH_ISE}
+  \item Code(s): \code{pH-ISE}
   \item Unit: Unitless
   \item Sensing: Soil pH Manager (VERIS Technologies, Salinas, USA) from VerisMSP3, in-situ
   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations

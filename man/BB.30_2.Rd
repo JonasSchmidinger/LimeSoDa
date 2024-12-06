@@ -15,7 +15,7 @@ BB.30_2
  \item Target Soil Properties: SOC, pH, Clay
  \item Groups of Features: DEM, ERa, Gamma, RSS, VI
  \item Sample size: 30
- \item Number of Features: 10
+ \item Number of Features: 13
  \item Coordinates: With coordinates (EPSG: 25833)
  \item Location: Brandenburg, Germany
  \item Sampling Design: Regular Grid Sampling

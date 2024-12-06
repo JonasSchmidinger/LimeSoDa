@@ -17,25 +17,30 @@
 # library(usethis)
 # library(roxygen2)
 # library(Lime.SoDa)
-#
-# O.32_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_dataset_files/O.32_data_table.rds")
-# O.32_data_table.rds
-# folds_O.32_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_split_files/O.32_folds.rds")
-# O.32_coordinates.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_dataset_coordinate_files/O.32_coordinates.rds")
-# O.32_coordinates.rds
-# O.32_coordinates.rds <- NA
+
+# CV.98_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_dataset_files/CV.98_data_table.rds")
+# CV.98_data_table.rds
+# folds_CV.98_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_split_files/CV.98_folds.rds")
+# CV.98_coordinates.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_dataset_coordinate_files/CV.98_coordinates.rds")
+# CV.98_coordinates.rds
+# CV.98_coordinates.rds <- NA
 # # #
-# O.32 <- list("Dataset" = O.32_data_table.rds, "Folds" = folds_O.32_data_table.rds, "Coordinates" = O.32_coordinates.rds)
-# usethis::use_data(O.32,overwrite = TRUE)
+# CV.98 <- list("Dataset" = CV.98_data_table.rds, "Folds" = folds_CV.98_data_table.rds, "Coordinates" = CV.98_coordinates.rds)
+# usethis::use_data(CV.98,overwrite = TRUE)
 # usethis::use_r("data")
-#
+
+# Overview_Datasets <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_dataset_files/Overview_table.rds")
+# usethis::use_data(Overview_Datasets,overwrite = TRUE)
+# usethis::use_r("data")
+
+
 #
 #
 #
 
 # library(ggplot2)
 # library(tidyverse)
-# mir_data <- O.32$Dataset
+# mir_data <- CV.98$Dataset
 # #select all columns where column name contains "wl_"
 # tt <- mir_data[, grepl("wn_", colnames(mir_data))]
 # tt
@@ -55,8 +60,6 @@
 #   theme_minimal() +
 #   theme(legend.title = element_blank())+
 #   scale_x_reverse()
-
-
 
 
 

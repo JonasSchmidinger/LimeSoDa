@@ -121,10 +121,10 @@ Groups of Features:
    }
   }
 
-  pH_ISE – Ion Selective Electrodes for pH Determination
+  pH-ISE – Ion Selective Electrodes for pH Determination
   \itemize{
   \item Number Features: 1
-  \item Code(s): \code{pH_ISE}
+  \item Code(s): \code{pH-ISE}
   \item Unit: Unitless
   \item Sensing: Soil pH Manager (VERIS Technologies, Salinas, USA) on RapidMapper platform, in-situ
   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations

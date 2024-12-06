@@ -18,7 +18,7 @@ BB.51
  \item Number of Features: 4
  \item Coordinates: With coordinates (EPSG: 25833)
  \item Location: Brandenburg, Germany
- \item Sampling Design: Multi Criteria Sampling based on quantile coverage of the sensing-features (ECa and pH_ISE), clustering of large and low values of sensing-features and spatial coverage
+ \item Sampling Design: Multi Criteria Sampling based on quantile coverage of the sensing-features (ECa and pH-ISE), clustering of large and low values of sensing-features and spatial coverage
  \item Study Area Size: 40 ha
  \item Geological Setting: Pleistocene young morainic landscape of the Weichselian glaciation with predominantly glacial sand
  \item Previous Data Publication: Target soil properties published but under boycott in Vogel et al. 2022
@@ -93,10 +93,10 @@ Groups of Features:
   \item Sensing Date: September 2017
   }
 
-  pH_ISE – Ion Selective Electrodes for pH Determination
+  pH-ISE – Ion Selective Electrodes for pH Determination
   \itemize{
   \item Number Features: 1
-  \item Code(s): \code{pH_ISE}
+  \item Code(s): \code{pH-ISE}
   \item Unit: Unitless
   \item Sensing: Soil pH Manager (VERIS Technologies, Salinas, USA) from VerisMSP3, in-situ
   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
