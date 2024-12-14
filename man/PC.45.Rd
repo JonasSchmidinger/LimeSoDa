@@ -5,14 +5,129 @@
 \alias{PC.45}
 \title{PC.45 Dataset}
 \format{
-An object of class \code{list} of length 3.
+A list with three elements: 'Dataset','Coordinates' and 'Folds'
 }
 \usage{
 PC.45
 }
 \description{
 \itemize{
- \item Metadata not yet received
- }
+ \item Target Soil Properties: SOC, pH, Clay
+ \item Groups of Features: CSMoist, ERa
+ \item Sample size: 45
+ \item Number of Features: 4
+ \item Coordinates: Without coordinates as coordinates could not be found anymore
+ \item Location: Pest County, Hungary
+ \item Sampling Design: Stratified Systematic Sampling, where three 70 m wide transects were selected based on contrasting environmental settings and soil types ((1) agricultural land, (2) salt affected grassland, (3) forest)
+ \item Study Area Size: 4.5 ha
+ \item Geological Setting: Alluvial plain of the Danube (2 transects) and wind-blown dune region, where the calcareous sediments are originating from the Danube
+ \item Previous Data Publication: None
+ \item Contact Information:
+   \itemize{
+     \item Csilla.Farkas (Csilla.Farkas@nibio.no), Norwegian Institute of Bioeconomy Research (NIBIO)
+     \item Tibor Tóth (tibor@rissac.hu), HUN-REN Centre for Agricultural Research
+     }
+ \item License: CC BY-SA 4.0
+ \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
+ \item Changelog:
+   \itemize{
+     \item Version 1.0 (XXX.2025): Initial release
+   }
+}
+\cr
+}
+\details{
+\describe{
+\strong{Dataset:}
+Dataframe which contains the tabular dataset with the target soil properties and features}
+\describe{
+Target Soil Properties:
+
+   SOC - Soil Organic Carbon
+   \itemize{
+   \item Code: \code{SOC_target}
+   \item Unit: \%
+   \item Protocol: Measured through titration after oxidization of the organic carbon (Tyurin 1935)
+   \item Sampling Date: November 2004
+   \item Sampling Depth: 0 – 20 cm
+   }
+
+   pH
+   \itemize{
+   \item Code: \code{pH_target}
+   \item Unit: Unitless
+   \item Protocol: Measured in water suspension with a glass electrode with a 2.5:1 liquid:soil volumetric ratio (MSz-08-0206/2-1978)
+   \item Sampling Date: November 2004
+   \item Sampling Depth: 0 – 20 cm
+}
+
+   Clay
+   \itemize{
+   \item Code: \code{Clay_target}
+   \item Unit: \%
+   \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, Hungarian adaption (MSZ-08-0205-1978)
+   \item Sampling Date: November 2004
+   \item Sampling Depth: 0 – 20 cm
+   }
+
+}
+
+\cr
+Groups of Features:
+\describe{
+  CSMoist – Capacitive Soil Moisture
+  \itemize{
+  \item Number Features: 1
+  \item Code(s): \code{CSMoist}
+  \item Unit: \% (volumetric moisture content)
+  \item Sensing: Capacitive soil moisture sensor (BR-30, Research Institute of Soil Science and Agricultural Chemistry, Hungary, Budapest) with exploration depth of 10 cm, in-situ
+  \item Processing: None
+  \item Sampling Date: November 2004
+  }
+
+  ERa – Apparent Electrical Resistivity
+  \itemize{
+  \item Number Features: 3
+  \item Code(s): \code{ERa_EM, ERa_ERS, ERa_P}
+  \item Unit: \eqn{\Omega} m
+  \item Sensing: Three different devices
+   \itemize{
+     \item \code{ERa_EM} from Electromagnetic induction sensor (EMRC-120, Geoelectro, Nagykovácsi, Hungary) with exploration depth of 100 cm, in-situ
+     \item \code{ERa_ERS} from four electrode resistivity sensors (Martek SCT, Martek Instruments Inc., USA, Raleigh) with exploration depth of 20 cm, in-situ
+     \item \code{ERa_P} from Dielectric probe (Percometer, Adek ltd, Estonia, Tiskre) with exploration depth of 10 to 50 cm, in-situ
+     }
+  \item Processing: None
+  \item Sampling Date: November 2004
+  }
+
+}
+\cr
+
+\strong{Folds:}
+Vector which contains numerical entries from 1 to 10, each number can be used to index the folds for cross validation \cr
+
+\strong{Coordinates:}
+Empty entry (NA)
+}
+\examples{
+# Load the dataset list
+PC.45
+
+# Access the dataset
+PC.45$Dataset
+
+# Access the folds
+PC.45$Folds
+
+# Access the coordinates but empty for PC.45 (i.e. NA)
+PC.45$Coordinates
+
+# How to split the dataset into training and testing folds for the example of the first fold
+training_data_PC.45 <- PC.45$Dataset[PC.45$Folds != 1,]
+testing_data_PC.45 <- PC.45$Dataset[PC.45$Folds == 1,]
+
+}
+\references{
+Tyurin, I. V. (1935). Comparative study of the methods for the determination of organic carbon in soils and water extracts from soils. Materials on genesis and geography of soils, ML Academy of Sci USSR, 139-158.
 }
 \keyword{datasets}

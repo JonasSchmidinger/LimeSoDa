@@ -8,7 +8,7 @@ Authors@R:
               role = c("aut", "cre"),
               email = "Jonas.Schmidinger@uni-osnabrueck.de"))
 Description: This R-packages contains field- and farm-scale datasets for digital soil mapping purposes.
-License: CC BY-NC-SA 4.0 
+License: CC BY-SA 4.0 
 Encoding: UTF-8
 LazyData: true
 LazyDataCompression: gzip 

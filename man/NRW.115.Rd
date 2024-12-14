@@ -5,7 +5,7 @@
 \alias{NRW.115}
 \title{NRW.115 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+A list with three elements: 'Dataset','Coordinates' and 'Folds'
 }
 \usage{
 NRW.115
@@ -26,7 +26,7 @@ NRW.115
    \itemize{
      \item Stefan Paetzold (s.paetzold@uni-bonn.de), University of Bonn
      }
- \item License: CC BY-NC-SA 4.0
+ \item License: CC BY-SA 4.0
  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
  \item Changelog:
    \itemize{
@@ -64,7 +64,7 @@ Target Soil Properties:
    \itemize{
    \item Code: \code{Clay_target}
    \item Unit: \%
-   \item Measured through a combination of wet sieving and sedimentation after dispersion and removal of organic matter through oxidation (DIN ISO 11277)
+   \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaption (DIN ISO 11277)
    \item Sampling Date: October 2013 & November 2015
    \item Sampling Depth: 0 - 30 cm
    }
@@ -74,16 +74,15 @@ Groups of Features:
 \describe{
   MIR – Mid Infrared Spectroscopy
   \itemize{
-  \item Number Features: 1,686 \cr
-  \item Code(s): \code{wn_3799, wn_3797.1, wn_3795.1} ... \code{wn_549.6} \cr
-  \item Unit: Unitless \cr
-  \item Sensing: MIR spectrometer (Bruker Tensor 27 HTS-XT, Bruker Optik, Ettlingen, Germany), on dried and sieved samples (<2 mm) in the laboratory, spectral range was 7,500 – 549.6 cm\eqn{^{-1}} at 4 cm\eqn{^{-1}} intervals \cr
-  \item Processing: Discarding irrelevant spectral data of the spectrum (7,500 - 3,799 cm\eqn{^{-1}}), resampling to ~2 cm\eqn{^{-1}} intervals\cr
-  \item Sensing Date: October 2013 & November 2015
+  \item Number Features: 1,686
+  \item Code(s): \code{wn_3799, wn_3797.1, wn_3795.1} ... \code{wn_549.6}
+  \item Unit: \% (Reflectance)
+  \item Sensing: MIR spectrometer (Bruker Tensor 27 HTS-XT, Bruker Optik, Ettlingen, Germany), on dried and sieved samples (<2 mm) in the laboratory, spectral range was 7,500 – 549.6 cm\eqn{^{-1}} at 4 cm\eqn{^{-1}} intervals
+  \item Processing: Discarding irrelevant spectral data of the spectrum (7,500 - 3,799 cm\eqn{^{-1}}), resampling to ~2 cm\eqn{^{-1}} intervals
+  \item Sampling Date: October 2013 & November 2015
   \item Spectral Information (after data processing):
    \itemize{
      \item Data Representation: Wavenumber (in cm\eqn{^{-1}})
-     \item Measurement Type: Reflectance
      \item Spectral Resolution: ~ 2 cm\eqn{^{-1}}
      \item Spectral Range: 3,799 - 549.6 cm\eqn{^{-1}}
    }

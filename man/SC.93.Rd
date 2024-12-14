@@ -5,7 +5,7 @@
 \alias{SC.93}
 \title{SC.93 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+A list with three elements: 'Dataset','Coordinates' and 'Folds'
 }
 \usage{
 SC.93
@@ -27,7 +27,7 @@ SC.93
      \item Taciara Zborowski Horst (taciaraz@utfpr.edu.br), Federal University of Technology – Paraná
      \item Ricardo Simão Diniz Dalmolin (dalmolin@ufsm.br), Federal University of Santa Maria
      }
- \item License: CC BY-NC-SA 4.0
+ \item License: CC BY-SA 4.0
  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
  \item Changelog:
    \itemize{
@@ -57,6 +57,7 @@ Target Soil Properties:
    \item Code: \code{pH_target}
    \item Unit: Unitless
    \item Protocol: Measured in water suspension with a glass electrode ratio with a 1:1 liquid:soil [? volmetric or gravimetric ?] ratio
+   \item Sampling Date: December 2016
    \item Sampling Depth: 0 - 20 cm
 }
 
@@ -75,16 +76,15 @@ Groups of Features:
 \describe{
   vis-NIR – Visible and Near Infrared Spectroscopy
   \itemize{
-  \item Number Features: 2,146 \cr
-  \item Code(s): \code{wl_355, wl_356, wl_357} ... \code{wl_2500} \cr
-  \item Unit: Unitless \cr
-  \item Sensing: vis-NIR spectrometer (ASD FieldSpec 4, Analytical Spectral Devices Inc., Boulder, USA), on dried and sieved samples (<2 mm) in the laboratory, spectral range was 355 - 2,500 nm at 3 - 8 nm spectral resolution
-  \item Processing: Reesampling to 1 nm intervals\cr
-  \item Sensing Date: March 2017
+  \item Number Features: 2,146
+  \item Code(s): \code{wl_355, wl_356, wl_357} ... \code{wl_2500}
+  \item Unit: \% (Reflectance)
+  \item Sensing: ASD FieldSpec 4 (Analytical Spectral Devices Inc., Boulder, USA), on dried and sieved samples (<2 mm) in the laboratory, spectral range was 355 - 2,500 nm at 3 - 8 nm spectral resolution
+  \item Processing: Reesampling to 1 nm intervals
+  \item Sampling Date: March 2017
   \item Spectral Information (after data processing):
    \itemize{
      \item Data Representation: Wavelength (in nm)
-     \item Measurement Type: Reflectance
      \item Spectral Resolution: 1 nm
      \item Spectral Range: 355 – 2500 nm
    }

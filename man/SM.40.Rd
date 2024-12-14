@@ -5,7 +5,7 @@
 \alias{SM.40}
 \title{SM.40 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+A list with three elements: 'Dataset','Coordinates' and 'Folds'
 }
 \usage{
 SM.40
@@ -18,7 +18,7 @@ SM.40
  \item Number of Features: 3
  \item Coordinates: With coordinates (EPSG: 32633)
  \item Location: South Moravia, Czechia
- \item Sampling Design: Subsample from previous Regular Grid Sampling, subsample was handpicked to cover contrasting areas
+ \item Sampling Design: Stratified Sampling from previous Regular Grid Sampling, stratification was handpicked to cover contrasting areas
  \item Study Area Size: 53 ha
  \item Geological Setting: Weichselian sandy loess [? Eventually wrong ?]
  \item Previous Data Publication: None
@@ -26,7 +26,7 @@ SM.40
    \itemize{
      \item Vojtech Lukas (vojtech.lukas@mendelu.cz), Mendel University in Brno
      }
- \item License: CC BY-NC-SA 4.0
+ \item License: CC BY-SA 4.0
  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
  \item Changelog:
    \itemize{
@@ -44,7 +44,7 @@ Target Soil Properties:
 
    SOC - Soil Organic Carbon
    \itemize{
-   \item Code: \code{SOM_target}
+   \item Code: \code{SOC_target}
    \item Unit: \%
    \item Protocol: Measured through titration after oxidization of the organic carbon following slight adjustments of the Walkley & Black (1934) method (Zbíral et al. 2004)
    \item Sampling Date: May 2004
@@ -77,10 +77,10 @@ Groups of Features:
   \itemize{
   \item Number Features: 2
   \item Code(s): \code{Altitude, Slope}
-  \item Unit: \code{Altitude} (m), \code{Slope } (°)
+  \item Unit: \code{Altitude} in m, \code{Slope } in °
   \item Sensing: Digital elevation model raster (~2 m) based on LiDAR from “Geoportal of the Czech Office for Surveying, Mapping and Cadastre"
   \item Processing: Calculating \code{Slope} with \code{\link[raster]{terrain}} function of the \pkg{raster} package, extracting DEM values from raster at soil sampling locations
-  \item Sensing Date: Unknown
+  \item Sampling Date: Unknown
   }
 
   ERa – Apparent Electrical Resistivity
@@ -90,7 +90,7 @@ Groups of Features:
   \item Unit: \eqn{\Omega} m
   \item Sensing: EM38 sensor (Geonics Ltd., Mississauga, Canada) drawn by a vehicle with exploration depth of 0 - 75 cm, in-situ
   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-  \item Sensing Date: May 2004
+  \item Sampling Date: May 2004
   }
 
 }

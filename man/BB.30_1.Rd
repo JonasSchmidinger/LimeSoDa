@@ -5,7 +5,7 @@
 \alias{BB.30_1}
 \title{BB.30_1 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+A list with three elements: 'Dataset','Coordinates' and 'Folds'
 }
 \usage{
 BB.30_1
@@ -18,7 +18,7 @@ BB.30_1
  \item Number of Features: 8
  \item Coordinates: With coordinates (EPSG: 25833)
  \item Location: Brandenburg, Germany
- \item Sampling Design: Multi Criteria Sampling based on quantile coverage of the sensing-features (ERa and pH-ISE), clustering of large and low values of sensing-features and spatial coverage
+ \item Sampling Design: Multi Criteria Sampling (Bönecke et al. 2021) based on quantile coverage of the sensing-features (ERa and pH-ISE), clustering of large and low values of sensing-features and spatial coverage
  \item Study Area Size: 19 ha
  \item Geological Setting: Pleistocene young morainic landscape of the Weichselian glaciation with predominantly glacial sand
  \item Previous Data Publication: Target soil properties published but under boycott in Vogel et al. 2022
@@ -26,7 +26,7 @@ BB.30_1
    \itemize{
      \item Sebastian Vogel (SVogel@atb-potsdam.de), Leibniz Institute for Agricultural Engineering and Bioeconomy (ATB)
      }
- \item License: CC BY-NC-SA 4.0
+ \item License: CC BY-SA 4.0
  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
  \item Changelog:
    \itemize{
@@ -64,7 +64,7 @@ Target Soil Properties:
    \itemize{
    \item Code: \code{Clay_target}
    \item Unit: \%
-   \item Protocol: Measured through a combination of wet sieving and sedimentation after dispersion and removal of organic matter through oxidation (DIN ISO 11277)
+   \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaption (DIN ISO 11277)
    \item Sampling Date: August & October 2017
    \item Sampling Depth: 0 - 30 cm
    }
@@ -77,10 +77,10 @@ Groups of Features:
   \itemize{
   \item Number Features: 2
   \item Code(s): \code{Altitude, Slope}
-  \item Unit: \code{Altitude} (m), \code{Slope } (°)
+  \item Unit: \code{Altitude} in m, \code{Slope } in °
   \item Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from “GeoBasis-DE/LGB”
   \item Processing: Calculating \code{Slope} with \code{\link[raster]{terrain}} function of the \pkg{raster} package, extracting DEM values from raster at soil sampling locations
-  \item Sensing Date: LiDAR March 2011, images for photogrammetry May 2022
+  \item Sampling Date: LiDAR March 2011, images for photogrammetry May 2022
   }
 
   ERa – Apparent Electrical Resistivity
@@ -90,7 +90,7 @@ Groups of Features:
   \item Unit: \eqn{\Omega} m
   \item Sensing: EC Surveyor (VERIS Technologies, Salinas, USA) from VerisMSP3 with exploration depth of 0 - 30 cm, in-situ
   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-  \item Sensing Date: August 2017
+  \item Sampling Date: August 2017
   }
 
   pH-ISE – Ion Selective Electrodes for pH Determination
@@ -100,7 +100,7 @@ Groups of Features:
   \item Unit: Unitless
   \item Sensing: Soil pH Manager (VERIS Technologies, Salinas, USA) from VerisMSP3, in-situ
   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-  \item Sensing Date: August 2017
+  \item Sampling Date: August 2017
   }
   VI - Vegetation Indices
   \itemize{
@@ -109,7 +109,7 @@ Groups of Features:
   \item Unit: Unitless
   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04), extracting VI values from raster at soil sampling locations
-  \item Sensing Date: May 2017
+  \item Sampling Date: May 2017
    }
 }
 \cr
@@ -140,6 +140,8 @@ testing_data_BB.30_1 <- BB.30_1$Dataset[BB.30_1$Folds == 1,]
 
 }
 \references{
-Vogel S., Bönecke E., Kling C., Kramer E., Lück K., Nagel A., Philipp G., Rühlmann J., Schröter I. & Gebbers, R. (2022), Base neutralizing capacity from agricultural fields in the quaternary landscape of North-East Germany, BONARES Repository, https://doi.org/10.20387/bonares-zh3x-nd80
+Vogel S., Bönecke E., Kling C., Kramer E., Lück K., Nagel A., Philipp G., Rühlmann J., Schröter I. & Gebbers, R. (2022), Base neutralizing capacity from agricultural fields in the quaternary landscape of North-East Germany, BONARES Repository, https://doi.org/10.20387/bonares-zh3x-nd80 \cr
+\cr
+Bönecke, E., Meyer, S., Vogel, S., Schröter, I., Gebbers, R., Kling, C., Kramer, E., Lück, K., Nagel A., Philipp, G., Gerlach F., Palme S., Scheibe D., Ziegler K. & Rühlmann, J. (2021). Guidelines for precise lime management based on high-resolution soil pH, texture and SOM maps generated from proximal soil sensing data. Precision Agriculture, 22, 493-523.
 }
 \keyword{datasets}

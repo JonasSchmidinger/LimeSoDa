@@ -12,7 +12,7 @@ BC.58
 }
 \description{
 \itemize{
- \item dataset will probably be dropped because something seems wrong! Performance with MIR data should be much better !
+ \item dataset will probably be dropped because I have somer concerns about the data quality
  }
 }
 \keyword{datasets}

@@ -5,7 +5,7 @@
 \alias{MG.44}
 \title{MG.44 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+A list with three elements: 'Dataset','Coordinates' and 'Folds'
 }
 \usage{
 MG.44
@@ -18,7 +18,7 @@ MG.44
  \item Number of Features: 351
  \item Coordinates: With coordinates (EPSG: 32721)
  \item Location: Mato Grosso, Brazil
- \item Sampling Design:  Random sample from previous Regular Grid Sampling
+ \item Sampling Design: Random Sampling from previous Regular Grid Sampling
  \item Study Area Size: 13 ha
  \item Geological Setting: Heavily weathered soils originating from Sandstone
  \item Previous Data Publication: Full dataset published in Tavares et al. (2022)
@@ -27,7 +27,7 @@ MG.44
      \item Tiago Rodrigues Tavares, tiagosrt@usp.br, University of Sao Paulo
      \item José Paulo Molin (jpmolin@usp.br), University of Sao Paulo
      }
- \item License: CC BY-NC-SA 4.0
+ \item License: CC BY-SA 4.0
  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
  \item Changelog:
    \itemize{
@@ -78,14 +78,13 @@ Groups of Features:
   \itemize{
   \item Number Features: 351
   \item Code(s): \code{wl_431.6, wl_437.4, wl_449.1} ... \code{wl_2153.1}
-  \item Unit: Unitless
-  \item Sensing: Device of former Veris MSP3 (Veris Technologies, Salina, Kansas, USA) which is based on two spectrometers (USB4000, Ocean optics, Largo, FL, USA) for the visible region and (C9914GB, Hamamatsu Photonics, Hamamatsu, Japan) for the NIR region, on dried and sieved samples (<2 mm) in the laboratory, spectral range was 343 - 2,200 nm at ~5 nm spectral resolution
+  \item Unit: \% (Reflectance)
+  \item Sensing: vis-NIR spectrometer of former Veris MSP3 (Veris Technologies, Salina, Kansas, USA) which is based on two spectrometers (USB4000, Ocean optics, Largo, FL, USA) for the visible region and (C9914GB, Hamamatsu Photonics, Hamamatsu, Japan) for the NIR region, on dried and sieved samples (<2 mm) in the laboratory, spectral range was 343 - 2,200 nm at ~5 nm spectral resolution
   \item Processing: Discarding noisy edges of the spectrum (343 - 431.6 nm & 2153.1 - 2,200 nm)
-  \item Sensing Date: March 2016
+  \item Sampling Date: March 2016
   \item Spectral Information (after data processing):
    \itemize{
      \item Data Representation: Wavelength (in nm)
-     \item Measurement Type: Reflectance
      \item Spectral Resolution: ~5 nm
      \item Spectral Range: 431.6 - 2,153.1 nm
    }

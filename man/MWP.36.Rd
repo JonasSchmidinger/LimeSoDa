@@ -5,7 +5,7 @@
 \alias{MWP.36}
 \title{MWP.36 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+A list with three elements: 'Dataset','Coordinates' and 'Folds'
 }
 \usage{
 MWP.36
@@ -26,7 +26,7 @@ MWP.36
    \itemize{
      \item Alexander Steiger (alexander.steiger@uni-rostock.de), University of Rostock
      }
- \item License: CC BY-NC-SA 4.0
+ \item License: CC BY-SA 4.0
  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
  \item Changelog:
    \itemize{
@@ -65,6 +65,7 @@ Target Soil Properties:
    \item Code: \code{Clay_target}
    \item Unit: \%
    \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water (Gee and Bauder 1986)
+   \item Sampling Date: August 2022
    \item Sampling Depth: 0 – 15 cm
    }
 
@@ -77,10 +78,10 @@ Groups of Features:
   \itemize{
   \item Number Features: 2
   \item Code(s): \code{Altitude, Slope}
-  \item Unit: \code{Altitude} (m), \code{Slope } (°)
+  \item Unit: \code{Altitude} in m, \code{Slope } in °
   \item Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from “LAiV Geodaten-MV”
   \item Processing: Calculating \code{Slope} with \code{\link[raster]{terrain}} function of the \pkg{raster} package, extracting DEM values from raster at soil sampling locations
-  \item Sensing Date: Unknown
+  \item Sampling Date: Unknown
   }
 
   RSS – Remote Sensing Derived Spectral Data
@@ -88,9 +89,9 @@ Groups of Features:
   \item Number Features: 3
   \item Code(s): \code{B02, B8A, B11}
   \item Unit: Unitless
-  \item Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”
+  \item Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”, with bands of 10 - 20 m spatial resolution
   \item Processing: Extracting RSS values from raster at soil sampling locations, selecting bands spread throughout the spectral range with lower intercorrelation
-  \item Sensing Date: August 2022
+  \item Sampling Date: August 2022
   }
 
 }

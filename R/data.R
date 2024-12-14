@@ -2,14 +2,14 @@
 #' @description
 #' This table gives an overview of datasets used in Lime.SoDa and containts:
 #' \itemize{
-#'  \item Dataset: The name of the dataset
+#'  \item Dataset_ID: The ID (i.e. name) of the dataset
 #'  \item Number_of_samples: The number of analysed soil samples (i.e. rows) in the dataset
 #'  \item Number_of_features: The number of features (i.e. columns) in the dataset
 #'  \item Sensors: The type of sensors used to create the features in the dataset, see abbrevations below
 #'  \item Coordinates: Specifies whether coordinates or dummy covariates are available for the dataset
 #'  \item Location: The location where the dataset was collected
 #'  \item Study_area_in_ha: The size of the study area in ha
-#'  \item Sampling_Design: The sampling design used to collect the dataset
+#'  \item Sampling_Design: The sampling design used to collect the dataset as short description compared to metadata description
 #'  }
 #'  Abbreviations for sensors:
 #' \itemize{
@@ -62,7 +62,7 @@
 #'      \item Sebastian Vogel (SVogel@atb-potsdam.de), Leibniz Institute for Agricultural Engineering and Bioeconomy (ATB)
 #'      \item Joerg Ruehlmann (ruehlmann@igzev.de), Leibniz Institute of Vegetable and Ornamental Crops (IGZ)
 #'      }
-#'  \item License: CC BY-NC-SA 4.0
+#'  \item License: CC BY-SA 4.0
 #'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
@@ -99,7 +99,7 @@
 #'    \itemize{
 #'    \item Code: \code{Clay_target}
 #'    \item Unit: \%
-#'    \item Protocol: Measured through a combination of wet sieving and sedimentation after dispersion and removal of organic matter through oxidation (DIN ISO 11277)
+#'    \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaption (DIN ISO 11277)
 #'    \item Sampling Date: May 2020
 #'    \item Sampling Depth: 0 - 30 cm
 #'    }
@@ -112,10 +112,10 @@
 #'   \itemize{
 #'   \item Number Features: 2
 #'   \item Code(s): \code{Altitude, Slope}
-#'   \item Unit: \code{Altitude} (m), \code{Slope } (°)
+#'   \item Unit: \code{Altitude} in m, \code{Slope } in °
 #'   \item Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from “GeoBasis-DE/LGB”
 #'   \item Processing: Calculating \code{Slope} with \code{\link[raster]{terrain}} function of the \pkg{raster} package, extracting DEM values from raster at soil sampling locations
-#'   \item Sensing Date: LiDAR March 2009, images for photogrammetry May 2018
+#'   \item Sampling Date: LiDAR March 2009, images for photogrammetry May 2018
 #'   }
 #'
 #'   ERa – Apparent Electrical Resistivity
@@ -123,9 +123,9 @@
 #'   \item Number Features: 1
 #'   \item Code(s): \code{ERa}
 #'   \item Unit: \eqn{\Omega} m
-#'   \item Sensing: Array of multiple rolling electrodes(Geophilus company, Caputh, Germany) on Geophilus platform with exploration depth of 0 - 25 cm, in-situ
+#'   \item Sensing: Array of multiple rolling electrodes (Geophilus company, Caputh, Germany) on Geophilus platform with exploration depth of 0 - 25 cm, in-situ
 #'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-#'   \item Sensing Date: August 2021
+#'   \item Sampling Date: August 2021
 #'   }
 #'
 #'   Gamma
@@ -133,9 +133,9 @@
 #'   \item Number Features: 1
 #'   \item Code(s): \code{G_Total_Counts}
 #'   \item Unit: Unitless
-#'   \item Sensing: Gamma sensor (gamma sensor model is not commercially available) on Geophilus platform, in-situ
+#'   \item Sensing: Passive gamma sensor (Passive gamma sensor model is not commercially available) on Geophilus platform, in-situ
 #'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-#'   \item Sensing Date: August 2021
+#'   \item Sampling Date: August 2021
 #'   }
 #'
 #'   pH-ISE – Ion Selective Electrodes for pH Determination
@@ -145,9 +145,8 @@
 #'   \item Unit: Unitless
 #'   \item Sensing: Soil pH Manager (VERIS Technologies, Salinas, USA) from VerisMSP3, in-situ
 #'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-#'   \item Sensing Date: August 2021
+#'   \item Sampling Date: August 2021
 #'   }
-#'
 #'
 #'   RSS – Remote Sensing Derived Spectral Data
 #'   \itemize{
@@ -156,7 +155,7 @@
 #'   \item Unit: Unitless
 #'   \item Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”, with bands of 10 - 20 m spatial resolution
 #'   \item Processing: Extracting RSS values from raster at soil sampling locations
-#'   \item Sensing Date: April 2020
+#'   \item Sampling Date: April 2020
 #'   }
 #'
 #'   VI - Vegetation Indices
@@ -166,7 +165,7 @@
 #'   \item Unit: Unitless
 #'   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
 #'   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04) and \code{GNDVI} as (B08 - B03) / (B08 + B03), extracting VI values from raster at soil sampling locations
-#'   \item Sensing Date: August 2020
+#'   \item Sampling Date: August 2020
 #'   }
 #'
 #' }
@@ -197,7 +196,7 @@
 #' testing_data_BB.250 <- BB.250$Dataset[BB.250$Folds == 1,]
 #'
 #' @usage BB.250
-#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
 #' @references Vogel S., Bönecke E., Kling C., Kramer E., Lück K., Nagel A., Philipp G., Rühlmann J., Schröter I. & Gebbers, R. (2022), Base neutralizing capacity from agricultural fields in the quaternary landscape of North-East Germany, BONARES Repository, https://doi.org/10.20387/bonares-zh3x-nd80
 "BB.250"
@@ -207,13 +206,130 @@
 
 
 
+
+
 #' @title SP.231 Dataset
 #' @description
 #' \itemize{
-#'  \item Metadata not yet received
-#'  }
+#'  \item Target Soil Properties: SOM, pH, Clay
+#'  \item Groups of Features: vis-NIR
+#'  \item Sample size: 231
+#'  \item Number of Features: 271
+#'  \item Coordinates: With coordinates (EPSG: 32654)
+#'  \item Location: Saitama Prefecture, Japan
+#'  \item Sampling Design: Two sampling designs over multiple fields depending on the soil conditions: (1) Systematic Sampling, in which samples are taken in the corners and middle of the field and (2) Fully Random Sampling
+#'  \item Study Area Size: 3.1 ha
+#'  \item Geological Setting: Silandic Andosols
+#'  \item Previous Data Publication: None
+#'  \item Contact Information:
+#'    \itemize{
+#'      \item Masakazu Kodaira (kodaira@cc.tuat.ac.jp), Tokyo University of Agriculture and Technology
+#'      }
+#'  \item License: CC BY-SA 4.0
+#'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
+#'  \item Changelog:
+#'    \itemize{
+#'      \item Version 1.0 (XXX.2025): Initial release
+#'    }
+#' }
+#' \cr
+#' @details
+#' \describe{
+#' \strong{Dataset:}
+#' Dataframe which contains the tabular dataset with the target soil properties and features}
+#' \describe{
+#' Target Soil Properties:
+#'
+#'    SOM - Soil Organic Matter
+#'    \itemize{
+#'    \item Code: \code{SOM_target}
+#'    \item Unit: \%
+#'    \item Protocol: Measured through the weight difference before and after ignition
+#'    \item Sampling Date: February 2017, December 2017 and February 2018
+#'    \item Sampling Depth: 0 - 15 cm
+#'    }
+#'
+#'
+#'    pH
+#'    \itemize{
+#'    \item Code: \code{pH_target}
+#'    \item Unit: Unitless
+#'    \item Protocol: Measured in water suspension with a glass electrode with a 2.5:1 liquid:soil gravimetric ratio
+#'    \item Sampling Date: February 2017, December 2017 and February 2018
+#'    \item Sampling Depth: 0 - 15 cm
+#' }
+#'
+#'
+#'    Clay
+#'    \itemize{
+#'    \item Code: \code{Clay_target}
+#'    \item Unit: \%
+#'    \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water (Gee and Bauder 1986)
+#'    \item Sampling Date: February 2017, December 2017 and February 2018
+#'    \item Sampling Depth: 0 - 15 cm
+#'    }
+#' }
+#' \cr
+#' Groups of Features:
+#' \describe{
+#'   vis-NIR – Visible and Near Infrared Spectroscopy
+#'   \itemize{
+#'   \item Number Features: 2,081
+#'   \item Code(s): \code{wl_350, wl_355, wl_360} ... \code{wl_1700}
+#'   \item Unit: \% (Reflectance)
+#'   \item Sensing: mounted vis-NIR spectrometer (SAS3000, Shibuya Seiki Co. Ltd., Ehime Prefecture, Japan), in-situ, spectral range was 320 – 1,700 nm at 1 - 7 nm intervals [?metadata per email said 0.33 to 1.56 nm but in the paper it says 1 to 7 nm, which is correct?]
+#'   \item Processing: Discarding noisy edges of the spectrum (320 - 350 nm), resampling to 5 nm intervals
+#'   \item Sampling Date: February 2017, December 2017 and February 2018
+#'   \item Spectral Information (after data processing):
+#'    \itemize{
+#'      \item Data Representation: Wavelength (in nm)
+#'      \item Spectral Resolution: 1 nm
+#'      \item Spectral Range: 350 - 1,700 nm
+#'    }
+#'   }
+#'
+#' }
+#'
+#'\cr
+#'
+#'
+#' \strong{Folds:}
+#' Vector which contains numerical entries from 1 to 10, each number can be used to index the folds for cross validation \cr
+#'
+#' \strong{Coordinates:}
+#' Dataframe with coordinates (EPSG: 32654)
+#'
+#'
+#' @examples
+#' # Load the dataset list
+#' SP.231
+#'
+#' # Access the dataset
+#' SP.231$Dataset
+#'
+#' # Access the folds
+#' SP.231$Folds
+#'
+#' # Access the coordinates
+#' SP.231$Coordinates
+#'
+#' # How to split the dataset into training and testing folds for the example of the first fold
+#' training_data_SP.231 <- SP.231$Dataset[SP.231$Folds != 1,]
+#' testing_data_SP.231 <- SP.231$Dataset[SP.231$Folds == 1,]
+#'
+#' @usage SP.231
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
+#' @references Walkley, A. & Black, I. A. (1934). An examination of the Degtjareff method for determining soil organic matter, and a proposed modification of the chromic acid titration method. Soil science, 37(1), 29-38.
 "SP.231"
+
+
+
+
+
+
+
+
 
 
 
@@ -238,7 +354,7 @@
 #'    \itemize{
 #'      \item Domingos Sarvio Magalhaes Valente (valente@ufv.br), Federal University of Vicosa
 #'      }
-#'  \item License: CC BY-NC-SA 4.0
+#'  \item License: CC BY-SA 4.0
 #'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
@@ -287,10 +403,10 @@
 #'   \itemize{
 #'   \item Number Features: 2
 #'   \item Code(s): \code{Altitude, Slope}
-#'   \item Unit: \code{Altitude} (m), \code{Slope } (°)
+#'   \item Unit: \code{Altitude} in m, \code{Slope } in °
 #'   \item Sensing: Digital elevation model raster (30 m) based on synthetic aperture radar from “Copernicus Open Access Hub”
 #'   \item Processing: Calculating \code{Slope} with \code{\link[raster]{terrain}} function of the \pkg{raster} package, extracting DEM values from raster at soil sampling locations
-#'   \item Sensing Date: January 2010
+#'   \item Sampling Date: January 2010
 #'   }
 #'
 #'   RSS – Remote Sensing Derived Spectral Data
@@ -300,7 +416,7 @@
 #'   \item Unit: Unitless
 #'   \item Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”
 #'   \item Processing: Extracting RSS values from raster at soil sampling locations
-#'   \item Sensing Date: November 2016
+#'   \item Sampling Date: November 2016
 #'   }
 #'
 #'   VI - Vegetation Indices
@@ -310,7 +426,7 @@
 #'   \item Unit: Unitless
 #'   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
 #'   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04) and \code{GNDVI} as (B08 - B03) / (B08 + B03), extracting VI values from raster at soil sampling locations
-#'   \item Sensing Date: January 2017
+#'   \item Sampling Date: January 2017
 #'   }
 #' }
 #'\cr
@@ -340,7 +456,7 @@
 #' testing_data_B.204 <- B.204$Dataset[B.204$Folds == 1,]
 #'
 #' @usage B.204
-#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
 #' @references Gee, G.W. & Bauder, J.W. (1986) Particle-Size Analysis. In: Klute, A., Ed., Methods of Soil Analysis, Part 1. Physical and Mineralogical Methods, Agronomy Monograph No. 9, 2nd Edition, American Society of Agronomy/Soil Science Society of America, Madison, WI, 383-411.\cr
 #' \cr
@@ -362,15 +478,15 @@
 #'  \item Number of Features: 2,489
 #'  \item Coordinates: With coordinates (EPSG: 32649)
 #'  \item Location: Hubei, China
-#'  \item Sampling Design: XXX
+#'  \item Sampling Design: Two sampling designs: (1) adapted Latin Hypercube Sampling taking into account legacy samples, correlation and accessibility based on terrain parameters and (2) Uncertainty Guided Sampling based on uncertainty predictions from a Random Forest model (Stumpf et al. 2017)
 #'  \item Study Area Size: 420 ha
 #'  \item Geological Setting: Sedimentary rocks, mainly dolomite with silt and limestone formed in the middle and lower Jurassic
-#'  \item Previous Data Publication: Full dataset published in Wadoux et al. (2025) [?Not yet published?]
+#'  \item Previous Data Publication: Full dataset published in Wadoux et al. (2025) [?Not yet published but planned?]
 #'  \item Contact Information:
 #'    \itemize{
 #'      \item Alexandre M.J.-C- Wadoux (Alexandre.Wadoux@inrae.fr), University of Montpellier
 #'      }
-#'  \item License: CC BY-NC-SA 4.0
+#'  \item License: CC BY-SA 4.0
 #'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
@@ -389,7 +505,7 @@
 #'    \itemize{
 #'    \item Code: \code{SOC_target}
 #'    \item Unit: \%
-#'    \item Protocol: Determined by the difference of total carbon and inorganic carbon, where total carbon was obtained through elemental analysis by measuring the CO2 release during dry combustion (DIN ISO 10694  ) without acid pretreatment and inorganic carbon as 0.12 x the calcium carbonate content,  determined by the gas-volumetric Scheibler Method (ISO 10693)
+#'    \item Protocol: Determined by the difference of total carbon and inorganic carbon, where total carbon was obtained through elemental analysis by measuring the CO2 release during dry combustion (DIN ISO 10694) without acid pretreatment and inorganic carbon as 0.12 x the calcium carbonate content,  determined by the gas-volumetric Scheibler Method (ISO 10693)
 #'    \item Sampling Date: June 2013, May, 2014 & November 2014
 #'    \item Sampling Depth: 0 - 20 cm
 #'    }
@@ -399,7 +515,7 @@
 #'    \itemize{
 #'    \item Code: \code{pH_target}
 #'    \item Unit: Unitless
-#'    \item Protocol: XXX
+#'    \item Protocol: Measured in water suspension with a glass electrode with unspecified [?please add if you the volumetric or gravimetric soil to liquid ratio?] liquid:soil ratio
 #'    \item Sampling Date: June 2013, May, 2014 & November 2014
 #'    \item Sampling Depth: 0 - 20 cm
 #' }
@@ -409,7 +525,7 @@
 #'    \itemize{
 #'    \item Code: \code{Clay_target}
 #'    \item Unit: \%
-#'    \item Protocol: XXX
+#'    \item Protocol: Measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by x-ray sedimentation
 #'    \item Sampling Date: June 2013, May, 2014 & November 2014
 #'    \item Sampling Depth: 0 - 20 cm
 #'    }
@@ -419,16 +535,15 @@
 #' \describe{
 #'   MIR – Mid Infrared Spectroscopy
 #'   \itemize{
-#'   \item Number Features: 2,489 \cr
+#'   \item Number Features: 2,489
 #'   \item Code(s): \code{wn_5397.9, wn_5396, wn_5394} ... \code{wn_599.8}
-#'   \item Unit: Unitless
+#'   \item Unit: \% (Reflectance)
 #'   \item Sensing: VERTEX 70v FT-IR Spektrometer (Bruker Optik, Ettlingen, Germany), on dried and sieved samples (<2 mm) in the laboratory, spectral range was 7,500 - 370 cm\eqn{^{-1}} at 0.4 cm\eqn{^{-1}} intervals
 #'   \item Processing: Discarding irrelevant spectral data of the spectrum (7,500 - 5,397.9 cm\eqn{^{-1}}) and noisy edges of the spectrum (599.8 - 370 cm\eqn{^{-1}})
-#'   \item Sensing Date: June 2013, May, 2014 & November 2014
+#'   \item Sampling Date: June 2013, May, 2014 & November 2014
 #'   \item Spectral Information (after data processing):
 #'    \itemize{
 #'      \item Data Representation: Wavenumber (in cm\eqn{^{-1}})
-#'      \item Measurement Type: Reflectance
 #'      \item Spectral Resolution: ~2 cm\eqn{^{-1}}
 #'      \item Spectral Range: 5,397.9 – 599.8 cm\eqn{^{-1}}
 #'    }
@@ -463,21 +578,12 @@
 #' testing_data_H.138 <- H.138$Dataset[H.138$Folds == 1,]
 #'
 #' @usage H.138
-#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
-#' @references [ ? Add data publication ?]
+#' @references [ ? Add data publication when published ?]\cr
+#' \cr
+#' Stumpf, F., Schmidt, K., Goebes, P., Behrens, T., Schönbrodt-Stitt, S., Wadoux, A., Xiang, W. & Scholten, T. (2017). Uncertainty-guided sampling to improve digital soil maps. Catena, 153, 30-38.
 "H.138"
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -501,7 +607,7 @@
 #'      \item Johanna Wetterlind (Johanna.Wetterlind@slu.se), Swedish University of Agricultural Sciences
 #'      \item Bo Stenberg (Bo.Stenberg@slu.se), Swedish University of Agricultural Sciences
 #'      }
-#'  \item License: CC BY-NC-SA 4.0
+#'  \item License: CC BY-SA 4.0
 #'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
@@ -555,22 +661,21 @@
 #'   \item Unit: \eqn{\Omega} m
 #'   \item Sensing: EM38 sensor (Geonics Ltd., Mississauga, Canada) with exploration depth of 0 - 150 cm, in-situ
 #'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-#'   \item Sensing Date: April 2006
+#'   \item Sampling Date: April 2006
 #'   }
 #'
 #'
 #'   vis-NIR – Visible and Near Infrared Spectroscopy
 #'   \itemize{
-#'   \item Number Features: 2,081 \cr
-#'   \item Code(s): \code{wl_420, wl_421, wl_422} ... \code{wl_2500} \cr
-#'   \item Unit: Unitless \cr
-#'   \item Sensing: vis-NIR spectrometer (FieldSpec Pro FR scanning instrument, Analytical Spectral Devices Inc., Boulder, USA), on dried and sieved samples (<2 mm) in the laboratory, spectral range was 350–2,500 nm at 1.4–2.0 nm intervals \cr
-#'   \item Processing: Discarding noisy edges of the spectrum (350 - 420 nm), resampling to 1 nm intervals \cr
-#'   \item Sensing Date: September 2006
+#'   \item Number Features: 2,081
+#'   \item Code(s): \code{wl_420, wl_421, wl_422} ... \code{wl_2500}
+#'   \item Unit: \% (Reflectance)
+#'   \item Sensing: FieldSpec Pro FR scanning instrument (Analytical Spectral Devices Inc., Boulder, USA), on dried and sieved samples (<2 mm) in the laboratory, spectral range was 350 – 2,500 nm at 1.4 – 2.0 nm intervals \cr
+#'   \item Processing: Discarding noisy edges of the spectrum (350 - 420 nm), resampling to 1 nm intervals
+#'   \item Sampling Date: September 2006
 #'   \item Spectral Information (after data processing):
 #'    \itemize{
 #'      \item Data Representation: Wavelength (in nm)
-#'      \item Measurement Type: Reflectance
 #'      \item Spectral Resolution: 1 nm
 #'      \item Spectral Range: 420 - 2,500 nm
 #'    }
@@ -605,7 +710,7 @@
 #' testing_data_SL.125 <- SL.125$Dataset[SL.125$Folds == 1,]
 #'
 #' @usage SL.125
-#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
 #' @references Ekström, G. (1927). Klassifikation av Svenska Åkerjordar (Classification of Swedish arable soils). Sveriges Geologiska Undersökning, Ser C. 345, 161 pp. \cr
 #' \cr
@@ -634,7 +739,7 @@
 #'      \item Johanna Wetterlind (Johanna.Wetterlind@slu.se), Swedish University of Agricultural Sciences
 #'      \item Bo Stenberg (Bo.Stenberg@slu.se), Swedish University of Agricultural Sciences
 #'      }
-#'  \item License: CC BY-NC-SA 4.0
+#'  \item License: CC BY-SA 4.0
 #'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
@@ -688,22 +793,21 @@
 #'   \item Unit: \eqn{\Omega} m
 #'   \item Sensing: EM38 sensor (Geonics Ltd., Mississauga, Canada) with exploration depth of 0 - 150 cm, in-situ
 #'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-#'   \item Sensing Date: April 2005
+#'   \item Sampling Date: April 2005
 #'   }
 #'
 #'
 #'   vis-NIR – Visible and Near Infrared Spectroscopy
 #'   \itemize{
-#'   \item Number Features: 2,081 \cr
-#'   \item Code(s): \code{wl_420, wl_421, wl_422} ... \code{wl_2500} \cr
-#'   \item Unit: Unitless \cr
-#'   \item Sensing: vis-NIR spectrometer (FieldSpec Pro FR scanning instrument, Analytical Spectral Devices Inc., Boulder, USA), on dried and sieved samples (<2 mm) in the laboratory, spectral range was 350–2,500 nm at 1.4–2.0 nm intervals \cr
-#'   \item Processing: Discarding noisy edges of the spectrum (350 - 420 nm), resampling to 1 nm intervals \cr
-#'   \item Sensing Date: September 2005
+#'   \item Number Features: 2,081
+#'   \item Code(s): \code{wl_420, wl_421, wl_422} ... \code{wl_2500}
+#'   \item Unit: \% (Reflectance)
+#'   \item Sensing: FieldSpec Pro FR scanning instrument (Analytical Spectral Devices Inc., Boulder, USA), on dried and sieved samples (<2 mm) in the laboratory, spectral range was 350 – 2,500 nm at 1.4 – 2.0 nm intervals
+#'   \item Processing: Discarding noisy edges of the spectrum (350 - 420 nm), resampling to 1 nm intervals
+#'   \item Sampling Date: September 2005
 #'   \item Spectral Information (after data processing):
 #'    \itemize{
 #'      \item Data Representation: Wavelength (in nm)
-#'      \item Measurement Type: Reflectance
 #'      \item Spectral Resolution: 1 nm
 #'      \item Spectral Range: 420 - 2,500 nm
 #'    }
@@ -738,7 +842,7 @@
 #' testing_data_UL.120 <- UL.120$Dataset[UL.120$Folds == 1,]
 #'
 #' @usage UL.120
-#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
 #' @references Ekström, G. (1927). Klassifikation av Svenska Åkerjordar (Classification of Swedish arable soils). Sveriges Geologiska Undersökning, Ser C. 345, 161 pp. \cr
 #' \cr
@@ -766,7 +870,7 @@
 #'    \itemize{
 #'      \item Stefan Paetzold (s.paetzold@uni-bonn.de), University of Bonn
 #'      }
-#'  \item License: CC BY-NC-SA 4.0
+#'  \item License: CC BY-SA 4.0
 #'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
@@ -803,7 +907,7 @@
 #'    \itemize{
 #'    \item Code: \code{Clay_target}
 #'    \item Unit: \%
-#'    \item Measured through a combination of wet sieving and sedimentation after dispersion and removal of organic matter through oxidation (DIN ISO 11277)
+#'    \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaption (DIN ISO 11277)
 #'    \item Sampling Date: October 2013 & November 2015
 #'    \item Sampling Depth: 0 - 30 cm
 #'    }
@@ -813,16 +917,15 @@
 #' \describe{
 #'   MIR – Mid Infrared Spectroscopy
 #'   \itemize{
-#'   \item Number Features: 1,686 \cr
-#'   \item Code(s): \code{wn_3799, wn_3797.1, wn_3795.1} ... \code{wn_549.6} \cr
-#'   \item Unit: Unitless \cr
-#'   \item Sensing: MIR spectrometer (Bruker Tensor 27 HTS-XT, Bruker Optik, Ettlingen, Germany), on dried and sieved samples (<2 mm) in the laboratory, spectral range was 7,500 – 549.6 cm\eqn{^{-1}} at 4 cm\eqn{^{-1}} intervals \cr
-#'   \item Processing: Discarding irrelevant spectral data of the spectrum (7,500 - 3,799 cm\eqn{^{-1}}), resampling to ~2 cm\eqn{^{-1}} intervals\cr
-#'   \item Sensing Date: October 2013 & November 2015
+#'   \item Number Features: 1,686
+#'   \item Code(s): \code{wn_3799, wn_3797.1, wn_3795.1} ... \code{wn_549.6}
+#'   \item Unit: \% (Reflectance)
+#'   \item Sensing: MIR spectrometer (Bruker Tensor 27 HTS-XT, Bruker Optik, Ettlingen, Germany), on dried and sieved samples (<2 mm) in the laboratory, spectral range was 7,500 – 549.6 cm\eqn{^{-1}} at 4 cm\eqn{^{-1}} intervals
+#'   \item Processing: Discarding irrelevant spectral data of the spectrum (7,500 - 3,799 cm\eqn{^{-1}}), resampling to ~2 cm\eqn{^{-1}} intervals
+#'   \item Sampling Date: October 2013 & November 2015
 #'   \item Spectral Information (after data processing):
 #'    \itemize{
 #'      \item Data Representation: Wavenumber (in cm\eqn{^{-1}})
-#'      \item Measurement Type: Reflectance
 #'      \item Spectral Resolution: ~ 2 cm\eqn{^{-1}}
 #'      \item Spectral Range: 3,799 - 549.6 cm\eqn{^{-1}}
 #'    }
@@ -857,7 +960,7 @@
 #' testing_data_NRW.115 <- NRW.115$Dataset[NRW.115$Folds == 1,]
 #'
 #' @usage NRW.115
-#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
 "NRW.115"
 
@@ -873,14 +976,15 @@
 #'  \item Coordinates: Without coordinates because of privacy concerns
 #'  \item Location: Saxony-Anhalt, Germany
 #'  \item Sampling Design: Regular Grid Sampling but with missing values in the center of the field
-#'  \item Study Area Size: 27
+#'  \item Study Area Size: 27 ha
 #'  \item Previous Data Publication: None
 #'  \item Geological Setting: Weichselian loess
+#'  \item Contact Information:
 #'    \itemize{
 #'      \item Stefan Paetzold (s.paetzold@uni-bonn.de), University of Bonn
 #'      \item Hamed Tavakoli (HTavakoli@atb-potsdam.de), Leibniz Institute for Agricultural Engineering and Bioeconomy (ATB)
 #'      }
-#'  \item License: CC BY-NC-SA 4.0
+#'  \item License: CC BY-SA 4.0
 #'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
@@ -917,7 +1021,7 @@
 #'    \itemize{
 #'    \item Code: \code{Clay_target}
 #'    \item Unit: \%
-#'    \item Protocol: Measured through a combination of wet sieving and sedimentation after dispersion and removal of organic matter through oxidation (DIN ISO 11277)
+#'    \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaption (DIN ISO 11277)
 #'    \item Sampling Date: October 2016
 #'    \item Sampling Depth: 0 - 30 cm
 #'    }
@@ -925,15 +1029,14 @@
 #' \cr
 #' Groups of Features:
 #' \describe{
-#'
 #'   DEM – Digital Elevation Model and Terrain Parameters
 #'   \itemize{
 #'   \item Number Features: 2
 #'   \item Code(s): \code{Altitude, Slope}
-#'   \item Unit: \code{Altitude} (m), \code{Slope } (°)
+#'   \item Unit: \code{Altitude} in m, \code{Slope } in °
 #'   \item Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from “GeoBasis-DE / LVermGeo ST”
 #'   \item Processing: Calculating \code{Slope} with \code{\link[raster]{terrain}} function of the \pkg{raster} package, extracting DEM values from raster at soil sampling locations
-#'   \item Sensing Date: Unknown
+#'   \item Sampling Date: Unknown
 #'   }
 #'
 #'   ERa – Apparent Electrical Resistivity
@@ -943,7 +1046,7 @@
 #'   \item Unit: \eqn{\Omega} m
 #'   \item Sensing: Array of multiple rolling electrodes (Geophilus company, Caputh, Germany) on RapidMapper platform with exploration depth of 0 - 50 cm, in-situ
 #'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-#'   \item Sensing Date: August 2021
+#'   \item Sampling Date: August 2021
 #'   }
 #'
 #'   Gamma
@@ -951,24 +1054,22 @@
 #'   \item Number Features: 5
 #'   \item Code(s): \code{G_Total_Counts, G_K, G_U, G_Th, G_Cs}
 #'   \item Unit: Unitless
-#'   \item Sensing: Gamma sensor (MS-2000-CsI-MTS, Medusa Radiometrics BV, Groningen, Netherlands) on RapidMapper platform, in-situ
+#'   \item Sensing: Passive gamma sensor (MS-2000-CsI-MTS, Medusa Radiometrics BV, Groningen, Netherlands) on RapidMapper platform, in-situ
 #'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-#'   \item Sensing Date: August 2021
+#'   \item Sampling Date: August 2021
 #'   }
-#'
 #'
 #'   NIR – Near Infrared Spectroscopy
 #'   \itemize{
 #'   \item Number Features: 1,401
 #'   \item Code(s): \code{wl_1000, wl_1001, wl_1002} ... \code{wl_2400}
-#'   \item Unit: Unitless
+#'   \item Unit: \% (Reflectance)
 #'   \item Sensing: NIR spectrometer (C11118GA, Hamamatsu Photonics K.K., Shizuoka Prefecture, Japan) on RapidMapper platform, in-situ, spectral range was 900 - 2550 nm at 15 nm intervals
 #'   \item Processing: Kriging to align sensing- with soil sampling locations, discarding noisy edges of the spectrum (900 - 1,000 nm & 2,400 - 2,550 nm), resampling to 1 nm intervals
-#'   \item Sensing Date: August 2021
+#'   \item Sampling Date: August 2021
 #'   \item Spectral Information (after data processing):
 #'    \itemize{
 #'      \item Data Representation: Wavelength (in nm)
-#'      \item Measurement Type: Reflectance
 #'      \item Spectral Resolution: 1 nm
 #'      \item Spectral Range: 1,000 - 2,400 nm
 #'    }
@@ -981,7 +1082,7 @@
 #'   \item Unit: Unitless
 #'   \item Sensing: Soil pH Manager (VERIS Technologies, Salinas, USA) on RapidMapper platform, in-situ
 #'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-#'   \item Sensing Date: August 2021
+#'   \item Sampling Date: August 2021
 #'   }
 #'
 #'   VI - Vegetation Indices
@@ -991,7 +1092,7 @@
 #'   \item Unit: Unitless
 #'   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
 #'   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04) and \code{GNDVI} as (B08 - B03) / (B08 + B03), extracting VI values from raster at soil sampling locations
-#'   \item Sensing Date: April 2018
+#'   \item Sampling Date: April 2018
 #'   }
 #' }
 #' \cr
@@ -1020,7 +1121,7 @@
 #' testing_data_SA.112 <- SA.112$Dataset[SA.112$Folds == 1,]
 #'
 #' @usage SA.112
-#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
 "SA.112"
 
@@ -1044,7 +1145,7 @@
 #'    \itemize{
 #'      \item Domingos Sarvio Magalhaes Valente (valente@ufv.br), Federal University of Vicosa
 #'      }
-#'  \item License: CC BY-NC-SA 4.0
+#'  \item License: CC BY-SA 4.0
 #'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
@@ -1094,10 +1195,10 @@
 #'   \itemize{
 #'   \item Number Features: 2
 #'   \item Code(s): \code{Altitude, Slope}
-#'   \item Unit: \code{Altitude} (m), \code{Slope } (°)
+#'   \item Unit: \code{Altitude} in m, \code{Slope } in °
 #'   \item Sensing: Digital elevation model raster (30 m) based on synthetic aperture radar from “Copernicus Open Access Hub”
 #'   \item Processing: Calculating \code{Slope} with \code{\link[raster]{terrain}} function of the \pkg{raster} package, extracting DEM values from raster at soil sampling locations
-#'   \item Sensing Date: December 2010
+#'   \item Sampling Date: December 2010
 #'   }
 #'
 #'   RSS – Remote Sensing Derived Spectral Data
@@ -1107,7 +1208,7 @@
 #'   \item Unit: Unitless
 #'   \item Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”
 #'   \item Processing: Extracting RSS values from raster at soil sampling locations
-#'   \item Sensing Date: July 2022
+#'   \item Sampling Date: July 2022
 #'   }
 #'
 #'   VI - Vegetation Indices
@@ -1117,7 +1218,7 @@
 #'   \item Unit: Unitless
 #'   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
 #'   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04) and \code{GNDVI} as (B08 - B03) / (B08 + B03), extracting VI values from raster at soil sampling locations
-#'   \item Sensing Date: December 2023
+#'   \item Sampling Date: December 2023
 #'   }
 #'
 #' }
@@ -1148,7 +1249,7 @@
 #' testing_data_G.104 <- G.104$Dataset[G.104$Folds == 1,]
 #'
 #' @usage G.104
-#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
 #' @references Gee, G.W. & Bauder, J.W. (1986) Particle-Size Analysis. In: Klute, A., Ed., Methods of Soil Analysis, Part 1. Physical and Mineralogical Methods, Agronomy Monograph No. 9, 2nd Edition, American Society of Agronomy/Soil Science Society of America, Madison, WI, 383-411.\cr
 #' \cr
@@ -1176,7 +1277,7 @@
 #'    \itemize{
 #'      \item Domingos Sarvio Magalhaes Valente (valente@ufv.br), Federal University of Vicosa
 #'      }
-#'  \item License: CC BY-NC-SA 4.0
+#'  \item License: CC BY-SA 4.0
 #'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
@@ -1225,10 +1326,10 @@
 #'   \itemize{
 #'   \item Number Features: 2
 #'   \item Code(s): \code{Altitude, Slope}
-#'   \item Unit: \code{Altitude} (m), \code{Slope } (°)
+#'   \item Unit: \code{Altitude} in m, \code{Slope } in °
 #'   \item Sensing: Digital elevation model raster (30 m) based on synthetic aperture radar from “Copernicus Open Access Hub”
 #'   \item Processing: Calculating \code{Slope} with \code{\link[raster]{terrain}} function of the \pkg{raster} package, extracting DEM values from raster at soil sampling locations
-#'   \item Sensing Date: February 2011
+#'   \item Sampling Date: February 2011
 #'   }
 #'
 #'   RSS – Remote Sensing Derived Spectral Data
@@ -1238,7 +1339,7 @@
 #'   \item Unit: Unitless
 #'   \item Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”
 #'   \item Processing: Extracting RSS values from raster at soil sampling locations
-#'   \item Sensing Date: August 2022
+#'   \item Sampling Date: August 2022
 #'   }
 #'
 #'   VI - Vegetation Indices
@@ -1248,7 +1349,7 @@
 #'   \item Unit: Unitless
 #'   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
 #'   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04) and \code{GNDVI} as (B08 - B03) / (B08 + B03), extracting VI values from raster at soil sampling locations
-#'   \item Sensing Date: December 2021
+#'   \item Sampling Date: December 2021
 #'   }
 #'
 #' }
@@ -1279,7 +1380,7 @@
 #' testing_data_MGS.101 <- MGS.101$Dataset[MGS.101$Folds == 1,]
 #'
 #' @usage MGS.101
-#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
 #' @references Gee, G.W. & Bauder, J.W. (1986) Particle-Size Analysis. In: Klute, A., Ed., Methods of Soil Analysis, Part 1. Physical and Mineralogical Methods, Agronomy Monograph No. 9, 2nd Edition, American Society of Agronomy/Soil Science Society of America, Madison, WI, 383-411.\cr
 #' \cr
@@ -1301,15 +1402,16 @@
 #'  \item Number of Features: 2,151
 #'  \item Coordinates: Without coordinates because dataset was not georeferenced
 #'  \item Location: Canton of Vaud, Switzerland
-#'  \item Sampling Design: Random Stratified Sampling based on different treatments of organic amendments, fertilization, crop rotation and soil cultivation
+#'  \item Sampling Design: Stratified Random Sampling based on different treatments of organic amendments, fertilization, crop rotation and soil cultivation
 #'  \item Study Area Size: 28 ha
 #'  \item Geological Setting: Glacial or fluvioglacial deposits
 #'  \item Previous Data Publication: Full dataset published in Metzger et al. (2024) but under embargo until June 2025
+#'  \item Contact Information:
 #'    \itemize{
 #'      \item Konrad Metzger (konrad.metzger@agroscope.admin.ch), Agroscope
 #'      \item Luca Bragazza (luca.bragazza@agroscope.admin.ch), Agroscope
 #'      }
-#'  \item License: CC BY-NC-SA 4.0
+#'  \item License: CC BY-SA 4.0
 #'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
@@ -1327,7 +1429,7 @@
 #'    SOC - Soil Organic Carbon
 #'    \itemize{
 #'    \item Code: \code{SOC_target}
-#'    \item Unit: %
+#'    \item Unit: \%
 #'    \item Protocol: Measured through titration after oxidization of the organic carbon (Walkley & Black 1934)
 #'    \item Sampling Date: May - June and September - October 2021
 #'    \item Sampling Depth: 0 - 20 cm
@@ -1345,7 +1447,7 @@
 #'    Clay
 #'    \itemize{
 #'    \item Code: \code{Clay_target}
-#'    \item Unit: %
+#'    \item Unit: \%
 #'    \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water (Gee and Bauder 1986)
 #'    \item Sampling Date: May - June and September - October 2021
 #'    \item Sampling Depth: 0 - 20 cm
@@ -1359,14 +1461,13 @@
 #'   \itemize{
 #'   \item Number Features: 2,151
 #'   \item Code(s): \code{wl_350, wl_351, wl_352} ... \code{wl_2500}
-#'   \item Unit: Unitless
-#'   \item Sensing: PSR+3500 (Spectral Evolution, Haverhill, USA), in-situ from Edelman auger (denoted as scantype = a in original dataset publication), spectral range was 350 - 2500 nm at 3 - 8 nm spectral resolution
+#'   \item Unit: \% (Reflectance)
+#'   \item Sensing: vis-NIR spectrometer ( PSR+3500, Spectral Evolution, Haverhill, USA), in-situ from Edelman auger (denoted as scantype = a in original dataset publication), spectral range was 350 - 2500 nm at 3 - 8 nm spectral resolution
 #'   \item Processing: Resampling to 1 nm intervals
-#'   \item Sensing Date: May - June and September - October 2021
+#'   \item Sampling Date: May - June and September - October 2021
 #'   \item Spectral Information (after data processing):
 #'    \itemize{
 #'      \item Data Representation: Wavelength (in nm)
-#'      \item Measurement Type: Reflectance
 #'      \item Spectral Resolution: 1 nm
 #'      \item Spectral Range: 350 – 2500 nm
 #'    }
@@ -1400,7 +1501,7 @@
 #' testing_data_CV.98 <- CV.98$Dataset[CV.98$Folds == 1,]
 #'
 #' @usage CV.98
-#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
 #' @references Gee, G.W. & Bauder, J.W. (1986) Particle-Size Analysis. In: Klute, A., Ed., Methods of Soil Analysis, Part 1. Physical and Mineralogical Methods, Agronomy Monograph No. 9, 2nd Edition, American Society of Agronomy/Soil Science Society of America, Madison, WI, 383-411.\cr
 #' \cr
@@ -1436,7 +1537,7 @@
 #'      \item Taciara Zborowski Horst (taciaraz@utfpr.edu.br), Federal University of Technology – Paraná
 #'      \item Ricardo Simão Diniz Dalmolin (dalmolin@ufsm.br), Federal University of Santa Maria
 #'      }
-#'  \item License: CC BY-NC-SA 4.0
+#'  \item License: CC BY-SA 4.0
 #'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
@@ -1465,6 +1566,7 @@
 #'    \item Code: \code{pH_target}
 #'    \item Unit: Unitless
 #'    \item Protocol: Measured in water suspension with a glass electrode ratio with a 1:1 liquid:soil [? volmetric or gravimetric ?] ratio
+#'    \item Sampling Date: December 2016
 #'    \item Sampling Depth: 0 - 20 cm
 #' }
 #'
@@ -1483,16 +1585,15 @@
 #' \describe{
 #'   vis-NIR – Visible and Near Infrared Spectroscopy
 #'   \itemize{
-#'   \item Number Features: 2,146 \cr
-#'   \item Code(s): \code{wl_355, wl_356, wl_357} ... \code{wl_2500} \cr
-#'   \item Unit: Unitless \cr
-#'   \item Sensing: vis-NIR spectrometer (ASD FieldSpec 4, Analytical Spectral Devices Inc., Boulder, USA), on dried and sieved samples (<2 mm) in the laboratory, spectral range was 355 - 2,500 nm at 3 - 8 nm spectral resolution
-#'   \item Processing: Reesampling to 1 nm intervals\cr
-#'   \item Sensing Date: March 2017
+#'   \item Number Features: 2,146
+#'   \item Code(s): \code{wl_355, wl_356, wl_357} ... \code{wl_2500}
+#'   \item Unit: \% (Reflectance)
+#'   \item Sensing: ASD FieldSpec 4 (Analytical Spectral Devices Inc., Boulder, USA), on dried and sieved samples (<2 mm) in the laboratory, spectral range was 355 - 2,500 nm at 3 - 8 nm spectral resolution
+#'   \item Processing: Reesampling to 1 nm intervals
+#'   \item Sampling Date: March 2017
 #'   \item Spectral Information (after data processing):
 #'    \itemize{
 #'      \item Data Representation: Wavelength (in nm)
-#'      \item Measurement Type: Reflectance
 #'      \item Spectral Resolution: 1 nm
 #'      \item Spectral Range: 355 – 2500 nm
 #'    }
@@ -1527,7 +1628,7 @@
 #' testing_data_SC.93 <- SC.93$Dataset[SC.93$Folds == 1,]
 #'
 #' @usage SC.93
-#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
 #' @references Gee, G.W. & Bauder, J.W. (1986) Particle-Size Analysis. In: Klute, A., Ed., Methods of Soil Analysis, Part 1. Physical and Mineralogical Methods, Agronomy Monograph No. 9, 2nd Edition, American Society of Agronomy/Soil Science Society of America, Madison, WI, 383-411.\cr
 #' \cr
@@ -1557,7 +1658,7 @@
 #'      \item Sebastian Vogel (SVogel@atb-potsdam.de), Leibniz Institute for Agricultural Engineering and Bioeconomy (ATB)
 #'      \item Jörg Rühlmann (ruehlmann@igzev.de), Leibniz Institute of Vegetable and Ornamental Crops (IGZ)
 #'      }
-#'  \item License: CC BY-NC-SA 4.0
+#'  \item License: CC BY-SA 4.0
 #'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
@@ -1594,7 +1695,7 @@
 #'    \itemize{
 #'    \item Code: \code{Clay_target}
 #'    \item Unit: \%
-#'    \item Protocol: Measured through a combination of wet sieving and sedimentation after dispersion and removal of organic matter through oxidation (DIN ISO 11277)
+#'    \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaption (DIN ISO 11277)
 #'    \item Sampling Date: August 2022
 #'    \item Sampling Depth: 0 - 30 cm
 #'    }
@@ -1609,10 +1710,10 @@
 #'   \itemize{
 #'   \item Number Features: 2
 #'   \item Code(s): \code{Altitude, Slope}
-#'   \item Unit: \code{Altitude} (m), \code{Slope } (°)
+#'   \item Unit: \code{Altitude} in m, \code{Slope } in °
 #'   \item Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from “GeoBasis-DE/LGB”
 #'   \item Processing: Calculating \code{Slope} with \code{\link[raster]{terrain}} function of the \pkg{raster} package, extracting DEM values from raster at soil sampling locations
-#'   \item Sensing Date: LiDAR March 2011, images for photogrammetry May 2022
+#'   \item Sampling Date: LiDAR March 2011, images for photogrammetry May 2022
 #'   }
 #'
 #'   ERa – Apparent Electrical Resistivity
@@ -1620,9 +1721,9 @@
 #'   \item Number Features: 1
 #'   \item Code(s): \code{ERa}
 #'   \item Unit: \eqn{\Omega} m
-#'   \item Sensing: Array of multiple rolling electrodes(Geophilus company, Caputh, Germany) on Geophilus platform with exploration depth of 0 - 25 cm, in-situ
+#'   \item Sensing: Array of multiple rolling electrodes (Geophilus company, Caputh, Germany) on Geophilus platform with exploration depth of 0 - 25 cm, in-situ
 #'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-#'   \item Sensing Date: August 2021
+#'   \item Sampling Date: August 2021
 #'   }
 #'
 #'   Gamma
@@ -1630,9 +1731,9 @@
 #'   \item Number Features: 1
 #'   \item Code(s): \code{G_Total_Counts}
 #'   \item Unit: Unitless
-#'   \item Sensing: Gamma sensor (gamma sensor model is not commercially available) on Geophilus platform, in-situ
+#'   \item Sensing: Passive gamma sensor (Gamma sensor model is not commercially available) on Geophilus platform, in-situ
 #'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-#'   \item Sensing Date: August 2021
+#'   \item Sampling Date: August 2021
 #'   }
 #'
 #'   pH-ISE – Ion Selective Electrodes for pH Determination
@@ -1642,7 +1743,7 @@
 #'   \item Unit: Unitless
 #'   \item Sensing: Soil pH Manager (VERIS Technologies, Salinas, USA) from VerisMSP3, in-situ
 #'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-#'   \item Sensing Date: July 2020
+#'   \item Sampling Date: July 2020
 #'   }
 #'
 #'   RSS – Remote Sensing Derived Spectral Data
@@ -1652,7 +1753,7 @@
 #'   \item Unit: Unitless
 #'   \item Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”, with bands of 10 - 20 m spatial resolution
 #'   \item Processing: Extracting RSS values from raster at soil sampling locations
-#'   \item Sensing Date: August 2022
+#'   \item Sampling Date: August 2022
 #'   }
 #'   VI - Vegetation Indices
 #'   \itemize{
@@ -1661,7 +1762,7 @@
 #'   \item Unit: Unitless
 #'   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
 #'   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04) and \code{GNDVI} as (B08 - B03) / (B08 + B03), extracting VI values from raster at soil sampling locations
-#'   \item Sensing Date: May 2022
+#'   \item Sampling Date: May 2022
 #'   }
 #' }
 #'\cr
@@ -1692,7 +1793,7 @@
 #' testing_data_BB.72 <- BB.72$Dataset[BB.72$Folds == 1,]
 #'
 #' @usage BB.72
-#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
 #' @references Vogel S., Bönecke E., Kling C., Kramer E., Lück K., Nagel A., Philipp G., Rühlmann J., Schröter I. & Gebbers, R. (2022), Base neutralizing capacity from agricultural fields in the quaternary landscape of North-East Germany, BONARES Repository, https://doi.org/10.20387/bonares-zh3x-nd80
 "BB.72"
@@ -1709,7 +1810,7 @@
 #'  \item Number of Features: 1,686
 #'  \item Coordinates: Without coordinates because of privacy concerns
 #'  \item Location: North Rhine-Westphalia, Germany
-#'  \item Sampling Design: Stratified Sampling by sampling rectangular plots which received different fertilizer dosages, samples were taken in the center of the plots
+#'  \item Sampling Design: Stratified Systematic Sampling by sampling rectangular plots which received different fertilizer dosages, samples were taken in the center of the plots
 #'  \item Study Area Size: 0.6 ha
 #'  \item Geological Setting: Pleistocene periglacial slope deposits consisting of weathered sand- and claystones from the Upper Bunter sandstone
 #'  \item Previous Data Publication: None
@@ -1717,7 +1818,7 @@
 #'    \itemize{
 #'      \item Stefan Paetzold (s.paetzold@uni-bonn.de), University of Bonn
 #'      }
-#'  \item License: CC BY-NC-SA 4.0
+#'  \item License: CC BY-SA 4.0
 #'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
@@ -1756,7 +1857,7 @@
 #'    \itemize{
 #'    \item Code: \code{Clay_target}
 #'    \item Unit: \%
-#'    \item Protocol: Measured through a combination of wet sieving and sedimentation after dispersion and removal of organic matter through oxidation (DIN ISO 11277)
+#'    \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaption (DIN ISO 11277)
 #'    \item Sampling Date: November 2017
 #'    \item Sampling Depth: 0 - 30 cm
 #'    }
@@ -1768,16 +1869,15 @@
 #' \describe{
 #'   MIR – Mid Infrared Spectroscopy
 #'   \itemize{
-#'   \item Number Features: 1,686 \cr
-#'   \item Code(s): \code{wn_3799, wn_3797.1, wn_3795.1} ... \code{wn_549.6} \cr
-#'   \item Unit: Unitless \cr
-#'   \item Sensing: MIR spectrometer (Bruker Optik, Ettlingen, Germany), on dried and sieved samples (<2 mm) in the laboratory, spectral range was 7,500 – 549.6 cm\eqn{^{-1}} at 4 cm\eqn{^{-1}} intervals \cr
-#'   \item Processing: Discarding irrelevant spectral data of the spectrum (7,500 - 3,799 cm\eqn{^{-1}}), resampling to ~2 cm\eqn{^{-1}} intervals\cr
-#'   \item Sensing Date: November 2017
+#'   \item Number Features: 1,686
+#'   \item Code(s): \code{wn_3799, wn_3797.1, wn_3795.1} ... \code{wn_549.6}
+#'   \item Unit: \% (Reflectance)
+#'   \item Sensing: MIR spectrometer (Bruker Optik, Ettlingen, Germany), on dried and sieved samples (<2 mm) in the laboratory, spectral range was 7,500 – 549.6 cm\eqn{^{-1}} at 4 cm\eqn{^{-1}} intervals
+#'   \item Processing: Discarding irrelevant spectral data of the spectrum (7,500 - 3,799 cm\eqn{^{-1}}), resampling to ~2 cm\eqn{^{-1}} intervals
+#'   \item Sampling Date: November 2017
 #'   \item Spectral Information (after data processing):
 #'    \itemize{
 #'      \item Data Representation: Wavenumber (in cm\eqn{^{-1}})
-#'      \item Measurement Type: Reflectance
 #'      \item Spectral Resolution: ~ 2 cm\eqn{^{-1}}
 #'      \item Spectral Range: 3,799 - 549.6 cm\eqn{^{-1}}
 #'    }
@@ -1811,7 +1911,7 @@
 #' testing_data_NRW.62 <- NRW.62$Dataset[NRW.62$Folds == 1,]
 #'
 #' @usage NRW.62
-#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
 "NRW.62"
 
@@ -1837,7 +1937,7 @@
 #'      \item Stefan Paetzold (s.paetzold@uni-bonn.de), University of Bonn
 #'      \item Hamed Tavakoli (HTavakoli@atb-potsdam.de), Leibniz Institute for Agricultural Engineering and Bioeconomy (ATB)
 #'      }
-#'  \item License: CC BY-NC-SA 4.0
+#'  \item License: CC BY-SA 4.0
 #'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
@@ -1874,7 +1974,7 @@
 #'    \itemize{
 #'    \item Code: \code{Clay_target}
 #'    \item Unit: \%
-#'    \item Protocol: Measured through a combination of wet sieving and sedimentation after dispersion and removal of organic matter through oxidation (DIN ISO 11277)
+#'    \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaption (DIN ISO 11277)
 #'    \item Sampling Date: October 2017
 #'    \item Sampling Depth: 0 - 30 cm
 #'    }
@@ -1887,9 +1987,9 @@
 #'   \item Number Features: 1
 #'   \item Code(s): \code{ERa}
 #'   \item Unit: \eqn{\Omega} m
-#'   \item Sensing: Array of multiple rolling electrodes (Geophilus company, Caputh, Germany) on RapidMapper platform with 0 - 50 cm measuring depth, in-situ
+#'   \item Sensing: Array of multiple rolling electrodes (Geophilus company, Caputh, Germany) on RapidMapper platform with exploration depth of 0 - 50 cm, in-situ
 #'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-#'   \item Sensing Date: September 2020
+#'   \item Sampling Date: September 2020
 #'   }
 #'
 #'   Gamma
@@ -1897,23 +1997,22 @@
 #'   \item Number Features: 5
 #'   \item Code(s): \code{G_Total_Counts, G_K, G_U, G_Th, G_Cs}
 #'   \item Unit: Unitless
-#'   \item Sensing: Gamma sensor (MS-2000-CsI-MTS, Medusa Radiometrics BV, Groningen, Netherlands) on RapidMapper platform, in-situ
+#'   \item Sensing: Passive gamma sensor (MS-2000-CsI-MTS, Medusa Radiometrics BV, Groningen, Netherlands) on RapidMapper platform, in-situ
 #'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-#'   \item Sensing Date: September 2020
+#'   \item Sampling Date: September 2020
 #'   }
 #'
 #'   NIR – Near Infrared Spectroscopy
 #'   \itemize{
 #'   \item Number Features: 1,401
 #'   \item Code(s): \code{wl_1000, wl_1001, wl_1002} ... \code{wl_2400}
-#'   \item Unit: Unitless
+#'   \item Unit: \% (Reflectance)
 #'   \item Sensing: NIR spectrometer (C11118GA, Hamamatsu Photonics K.K., Shizuoka Prefecture, Japan) on RapidMapper platform, in-situ, spectral range was 900 - 2550 nm at 15 nm intervals
-#'   \item Processing: Kriging to align sensing- with soil sampling locations, discarding noisy edges of the spectrum (900 - 999 nm & 2,400 - 2,550 nm), resampling to 1 nm intervals
-#'   \item Sensing Date: September 2020
+#'   \item Processing: Kriging to align sensing- with soil sampling locations, discarding noisy edges of the spectrum (900 - 1,000 nm & 2,400 - 2,550 nm), resampling to 1 nm intervals
+#'   \item Sampling Date: September 2020
 #'   \item Spectral Information (after data processing):
 #'    \itemize{
 #'      \item Data Representation: Wavelength (in nm)
-#'      \item Measurement Type: Reflectance
 #'      \item Spectral Resolution: 1 nm
 #'      \item Spectral Range: 1,000 - 2,400 nm
 #'    }
@@ -1925,7 +2024,7 @@
 #'   \item Unit: Unitless
 #'   \item Sensing: Soil pH Manager (VERIS Technologies, Salinas, USA) on RapidMapper platform, in-situ
 #'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-#'   \item Sensing Date: September 2020
+#'   \item Sampling Date: September 2020
 #'   }
 #'   VI - Vegetation Indices
 #'   \itemize{
@@ -1934,7 +2033,7 @@
 #'   \item Unit: Unitless
 #'   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
 #'   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04) and \code{GNDVI} as (B08 - B03) / (B08 + B03), extracting VI values from raster at soil sampling locations
-#'   \item Sensing Date: March 2017
+#'   \item Sampling Date: March 2017
 #'    }
 #' }
 #'\cr
@@ -1965,7 +2064,7 @@
 #' testing_data_RP.62 <- RP.62$Dataset[RP.62$Folds == 1,]
 #'
 #' @usage RP.62
-#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
 #' @references Walkley, A. & Black, I. A. (1934). An examination of the Degtjareff method for determining soil organic matter, and a proposed modification of the chromic acid titration method. Soil science, 37(1), 29-38.
 "RP.62"
@@ -1978,7 +2077,7 @@
 #' @title BC.58 Dataset
 #' @description
 #' \itemize{
-#'  \item dataset will probably be dropped because something seems wrong! Performance with MIR data should be much better !
+#'  \item dataset will probably be dropped because I have somer concerns about the data quality
 #'  }
 #' @docType data
 "BC.58"
@@ -2000,7 +2099,7 @@
 #'  \item Number of Features: 351
 #'  \item Coordinates: Without coordinates because dataset was not georeferenced
 #'  \item Location: State of Sao Paulo, Brazil
-#'  \item Sampling Design: Random Stratified sampling based on treatment doses of K\eqn{_2}O and CaO
+#'  \item Sampling Design: Stratified Random Sampling based on treatment doses of K\eqn{_2}O and CaO
 #'  \item Study Area Size: 0.7 ha
 #'  \item Geological Setting: Heavily weathered soils originating from diabase
 #'  \item Previous Data Publication: Full dataset published in Tavares et al. (2022)
@@ -2009,7 +2108,7 @@
 #'      \item Tiago Rodrigues Tavares, tiagosrt@usp.br, University of Sao Paulo
 #'      \item José Paulo Molin (jpmolin@usp.br), University of Sao Paulo
 #'      }
-#'  \item License: CC BY-NC-SA 4.0
+#'  \item License: CC BY-SA 4.0
 #'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
@@ -2059,14 +2158,13 @@
 #'   \itemize{
 #'   \item Number Features: 351
 #'   \item Code(s): \code{wl_431.6, wl_437.4, wl_449.1} ... \code{wl_2153.1}
-#'   \item Unit: Unitless
-#'   \item Sensing: Device of former Veris MSP3 (Veris Technologies, Salina, Kansas, USA) which is based on two spectrometers (USB4000, Ocean optics, Largo, FL, USA) for the visible region and (C9914GB, Hamamatsu Photonics, Hamamatsu, Japan) for the NIR region, on dried and sieved samples (<2 mm) in the laboratory, spectral range was 343 - 2,200 nm at ~5 nm spectral resolution
+#'   \item Unit: \% (Reflectance)
+#'   \item Sensing: vis-NIR spectrometer of former Veris MSP3 (Veris Technologies, Salina, Kansas, USA) which is based on two spectrometers (USB4000, Ocean optics, Largo, FL, USA) for the visible region and (C9914GB, Hamamatsu Photonics, Hamamatsu, Japan) for the NIR region, on dried and sieved samples (<2 mm) in the laboratory, spectral range was 343 - 2,200 nm at ~5 nm spectral resolution
 #'   \item Processing: Discarding noisy edges of the spectrum (343 - 431.6 nm & 2153.1 - 2,200  nm)
-#'   \item Sensing Date: September 2015
+#'   \item Sampling Date: September 2015
 #'   \item Spectral Information (after data processing):
 #'    \itemize{
 #'      \item Data Representation: Wavelength (in nm)
-#'      \item Measurement Type: Reflectance
 #'      \item Spectral Resolution: ~5 nm
 #'      \item Spectral Range: 431.6 - 2,153.1 nm
 #'    }
@@ -2099,7 +2197,7 @@
 #' testing_data_SSP.58 <- SSP.58$Dataset[SSP.58$Folds == 1,]
 #'
 #' @usage SSP.58
-#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
 #' @references Bouyoucos, G. J. (1927). The hydrometer as a new method for the mechanical analysis of soils. Soil science, 23(5), 343-354.\cr
 #' \cr
@@ -2133,7 +2231,7 @@
 #'      \item Patrick Filippi (patrick.filippi@sydney.edu.au), University of Sydney
 #'      \item Edward Jones (edjones1684@gmail.com), University of Sydney
 #'      }
-#'  \item License: CC BY-NC-SA 4.0
+#'  \item License: CC BY-SA 4.0
 #'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
@@ -2183,10 +2281,10 @@
 #'   \itemize{
 #'   \item Number Features: 2
 #'   \item Code(s): \code{Altitude, Slope}
-#'   \item Unit: \code{Altitude} (m), \code{Slope } (°)
+#'   \item Unit: \code{Altitude} in m, \code{Slope } in °
 #'   \item Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from the “Elevation and Depth – Foundation Spatial Data (ELVIS)”
 #'   \item Processing: Calculating \code{Slope} with \code{\link[raster]{terrain}} function of the \pkg{raster} package, extracting DEM values from raster at soil sampling locations
-#'   \item Sensing Date: April 2016
+#'   \item Sampling Date: April 2016
 #'   }
 #'
 #'   RSS – Remote Sensing Derived Spectral Data
@@ -2196,7 +2294,7 @@
 #'   \item Unit: Unitless
 #'   \item Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”, with bands of 10 - 20 m spatial resolution
 #'   \item Processing: Extracting RSS values from raster at soil sampling locations, selecting bands spread throughout the spectral range with lower intercorrelation
-#'   \item Sensing Date: July 2018
+#'   \item Sampling Date: July 2018
 #'   }
 #'
 #' }
@@ -2227,7 +2325,7 @@
 #' testing_data_NSW.52 <- NSW.52$Dataset[NSW.52$Folds == 1,]
 #'
 #' @usage NSW.52
-#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
 #' @references Gee, G.W. & Bauder, J.W. (1986) Particle-Size Analysis. In: Klute, A., Ed., Methods of Soil Analysis, Part 1. Physical and Mineralogical Methods, Agronomy Monograph No. 9, 2nd Edition, American Society of Agronomy/Soil Science Society of America, Madison, WI, 383-411.\cr
 #' \cr
@@ -2250,7 +2348,7 @@
 #'  \item Number of Features: 4
 #'  \item Coordinates: With coordinates (EPSG: 25833)
 #'  \item Location: Brandenburg, Germany
-#'  \item Sampling Design: Multi Criteria Sampling based on quantile coverage of the sensing-features (ECa and pH-ISE), clustering of large and low values of sensing-features and spatial coverage
+#'  \item Sampling Design: Multi Criteria Sampling (Bönecke et al. 2021) based on quantile coverage of the sensing-features (ECa and pH-ISE), clustering of large and low values of sensing-features and spatial coverage
 #'  \item Study Area Size: 40 ha
 #'  \item Geological Setting: Pleistocene young morainic landscape of the Weichselian glaciation with predominantly glacial sand
 #'  \item Previous Data Publication: Target soil properties published but under boycott in Vogel et al. 2022
@@ -2258,7 +2356,7 @@
 #'    \itemize{
 #'      \item Sebastian Vogel (SVogel@atb-potsdam.de), Leibniz Institute for Agricultural Engineering and Bioeconomy (ATB)
 #'      }
-#'  \item License: CC BY-NC-SA 4.0
+#'  \item License: CC BY-SA 4.0
 #'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
@@ -2295,7 +2393,7 @@
 #'    \itemize{
 #'    \item Code: \code{Clay_target}
 #'    \item Unit: \%
-#'    \item Protocol: Measured through a combination of wet sieving and sedimentation after dispersion and removal of organic matter through oxidation (DIN ISO 11277)
+#'    \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaption (DIN ISO 11277)
 #'    \item Sampling Date: September - November 2017
 #'    \item Sampling Depth: 0 - 30 cm
 #'    }
@@ -2308,10 +2406,10 @@
 #'   \itemize{
 #'   \item Number Features: 2
 #'   \item Code(s): \code{Altitude, Slope}
-#'   \item Unit: \code{Altitude} (m), \code{Slope } (°)
+#'   \item Unit: \code{Altitude} in m, \code{Slope } in °
 #'   \item Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from “GeoBasis-DE/LGB”
 #'   \item Processing: Calculating \code{Slope} with \code{\link[raster]{terrain}} function of the \pkg{raster} package, extracting DEM values from raster at soil sampling locations
-#'   \item Sensing Date: LiDAR March 2009, images for photogrammetry May 2018
+#'   \item Sampling Date: LiDAR March 2009, images for photogrammetry May 2018
 #'   }
 #'
 #'   ERa – Apparent Electrical Resistivity
@@ -2321,7 +2419,7 @@
 #'   \item Unit: \eqn{\Omega} m
 #'   \item Sensing: EC Surveyor (VERIS Technologies, Salinas, USA) from VerisMSP3 with exploration depth of 0 - 30 cm, in-situ
 #'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-#'   \item Sensing Date: September 2017
+#'   \item Sampling Date: September 2017
 #'   }
 #'
 #'   pH-ISE – Ion Selective Electrodes for pH Determination
@@ -2331,7 +2429,7 @@
 #'   \item Unit: Unitless
 #'   \item Sensing: Soil pH Manager (VERIS Technologies, Salinas, USA) from VerisMSP3, in-situ
 #'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-#'   \item Sensing Date: September 2017
+#'   \item Sampling Date: September 2017
 #'   }
 #'
 #' }
@@ -2363,9 +2461,11 @@
 #' testing_data_BB.51 <- BB.51$Dataset[BB.51$Folds == 1,]
 #'
 #' @usage BB.51
-#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
-#' @references Vogel S., Bönecke E., Kling C., Kramer E., Lück K., Nagel A., Philipp G., Rühlmann J., Schröter I. & Gebbers, R. (2022), Base neutralizing capacity from agricultural fields in the quaternary landscape of North-East Germany, BONARES Repository, https://doi.org/10.20387/bonares-zh3x-nd80
+#' @references Vogel S., Bönecke E., Kling C., Kramer E., Lück K., Nagel A., Philipp G., Rühlmann J., Schröter I. & Gebbers, R. (2022), Base neutralizing capacity from agricultural fields in the quaternary landscape of North-East Germany, BONARES Repository, https://doi.org/10.20387/bonares-zh3x-nd80 \cr
+#' \cr
+#' Bönecke, E., Meyer, S., Vogel, S., Schröter, I., Gebbers, R., Kling, C., Kramer, E., Lück, K., Nagel A., Philipp, G., Gerlach F., Palme S., Scheibe D., Ziegler K. & Rühlmann, J. (2021). Guidelines for precise lime management based on high-resolution soil pH, texture and SOM maps generated from proximal soil sensing data. Precision Agriculture, 22, 493-523.
 "BB.51"
 
 
@@ -2386,7 +2486,7 @@
 #'  \item Number of Features: 15
 #'  \item Coordinates: Without coordinates because of privacy concerns
 #'  \item Location: Wisconsin, USA
-#'  \item Sampling Design: Conditioned Latin Hypercube Sampling (cLHS) based on electrical conductivity, terrain parameters, and normalized difference vegetation index
+#'  \item Sampling Design: conditioned Latin Hypercube Sampling based on electrical conductivity, terrain parameters, and normalized difference vegetation index
 #'  \item Study Area Size: 80 ha
 #'  \item Geological Setting: Glacial outwash and sediments of the Johnson End Moraine
 #'  \item Previous Data Publication: None
@@ -2394,7 +2494,7 @@
 #'    \itemize{
 #'      \item Jingyi Huang, (jhuang426@wisc.edu), University of Wisconsin-Madison
 #'      }
-#'  \item License: CC BY-NC-SA 4.0
+#'  \item License: CC BY-SA 4.0
 #'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
@@ -2445,10 +2545,10 @@
 #'   \itemize{
 #'   \item Number Features: 2
 #'   \item Code(s): \code{Altitude, Slope}
-#'   \item Unit: \code{Altitude} (m), \code{Slope } (°)
+#'   \item Unit: \code{Altitude} in m, \code{Slope } in °
 #'   \item Sensing: Digital elevation model raster (3 m) based on LiDAR from the “Wisconsin Department of Natural Resources”
 #'   \item Processing: Calculating \code{Slope} with \code{\link[raster]{terrain}} function of the \pkg{raster} package, extracting DEM values from raster at soil sampling locations, resampled from the original 3 m resolution to 5 m resolution
-#'   \item Sensing Date: Unknown
+#'   \item Sampling Date: Unknown
 #'   }
 #'
 #'   ERa – Apparent Electrical Resistivity
@@ -2458,7 +2558,7 @@
 #'   \item Unit: \eqn{\Omega} m
 #'   \item Sensing: DUALEM-1HS instrument (DUALEM Inc., Milton, Canada) with exploration depth of 0 - 30 cm, in-situ
 #'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-#'   \item Sensing Date: July 2019
+#'   \item Sampling Date: July 2019
 #'   }
 #'
 #'   VI - Vegetation Indices
@@ -2468,7 +2568,7 @@
 #'   \item Unit: Unitless
 #'   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
 #'   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04) and \code{GNDVI} as (B08 - B03) / (B08 + B03), extracting VI values from raster at soil sampling locations
-#'   \item Sensing Date: July 2019
+#'   \item Sampling Date: July 2019
 #'    }
 #'
 #'   XRF – X-ray fluorescence derived elemental concentrations
@@ -2478,7 +2578,7 @@
 #'   \item Unit: ppm (estimated through XRF Geochem not ground truth)
 #'   \item Sensing: Delta Premium PXRF spectrometer (Olympus Scientific Solutions Americas Inc., Waltham, USA), on dried and sieved samples (<2 mm) in the laboratory
 #'   \item Processing: Compton normalization method to transform full spectra into estimates of elemental concentrations with accompanied software of the sensor (Geochem mode)
-#'   \item Sensing Date: July 2019
+#'   \item Sampling Date: July 2019
 #'   }
 #'
 #' }
@@ -2509,7 +2609,7 @@
 #' testing_data_W.50 <- W.50$Dataset[W.50$Folds == 1,]
 #'
 #' @usage W.50
-#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
 #' @references Burt, R. (Ed.) (2014). Kellogg soil survey laboratory methods manual. United States Department of Agriculture, Natural Resources Conservation Service, National Soil Survey Center, Kellogg Soil Survey Laboratory.\cr
 #' \cr
@@ -2545,7 +2645,7 @@
 #'      \item Eduardo Bottega (bottega.elb@gmail.com), Federal University of Santa Maria
 #'      \item José Lucas Safanelli (jsafanelli@woodwellclimate.org), Woodwell Climate Research Center
 #'      }
-#'  \item License: CC BY-NC-SA 4.0
+#'  \item License: CC BY-SA 4.0
 #'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
@@ -2564,7 +2664,7 @@
 #'    \itemize{
 #'    \item Code: \code{SOC_target}
 #'    \item Unit: \%
-#'    \item Protocol: Carbon from organic materials is oxidized with K\eqn{_2}Cr\eqn{_2}O\eqn{_7} and then quantified by titration using an ammoniacal ferrous sulphate solution (Walkley & Black 1934)
+#'    \item Protocol: Measured through titration after oxidization of the organic carbon (Walkley & Black 1934)
 #'    \item Sampling Date: November 2013
 #'    \item Sampling Depth: 0 – 20 cm
 #'    }
@@ -2582,7 +2682,7 @@
 #'    \itemize{
 #'    \item Code: \code{Clay_target}
 #'    \item Unit: \%
-#'    \item Protocol: Measured through a combination of wet sieving and sedimentation after dispersion and removal of organic matter through oxidation (DIN ISO 11277)
+#'    \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaption (DIN ISO 11277)
 #'    \item Sampling Date: November 2013
 #'    \item Sampling Depth: 0 – 20 cm
 #'    }
@@ -2596,10 +2696,10 @@
 #'   \itemize{
 #'   \item Number Features: 2
 #'   \item Code(s): \code{Altitude, Slope}
-#'   \item Unit: \code{Altitude} (m), \code{Slope } (°)
+#'   \item Unit: \code{Altitude} in m, \code{Slope } in °
 #'   \item Sensing: Digital elevation model raster (30 m) based on synthetic aperture radar from “Copernicus Open Access Hub”
 #'   \item Processing: Calculating \code{Slope} with \code{\link[raster]{terrain}} function of the \pkg{raster} package, extracting DEM values from raster at soil sampling locations
-#'   \item Sensing Date: October 2011
+#'   \item Sampling Date: October 2011
 #'   }
 #'
 #'   ERa – Apparent Electrical Resistivity
@@ -2609,7 +2709,7 @@
 #'   \item Unit: \eqn{\Omega} m
 #'   \item Sensing: LandMapper ERM-02 conductivity meter (Landviser, League City, USA) with exploration depth of 0 - 20 cm, in-situ
 #'   \item Processing: None
-#'   \item Sensing Date: November 2014
+#'   \item Sampling Date: November 2014
 #'   }
 #'
 #' }
@@ -2639,7 +2739,7 @@
 #' testing_data_SC.50 <- SC.50$Dataset[SC.50$Folds == 1,]
 #'
 #' @usage SC.50
-#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
 #' @references Bottega, E. L. & Safanelli J. L. (2024). Data for "Site-Specific Management Zones Delineation Based on Apparent Soil Electrical Conductivity in Two Contrasting Fields of Southern Brazil". Zenodo repository.  https://doi.org/10.5281/zenodo.13770031 \cr
 #' \cr
@@ -2656,10 +2756,125 @@
 #' @title PC.45 Dataset
 #' @description
 #' \itemize{
-#'  \item Metadata not yet received
-#'  }
+#'  \item Target Soil Properties: SOC, pH, Clay
+#'  \item Groups of Features: CSMoist, ERa
+#'  \item Sample size: 45
+#'  \item Number of Features: 4
+#'  \item Coordinates: Without coordinates as coordinates could not be found anymore
+#'  \item Location: Pest County, Hungary
+#'  \item Sampling Design: Stratified Systematic Sampling, where three 70 m wide transects were selected based on contrasting environmental settings and soil types ((1) agricultural land, (2) salt affected grassland, (3) forest)
+#'  \item Study Area Size: 4.5 ha
+#'  \item Geological Setting: Alluvial plain of the Danube (2 transects) and wind-blown dune region, where the calcareous sediments are originating from the Danube
+#'  \item Previous Data Publication: None
+#'  \item Contact Information:
+#'    \itemize{
+#'      \item Csilla.Farkas (Csilla.Farkas@nibio.no), Norwegian Institute of Bioeconomy Research (NIBIO)
+#'      \item Tibor Tóth (tibor@rissac.hu), HUN-REN Centre for Agricultural Research
+#'      }
+#'  \item License: CC BY-SA 4.0
+#'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
+#'  \item Changelog:
+#'    \itemize{
+#'      \item Version 1.0 (XXX.2025): Initial release
+#'    }
+#' }
+#' \cr
+#' @details
+#' \describe{
+#' \strong{Dataset:}
+#' Dataframe which contains the tabular dataset with the target soil properties and features}
+#' \describe{
+#' Target Soil Properties:
+#'
+#'    SOC - Soil Organic Carbon
+#'    \itemize{
+#'    \item Code: \code{SOC_target}
+#'    \item Unit: \%
+#'    \item Protocol: Measured through titration after oxidization of the organic carbon (Tyurin 1935)
+#'    \item Sampling Date: November 2004
+#'    \item Sampling Depth: 0 – 20 cm
+#'    }
+#'
+#'    pH
+#'    \itemize{
+#'    \item Code: \code{pH_target}
+#'    \item Unit: Unitless
+#'    \item Protocol: Measured in water suspension with a glass electrode with a 2.5:1 liquid:soil volumetric ratio (MSz-08-0206/2-1978)
+#'    \item Sampling Date: November 2004
+#'    \item Sampling Depth: 0 – 20 cm
+#' }
+#'
+#'    Clay
+#'    \itemize{
+#'    \item Code: \code{Clay_target}
+#'    \item Unit: \%
+#'    \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, Hungarian adaption (MSZ-08-0205-1978)
+#'    \item Sampling Date: November 2004
+#'    \item Sampling Depth: 0 – 20 cm
+#'    }
+#'
+#' }
+#'
+#' \cr
+#' Groups of Features:
+#' \describe{
+#'   CSMoist – Capacitive Soil Moisture
+#'   \itemize{
+#'   \item Number Features: 1
+#'   \item Code(s): \code{CSMoist}
+#'   \item Unit: \% (volumetric moisture content)
+#'   \item Sensing: Capacitive soil moisture sensor (BR-30, Research Institute of Soil Science and Agricultural Chemistry, Hungary, Budapest) with exploration depth of 10 cm, in-situ
+#'   \item Processing: None
+#'   \item Sampling Date: November 2004
+#'   }
+#'
+#'   ERa – Apparent Electrical Resistivity
+#'   \itemize{
+#'   \item Number Features: 3
+#'   \item Code(s): \code{ERa_EM, ERa_ERS, ERa_P}
+#'   \item Unit: \eqn{\Omega} m
+#'   \item Sensing: Three different devices
+#'    \itemize{
+#'      \item \code{ERa_EM} from Electromagnetic induction sensor (EMRC-120, Geoelectro, Nagykovácsi, Hungary) with exploration depth of 100 cm, in-situ
+#'      \item \code{ERa_ERS} from four electrode resistivity sensors (Martek SCT, Martek Instruments Inc., USA, Raleigh) with exploration depth of 20 cm, in-situ
+#'      \item \code{ERa_P} from Dielectric probe (Percometer, Adek ltd, Estonia, Tiskre) with exploration depth of 10 to 50 cm, in-situ
+#'      }
+#'   \item Processing: None
+#'   \item Sampling Date: November 2004
+#'   }
+#'
+#' }
+#'\cr
+#'
+#' \strong{Folds:}
+#' Vector which contains numerical entries from 1 to 10, each number can be used to index the folds for cross validation \cr
+#'
+#' \strong{Coordinates:}
+#' Empty entry (NA)
+#'
+#' @examples
+#' # Load the dataset list
+#' PC.45
+#'
+#' # Access the dataset
+#' PC.45$Dataset
+#'
+#' # Access the folds
+#' PC.45$Folds
+#'
+#' # Access the coordinates but empty for PC.45 (i.e. NA)
+#' PC.45$Coordinates
+#'
+#' # How to split the dataset into training and testing folds for the example of the first fold
+#' training_data_PC.45 <- PC.45$Dataset[PC.45$Folds != 1,]
+#' testing_data_PC.45 <- PC.45$Dataset[PC.45$Folds == 1,]
+#'
+#' @usage PC.45
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
+#' @references Tyurin, I. V. (1935). Comparative study of the methods for the determination of organic carbon in soils and water extracts from soils. Materials on genesis and geography of soils, ML Academy of Sci USSR, 139-158.
 "PC.45"
+
 
 
 
@@ -2673,7 +2888,7 @@
 #'  \item Number of Features: 351
 #'  \item Coordinates: With coordinates (EPSG: 32721)
 #'  \item Location: Mato Grosso, Brazil
-#'  \item Sampling Design:  Random sample from previous Regular Grid Sampling
+#'  \item Sampling Design: Random Sampling from previous Regular Grid Sampling
 #'  \item Study Area Size: 13 ha
 #'  \item Geological Setting: Heavily weathered soils originating from Sandstone
 #'  \item Previous Data Publication: Full dataset published in Tavares et al. (2022)
@@ -2682,7 +2897,7 @@
 #'      \item Tiago Rodrigues Tavares, tiagosrt@usp.br, University of Sao Paulo
 #'      \item José Paulo Molin (jpmolin@usp.br), University of Sao Paulo
 #'      }
-#'  \item License: CC BY-NC-SA 4.0
+#'  \item License: CC BY-SA 4.0
 #'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
@@ -2732,14 +2947,13 @@
 #'   \itemize{
 #'   \item Number Features: 351
 #'   \item Code(s): \code{wl_431.6, wl_437.4, wl_449.1} ... \code{wl_2153.1}
-#'   \item Unit: Unitless
-#'   \item Sensing: Device of former Veris MSP3 (Veris Technologies, Salina, Kansas, USA) which is based on two spectrometers (USB4000, Ocean optics, Largo, FL, USA) for the visible region and (C9914GB, Hamamatsu Photonics, Hamamatsu, Japan) for the NIR region, on dried and sieved samples (<2 mm) in the laboratory, spectral range was 343 - 2,200 nm at ~5 nm spectral resolution
+#'   \item Unit: \% (Reflectance)
+#'   \item Sensing: vis-NIR spectrometer of former Veris MSP3 (Veris Technologies, Salina, Kansas, USA) which is based on two spectrometers (USB4000, Ocean optics, Largo, FL, USA) for the visible region and (C9914GB, Hamamatsu Photonics, Hamamatsu, Japan) for the NIR region, on dried and sieved samples (<2 mm) in the laboratory, spectral range was 343 - 2,200 nm at ~5 nm spectral resolution
 #'   \item Processing: Discarding noisy edges of the spectrum (343 - 431.6 nm & 2153.1 - 2,200 nm)
-#'   \item Sensing Date: March 2016
+#'   \item Sampling Date: March 2016
 #'   \item Spectral Information (after data processing):
 #'    \itemize{
 #'      \item Data Representation: Wavelength (in nm)
-#'      \item Measurement Type: Reflectance
 #'      \item Spectral Resolution: ~5 nm
 #'      \item Spectral Range: 431.6 - 2,153.1 nm
 #'    }
@@ -2773,7 +2987,7 @@
 #' testing_data_MG.44 <- MG.44$Dataset[MG.44$Folds == 1,]
 #'
 #' @usage MG.44
-#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
 #' @references Bouyoucos, G. J. (1927). The hydrometer as a new method for the mechanical analysis of soils. Soil science, 23(5), 343-354.\cr
 #' \cr
@@ -2805,7 +3019,7 @@
 #'    \itemize{
 #'      \item Stefan Paetzold (s.paetzold@uni-bonn.de), University of Bonn
 #'      }
-#'  \item License: CC BY-NC-SA 4.0
+#'  \item License: CC BY-SA 4.0
 #'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
@@ -2825,7 +3039,7 @@
 #'    \item Code: \code{SOC_target}
 #'    \item Unit: \%
 #'    \item Protocol: Determined by the difference of total carbon and inorganic carbon, where total carbon was obtained through elemental analysis by measuring the CO\eqn{_2} release during dry combustion (DIN ISO 10694) without acid pretreatment and inorganic carbon as 0.12 x the calcium carbonate content, determined by the gas-volumetric Scheibler Method (ISO 10693)
-#'    \item Sampling Date: Apr 2013
+#'    \item Sampling Date: April 2013
 #'    \item Sampling Depth: 0 - 30 cm
 #'    }
 #'
@@ -2835,7 +3049,7 @@
 #'    \item Code: \code{pH_target}
 #'    \item Unit: Unitless
 #'    \item Protocol: Measured in CaCl\eqn{_2} suspension with a glass electrode with a 5:1 liquid:soil volumetric ratio (DIN ISO 10390)
-#'    \item Sampling Date: Apr 2013
+#'    \item Sampling Date: April 2013
 #'    \item Sampling Depth: 0 - 30 cm
 #' }
 #'
@@ -2844,8 +3058,8 @@
 #'    \itemize{
 #'    \item Code: \code{Clay_target}
 #'    \item Unit: \%
-#'    \item Protocol: Measured through a combination of wet sieving and sedimentation after dispersion and removal of organic matter through oxidation (DIN ISO 11277)
-#'    \item Sampling Date: Apr 2013
+#'    \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaption (DIN ISO 11277)
+#'    \item Sampling Date: April 2013
 #'    \item Sampling Depth: 0 - 30 cm
 #'    }
 #'
@@ -2856,16 +3070,15 @@
 #' \describe{
 #'   MIR – Mid Infrared Spectroscopy
 #'   \itemize{
-#'   \item Number Features: 1,686 \cr
-#'   \item Code(s): \code{wn_3799, wn_3797.1, wn_3795.1} ... \code{wn_549.6} \cr
-#'   \item Unit: Unitless \cr
-#'   \item Sensing: MIR spectrometer (Bruker Tensor 27 HTS-XT, Bruker Optik, Ettlingen, Germany), on dried and sieved samples (<2 mm) in the laboratory, spectral range was 7,500 – 550 cm\eqn{^{-1}} at 4 cm\eqn{^{-1}} intervals \cr
-#'   \item Processing: Discarding irrelevant spectral data of the spectrum (7,500 - 3,799 cm\eqn{^{-1}}), resampling to ~2 cm\eqn{^{-1}} intervals\cr
-#'   \item Sensing Date: Apr 2013
+#'   \item Number Features: 1,686
+#'   \item Code(s): \code{wn_3799, wn_3797.1, wn_3795.1} ... \code{wn_549.6}
+#'   \item Unit: \% (Reflectance)
+#'   \item Sensing: MIR spectrometer (Bruker Tensor 27 HTS-XT, Bruker Optik, Ettlingen, Germany), on dried and sieved samples (<2 mm) in the laboratory, spectral range was 7,500 – 550 cm\eqn{^{-1}} at 4 cm\eqn{^{-1}} intervals
+#'   \item Processing: Discarding irrelevant spectral data of the spectrum (7,500 - 3,799 cm\eqn{^{-1}}), resampling to ~2 cm\eqn{^{-1}} intervals
+#'   \item Sampling Date: April 2013
 #'   \item Spectral Information (after data processing):
 #'    \itemize{
 #'      \item Data Representation: Wavenumber (in cm\eqn{^{-1}})
-#'      \item Measurement Type: Reflectance
 #'      \item Spectral Resolution: ~ 2 cm\eqn{^{-1}}
 #'      \item Spectral Range: 3,799 - 549.6 cm\eqn{^{-1}}
 #'    }
@@ -2899,7 +3112,7 @@
 #' testing_data_NRW.42 <- NRW.42$Dataset[NRW.42$Folds == 1,]
 #'
 #' @usage NRW.42
-#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
 "NRW.42"
 
@@ -2920,7 +3133,7 @@
 #'  \item Number of Features: 3
 #'  \item Coordinates: With coordinates (EPSG: 32633)
 #'  \item Location: South Moravia, Czechia
-#'  \item Sampling Design: Subsample from previous Regular Grid Sampling, subsample was handpicked to cover contrasting areas
+#'  \item Sampling Design: Stratified Sampling from previous Regular Grid Sampling, stratification was handpicked to cover contrasting areas
 #'  \item Study Area Size: 53 ha
 #'  \item Geological Setting: Weichselian sandy loess [? Eventually wrong ?]
 #'  \item Previous Data Publication: None
@@ -2928,7 +3141,7 @@
 #'    \itemize{
 #'      \item Vojtech Lukas (vojtech.lukas@mendelu.cz), Mendel University in Brno
 #'      }
-#'  \item License: CC BY-NC-SA 4.0
+#'  \item License: CC BY-SA 4.0
 #'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
@@ -2945,7 +3158,7 @@
 #'
 #'    SOC - Soil Organic Carbon
 #'    \itemize{
-#'    \item Code: \code{SOM_target}
+#'    \item Code: \code{SOC_target}
 #'    \item Unit: \%
 #'    \item Protocol: Measured through titration after oxidization of the organic carbon following slight adjustments of the Walkley & Black (1934) method (Zbíral et al. 2004)
 #'    \item Sampling Date: May 2004
@@ -2978,10 +3191,10 @@
 #'   \itemize{
 #'   \item Number Features: 2
 #'   \item Code(s): \code{Altitude, Slope}
-#'   \item Unit: \code{Altitude} (m), \code{Slope } (°)
+#'   \item Unit: \code{Altitude} in m, \code{Slope } in °
 #'   \item Sensing: Digital elevation model raster (~2 m) based on LiDAR from “Geoportal of the Czech Office for Surveying, Mapping and Cadastre"
 #'   \item Processing: Calculating \code{Slope} with \code{\link[raster]{terrain}} function of the \pkg{raster} package, extracting DEM values from raster at soil sampling locations
-#'   \item Sensing Date: Unknown
+#'   \item Sampling Date: Unknown
 #'   }
 #'
 #'   ERa – Apparent Electrical Resistivity
@@ -2991,7 +3204,7 @@
 #'   \item Unit: \eqn{\Omega} m
 #'   \item Sensing: EM38 sensor (Geonics Ltd., Mississauga, Canada) drawn by a vehicle with exploration depth of 0 - 75 cm, in-situ
 #'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-#'   \item Sensing Date: May 2004
+#'   \item Sampling Date: May 2004
 #'   }
 #'
 #' }
@@ -3023,7 +3236,7 @@
 #' testing_data_SM.40 <- SM.40$Dataset[SM.40$Folds == 1,]
 #'
 #' @usage SM.40
-#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
 #' @references Bouyoucos, G. J. (1927). The hydrometer as a new method for the mechanical analysis of soils. Soil science, 23(5), 343-354.\cr
 #' \cr
@@ -3055,7 +3268,7 @@
 #'    \itemize{
 #'      \item Alexander Steiger (alexander.steiger@uni-rostock.de), University of Rostock
 #'      }
-#'  \item License: CC BY-NC-SA 4.0
+#'  \item License: CC BY-SA 4.0
 #'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
@@ -3093,6 +3306,7 @@
 #'    \item Code: \code{Clay_target}
 #'    \item Unit: \%
 #'    \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water (Gee and Bauder 1986)
+#'    \item Sampling Date: August 2022
 #'    \item Sampling Depth: 0 – 15 cm
 #'    }
 #'
@@ -3105,10 +3319,10 @@
 #'   \itemize{
 #'   \item Number Features: 2
 #'   \item Code(s): \code{Altitude, Slope}
-#'   \item Unit: \code{Altitude} (m), \code{Slope } (°)
+#'   \item Unit: \code{Altitude} in m, \code{Slope } in °
 #'   \item Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from “LAiV Geodaten-MV”
 #'   \item Processing: Calculating \code{Slope} with \code{\link[raster]{terrain}} function of the \pkg{raster} package, extracting DEM values from raster at soil sampling locations
-#'   \item Sensing Date: Unknown
+#'   \item Sampling Date: Unknown
 #'   }
 #'
 #'   RSS – Remote Sensing Derived Spectral Data
@@ -3116,9 +3330,9 @@
 #'   \item Number Features: 3
 #'   \item Code(s): \code{B02, B8A, B11}
 #'   \item Unit: Unitless
-#'   \item Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”
+#'   \item Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”, with bands of 10 - 20 m spatial resolution
 #'   \item Processing: Extracting RSS values from raster at soil sampling locations, selecting bands spread throughout the spectral range with lower intercorrelation
-#'   \item Sensing Date: August 2022
+#'   \item Sampling Date: August 2022
 #'   }
 #'
 #' }
@@ -3148,7 +3362,7 @@
 #' testing_data_MWP.36 <- MWP.36$Dataset[MWP.36$Folds == 1,]
 #'
 #' @usage MWP.36
-#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
 #' @references Gee, G.W. & Bauder, J.W. (1986) Particle-Size Analysis. In: Klute, A., Ed., Methods of Soil Analysis, Part 1. Physical and Mineralogical Methods, Agronomy Monograph No. 9, 2nd Edition, American Society of Agronomy/Soil Science Society of America, Madison, WI, 383-411.\cr
 #' \cr
@@ -3171,14 +3385,14 @@
 #'  \item Coordinates: Without coordinates because of privacy concerns
 #'  \item Location: Occitanie, France
 #'  \item Sampling Design: Regular Grid Sampling
-#'  \item Study Area Size: XXX [will be delivered later]
+#'  \item Study Area Size: XXX [? What was the size of the study area?]
 #'  \item Geological Setting: Pleistocene fluvial deposits and Miocene marine deposits
 #'  \item Previous Data Publication: None
 #'  \item Contact Information:
 #'    \itemize{
 #'      \item Stefan Paetzold (s.paetzold@uni-bonn.de), University of Bonn
 #'      }
-#'  \item License: CC BY-NC-SA 4.0
+#'  \item License: CC BY-SA 4.0
 #'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
@@ -3217,7 +3431,7 @@
 #'    \itemize{
 #'    \item Code: \code{Clay_target}
 #'    \item Unit: \%
-#'    \item Protocol: Measured through a combination of wet sieving and sedimentation after dispersion and removal of organic matter through oxidation (DIN ISO 11277)
+#'    \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaption (DIN ISO 11277)
 #'    \item Sampling Date: March 2020
 #'    \item Sampling Depth: 0 - 20 cm
 #'    }
@@ -3229,16 +3443,15 @@
 #' \describe{
 #'   MIR – Mid Infrared Spectroscopy
 #'   \itemize{
-#'   \item Number Features: 1,637 \cr
+#'   \item Number Features: 1,637
 #'   \item Code(s): \code{wn_3800, wn_3797.1, wn_3795.1} ... \code{wn_751.1} \cr
-#'   \item Unit: Unitless \cr
+#'   \item Unit: \% (Reflectance)
 #'   \item Sensing: Handheld MIR spectrometer (Agilent 4300, Agilent Technologies, Santa Clara, USA), on dried and sieved samples (<2 mm) in the laboratory compressed to soil tablets, spectral range was 5,200 – 650 cm\eqn{^{-1}} at 4 - 16 cm\eqn{^{-1}} intervals \cr
 #'   \item Processing: Discarding irrelevant spectral data of the spectrum (5,200 - 3,800 cm\eqn{^{-1}}) and noisy edges of the spectrum (751.1 - 650 cm\eqn{^{-1}}), resampling to ~2 cm\eqn{^{-1}} intervals\cr
-#'   \item Sensing Date: March 2020
+#'   \item Sampling Date: March 2020
 #'   \item Spectral Information (after data processing):
 #'    \itemize{
 #'      \item Data Representation: Wavenumber (in cm\eqn{^{-1}})
-#'      \item Measurement Type: Reflectance
 #'      \item Spectral Resolution: ~ 2 cm\eqn{^{-1}}
 #'      \item Spectral Range: 3,800 - 751.1 cm\eqn{^{-1}}
 #'    }
@@ -3272,7 +3485,7 @@
 #' testing_data_O.32 <- O.32$Dataset[O.32$Folds == 1,]
 #'
 #' @usage O.32
-#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
 "O.32"
 
@@ -3294,7 +3507,7 @@
 #'  \item Number of Features: 8
 #'  \item Coordinates: With coordinates (EPSG: 25833)
 #'  \item Location: Brandenburg, Germany
-#'  \item Sampling Design: Multi Criteria Sampling based on quantile coverage of the sensing-features (ERa and pH-ISE), clustering of large and low values of sensing-features and spatial coverage
+#'  \item Sampling Design: Multi Criteria Sampling (Bönecke et al. 2021) based on quantile coverage of the sensing-features (ERa and pH-ISE), clustering of large and low values of sensing-features and spatial coverage
 #'  \item Study Area Size: 19 ha
 #'  \item Geological Setting: Pleistocene young morainic landscape of the Weichselian glaciation with predominantly glacial sand
 #'  \item Previous Data Publication: Target soil properties published but under boycott in Vogel et al. 2022
@@ -3302,7 +3515,7 @@
 #'    \itemize{
 #'      \item Sebastian Vogel (SVogel@atb-potsdam.de), Leibniz Institute for Agricultural Engineering and Bioeconomy (ATB)
 #'      }
-#'  \item License: CC BY-NC-SA 4.0
+#'  \item License: CC BY-SA 4.0
 #'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
@@ -3339,7 +3552,7 @@
 #'    \itemize{
 #'    \item Code: \code{Clay_target}
 #'    \item Unit: \%
-#'    \item Protocol: Measured through a combination of wet sieving and sedimentation after dispersion and removal of organic matter through oxidation (DIN ISO 11277)
+#'    \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaption (DIN ISO 11277)
 #'    \item Sampling Date: August & October 2017
 #'    \item Sampling Depth: 0 - 30 cm
 #'    }
@@ -3352,10 +3565,10 @@
 #'   \itemize{
 #'   \item Number Features: 2
 #'   \item Code(s): \code{Altitude, Slope}
-#'   \item Unit: \code{Altitude} (m), \code{Slope } (°)
+#'   \item Unit: \code{Altitude} in m, \code{Slope } in °
 #'   \item Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from “GeoBasis-DE/LGB”
 #'   \item Processing: Calculating \code{Slope} with \code{\link[raster]{terrain}} function of the \pkg{raster} package, extracting DEM values from raster at soil sampling locations
-#'   \item Sensing Date: LiDAR March 2011, images for photogrammetry May 2022
+#'   \item Sampling Date: LiDAR March 2011, images for photogrammetry May 2022
 #'   }
 #'
 #'   ERa – Apparent Electrical Resistivity
@@ -3365,7 +3578,7 @@
 #'   \item Unit: \eqn{\Omega} m
 #'   \item Sensing: EC Surveyor (VERIS Technologies, Salinas, USA) from VerisMSP3 with exploration depth of 0 - 30 cm, in-situ
 #'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-#'   \item Sensing Date: August 2017
+#'   \item Sampling Date: August 2017
 #'   }
 #'
 #'   pH-ISE – Ion Selective Electrodes for pH Determination
@@ -3375,7 +3588,7 @@
 #'   \item Unit: Unitless
 #'   \item Sensing: Soil pH Manager (VERIS Technologies, Salinas, USA) from VerisMSP3, in-situ
 #'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-#'   \item Sensing Date: August 2017
+#'   \item Sampling Date: August 2017
 #'   }
 #'   VI - Vegetation Indices
 #'   \itemize{
@@ -3384,7 +3597,7 @@
 #'   \item Unit: Unitless
 #'   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
 #'   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04), extracting VI values from raster at soil sampling locations
-#'   \item Sensing Date: May 2017
+#'   \item Sampling Date: May 2017
 #'    }
 #' }
 #'\cr
@@ -3415,9 +3628,11 @@
 #' testing_data_BB.30_1 <- BB.30_1$Dataset[BB.30_1$Folds == 1,]
 #'
 #' @usage BB.30_1
-#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
-#' @references Vogel S., Bönecke E., Kling C., Kramer E., Lück K., Nagel A., Philipp G., Rühlmann J., Schröter I. & Gebbers, R. (2022), Base neutralizing capacity from agricultural fields in the quaternary landscape of North-East Germany, BONARES Repository, https://doi.org/10.20387/bonares-zh3x-nd80
+#' @references Vogel S., Bönecke E., Kling C., Kramer E., Lück K., Nagel A., Philipp G., Rühlmann J., Schröter I. & Gebbers, R. (2022), Base neutralizing capacity from agricultural fields in the quaternary landscape of North-East Germany, BONARES Repository, https://doi.org/10.20387/bonares-zh3x-nd80 \cr
+#' \cr
+#' Bönecke, E., Meyer, S., Vogel, S., Schröter, I., Gebbers, R., Kling, C., Kramer, E., Lück, K., Nagel A., Philipp, G., Gerlach F., Palme S., Scheibe D., Ziegler K. & Rühlmann, J. (2021). Guidelines for precise lime management based on high-resolution soil pH, texture and SOM maps generated from proximal soil sensing data. Precision Agriculture, 22, 493-523.
 "BB.30_1"
 
 
@@ -3439,7 +3654,7 @@
 #'      \item Pablo Rosso (Pablo.Rosso@zalf.de), Leibniz Centre for Agricultural Landscape Research (ZALF)
 #'      \item Sebastian Vogel (SVogel@atb-potsdam.de), Leibniz Institute for Agricultural Engineering and Bioeconomy (ATB)
 #'      }
-#'  \item License: CC BY-NC-SA 4.0
+#'  \item License: CC BY-SA 4.0
 #'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
@@ -3452,7 +3667,7 @@
 #' \strong{Dataset:}
 #' Dataframe which contains the tabular dataset with the target soil properties and features}
 #' \describe{
-#'  Target Soil Properties:
+#' Target Soil Properties:
 #'
 #'    SOC - Soil Organic Carbon
 #'    \itemize{
@@ -3477,7 +3692,7 @@
 #'    \itemize{
 #'    \item Code: \code{Clay_target}
 #'    \item Unit: \%
-#'    \item Protocol: Measured through a combination of wet sieving and sedimentation after dispersion and removal of organic matter through oxidation (DIN ISO 11277)
+#'    \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaption (DIN ISO 11277)
 #'    \item Sampling Date: September 2022
 #'    \item Sampling Depth: 0 - 30 cm
 #'    }
@@ -3490,10 +3705,10 @@
 #'   \itemize{
 #'   \item Number Features: 2
 #'   \item Code(s): \code{Altitude, Slope}
-#'   \item Unit: \code{Altitude} (m), \code{Slope } (°)
+#'   \item Unit: \code{Altitude} in m, \code{Slope } in °
 #'   \item Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from “GeoBasis-DE/LGB”
 #'   \item Processing: Calculating \code{Slope} with \code{\link[raster]{terrain}} function of the \pkg{raster} package, extracting DEM values from raster at soil sampling locations
-#'   \item Sensing Date: LiDAR March 2011, images for photogrammetry May 2022
+#'   \item Sampling Date: LiDAR March 2011, images for photogrammetry May 2022
 #'   }
 #'
 #'   ERa – Apparent Electrical Resistivity
@@ -3503,7 +3718,7 @@
 #'   \item Unit: \eqn{\Omega} m
 #'   \item Sensing: Array of multiple rolling electrodes (Geophilus company, Caputh, Germany) on RapidMapper platform with exploration depth of 0 - 50 cm, in-situ
 #'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-#'   \item Sensing Date:  September 2022
+#'   \item Sampling Date:  September 2022
 #'   }
 #'
 #'   Gamma
@@ -3511,9 +3726,9 @@
 #'   \item Number Features: 5
 #'   \item Code(s): \code{G_Total_Counts, G_K, G_U, G_Th, G_Cs}
 #'   \item Unit: Unitless
-#'   \item Sensing: Gamma sensor (MS-2000-CsI-MTS, Medusa Radiometrics BV, Groningen, Netherlands) on RapidMapper platform, in-situ
+#'   \item Sensing: Passive gamma sensor (MS-2000-CsI-MTS, Medusa Radiometrics BV, Groningen, Netherlands) on RapidMapper platform, in-situ
 #'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-#'   \item Sensing Date:  September 2022
+#'   \item Sampling Date: September 2022
 #'   }
 #'
 #'   RSS – Remote Sensing Derived Spectral Data
@@ -3521,9 +3736,9 @@
 #'   \item Number Features: 1
 #'   \item Code(s): \code{B04}
 #'   \item Unit: Unitless
-#'   \item Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”, selecting bands spread throughout the spectral range with lower intercorrelation
-#'   \item Processing: Extracting RSS values from raster at soil sampling locations
-#'   \item Sensing Date: September 2022
+#'   \item Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”
+#'   \item Processing: Extracting RSS values from raster at soil sampling locations, selecting single band due to low sample size
+#'   \item Sampling Date: September 2022
 #'   }
 #'   VI - Vegetation Indices
 #'   \itemize{
@@ -3532,7 +3747,7 @@
 #'   \item Unit: Unitless
 #'   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
 #'   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04), extracting VI values from raster at soil sampling locations
-#'   \item Sensing Date: April 2023
+#'   \item Sampling Date: April 2023
 #'    }
 #' }
 #'\cr
@@ -3563,7 +3778,7 @@
 #' testing_data_BB.30_2 <- BB.30_2$Dataset[BB.30_2$Folds == 1,]
 #'
 #' @usage BB.30_2
-#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
 "BB.30_2"
 

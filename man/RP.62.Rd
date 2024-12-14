@@ -5,7 +5,7 @@
 \alias{RP.62}
 \title{RP.62 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+A list with three elements: 'Dataset','Coordinates' and 'Folds'
 }
 \usage{
 RP.62
@@ -27,7 +27,7 @@ RP.62
      \item Stefan Paetzold (s.paetzold@uni-bonn.de), University of Bonn
      \item Hamed Tavakoli (HTavakoli@atb-potsdam.de), Leibniz Institute for Agricultural Engineering and Bioeconomy (ATB)
      }
- \item License: CC BY-NC-SA 4.0
+ \item License: CC BY-SA 4.0
  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
  \item Changelog:
    \itemize{
@@ -65,7 +65,7 @@ Target Soil Properties:
    \itemize{
    \item Code: \code{Clay_target}
    \item Unit: \%
-   \item Protocol: Measured through a combination of wet sieving and sedimentation after dispersion and removal of organic matter through oxidation (DIN ISO 11277)
+   \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaption (DIN ISO 11277)
    \item Sampling Date: October 2017
    \item Sampling Depth: 0 - 30 cm
    }
@@ -78,9 +78,9 @@ Groups of Features:
   \item Number Features: 1
   \item Code(s): \code{ERa}
   \item Unit: \eqn{\Omega} m
-  \item Sensing: Array of multiple rolling electrodes (Geophilus company, Caputh, Germany) on RapidMapper platform with 0 - 50 cm measuring depth, in-situ
+  \item Sensing: Array of multiple rolling electrodes (Geophilus company, Caputh, Germany) on RapidMapper platform with exploration depth of 0 - 50 cm, in-situ
   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-  \item Sensing Date: September 2020
+  \item Sampling Date: September 2020
   }
 
   Gamma
@@ -88,23 +88,22 @@ Groups of Features:
   \item Number Features: 5
   \item Code(s): \code{G_Total_Counts, G_K, G_U, G_Th, G_Cs}
   \item Unit: Unitless
-  \item Sensing: Gamma sensor (MS-2000-CsI-MTS, Medusa Radiometrics BV, Groningen, Netherlands) on RapidMapper platform, in-situ
+  \item Sensing: Passive gamma sensor (MS-2000-CsI-MTS, Medusa Radiometrics BV, Groningen, Netherlands) on RapidMapper platform, in-situ
   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-  \item Sensing Date: September 2020
+  \item Sampling Date: September 2020
   }
 
   NIR – Near Infrared Spectroscopy
   \itemize{
   \item Number Features: 1,401
   \item Code(s): \code{wl_1000, wl_1001, wl_1002} ... \code{wl_2400}
-  \item Unit: Unitless
+  \item Unit: \% (Reflectance)
   \item Sensing: NIR spectrometer (C11118GA, Hamamatsu Photonics K.K., Shizuoka Prefecture, Japan) on RapidMapper platform, in-situ, spectral range was 900 - 2550 nm at 15 nm intervals
-  \item Processing: Kriging to align sensing- with soil sampling locations, discarding noisy edges of the spectrum (900 - 999 nm & 2,400 - 2,550 nm), resampling to 1 nm intervals
-  \item Sensing Date: September 2020
+  \item Processing: Kriging to align sensing- with soil sampling locations, discarding noisy edges of the spectrum (900 - 1,000 nm & 2,400 - 2,550 nm), resampling to 1 nm intervals
+  \item Sampling Date: September 2020
   \item Spectral Information (after data processing):
    \itemize{
      \item Data Representation: Wavelength (in nm)
-     \item Measurement Type: Reflectance
      \item Spectral Resolution: 1 nm
      \item Spectral Range: 1,000 - 2,400 nm
    }
@@ -116,7 +115,7 @@ Groups of Features:
   \item Unit: Unitless
   \item Sensing: Soil pH Manager (VERIS Technologies, Salinas, USA) on RapidMapper platform, in-situ
   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-  \item Sensing Date: September 2020
+  \item Sampling Date: September 2020
   }
   VI - Vegetation Indices
   \itemize{
@@ -125,7 +124,7 @@ Groups of Features:
   \item Unit: Unitless
   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04) and \code{GNDVI} as (B08 - B03) / (B08 + B03), extracting VI values from raster at soil sampling locations
-  \item Sensing Date: March 2017
+  \item Sampling Date: March 2017
    }
 }
 \cr

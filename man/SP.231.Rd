@@ -5,14 +5,121 @@
 \alias{SP.231}
 \title{SP.231 Dataset}
 \format{
-An object of class \code{list} of length 3.
+A list with three elements: 'Dataset','Coordinates' and 'Folds'
 }
 \usage{
 SP.231
 }
 \description{
 \itemize{
- \item Metadata not yet received
- }
+ \item Target Soil Properties: SOM, pH, Clay
+ \item Groups of Features: vis-NIR
+ \item Sample size: 231
+ \item Number of Features: 271
+ \item Coordinates: With coordinates (EPSG: 32654)
+ \item Location: Saitama Prefecture, Japan
+ \item Sampling Design: Two sampling designs over multiple fields depending on the soil conditions: (1) Systematic Sampling, in which samples are taken in the corners and middle of the field and (2) Fully Random Sampling
+ \item Study Area Size: 3.1 ha
+ \item Geological Setting: Silandic Andosols
+ \item Previous Data Publication: None
+ \item Contact Information:
+   \itemize{
+     \item Masakazu Kodaira (kodaira@cc.tuat.ac.jp), Tokyo University of Agriculture and Technology
+     }
+ \item License: CC BY-SA 4.0
+ \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
+ \item Changelog:
+   \itemize{
+     \item Version 1.0 (XXX.2025): Initial release
+   }
+}
+\cr
+}
+\details{
+\describe{
+\strong{Dataset:}
+Dataframe which contains the tabular dataset with the target soil properties and features}
+\describe{
+Target Soil Properties:
+
+   SOM - Soil Organic Matter
+   \itemize{
+   \item Code: \code{SOM_target}
+   \item Unit: \%
+   \item Protocol: Measured through the weight difference before and after ignition
+   \item Sampling Date: February 2017, December 2017 and February 2018
+   \item Sampling Depth: 0 - 15 cm
+   }
+
+
+   pH
+   \itemize{
+   \item Code: \code{pH_target}
+   \item Unit: Unitless
+   \item Protocol: Measured in water suspension with a glass electrode with a 2.5:1 liquid:soil gravimetric ratio
+   \item Sampling Date: February 2017, December 2017 and February 2018
+   \item Sampling Depth: 0 - 15 cm
+}
+
+
+   Clay
+   \itemize{
+   \item Code: \code{Clay_target}
+   \item Unit: \%
+   \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water (Gee and Bauder 1986)
+   \item Sampling Date: February 2017, December 2017 and February 2018
+   \item Sampling Depth: 0 - 15 cm
+   }
+}
+\cr
+Groups of Features:
+\describe{
+  vis-NIR – Visible and Near Infrared Spectroscopy
+  \itemize{
+  \item Number Features: 2,081
+  \item Code(s): \code{wl_350, wl_355, wl_360} ... \code{wl_1700}
+  \item Unit: \% (Reflectance)
+  \item Sensing: mounted vis-NIR spectrometer (SAS3000, Shibuya Seiki Co. Ltd., Ehime Prefecture, Japan), in-situ, spectral range was 320 – 1,700 nm at 1 - 7 nm intervals [?metadata per email said 0.33 to 1.56 nm but in the paper it says 1 to 7 nm, which is correct?]
+  \item Processing: Discarding noisy edges of the spectrum (320 - 350 nm), resampling to 5 nm intervals
+  \item Sampling Date: February 2017, December 2017 and February 2018
+  \item Spectral Information (after data processing):
+   \itemize{
+     \item Data Representation: Wavelength (in nm)
+     \item Spectral Resolution: 1 nm
+     \item Spectral Range: 350 - 1,700 nm
+   }
+  }
+
+}
+
+\cr
+
+
+\strong{Folds:}
+Vector which contains numerical entries from 1 to 10, each number can be used to index the folds for cross validation \cr
+
+\strong{Coordinates:}
+Dataframe with coordinates (EPSG: 32654)
+}
+\examples{
+# Load the dataset list
+SP.231
+
+# Access the dataset
+SP.231$Dataset
+
+# Access the folds
+SP.231$Folds
+
+# Access the coordinates
+SP.231$Coordinates
+
+# How to split the dataset into training and testing folds for the example of the first fold
+training_data_SP.231 <- SP.231$Dataset[SP.231$Folds != 1,]
+testing_data_SP.231 <- SP.231$Dataset[SP.231$Folds == 1,]
+
+}
+\references{
+Walkley, A. & Black, I. A. (1934). An examination of the Degtjareff method for determining soil organic matter, and a proposed modification of the chromic acid titration method. Soil science, 37(1), 29-38.
 }
 \keyword{datasets}

@@ -5,7 +5,7 @@
 \alias{MGS.101}
 \title{MGS.101 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+A list with three elements: 'Dataset','Coordinates' and 'Folds'
 }
 \usage{
 MGS.101
@@ -26,7 +26,7 @@ MGS.101
    \itemize{
      \item Domingos Sarvio Magalhaes Valente (valente@ufv.br), Federal University of Vicosa
      }
- \item License: CC BY-NC-SA 4.0
+ \item License: CC BY-SA 4.0
  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
  \item Changelog:
    \itemize{
@@ -76,10 +76,10 @@ Groups of Features:
   \itemize{
   \item Number Features: 2
   \item Code(s): \code{Altitude, Slope}
-  \item Unit: \code{Altitude} (m), \code{Slope } (°)
+  \item Unit: \code{Altitude} in m, \code{Slope } in °
   \item Sensing: Digital elevation model raster (30 m) based on synthetic aperture radar from “Copernicus Open Access Hub”
   \item Processing: Calculating \code{Slope} with \code{\link[raster]{terrain}} function of the \pkg{raster} package, extracting DEM values from raster at soil sampling locations
-  \item Sensing Date: February 2011
+  \item Sampling Date: February 2011
   }
 
   RSS – Remote Sensing Derived Spectral Data
@@ -89,7 +89,7 @@ Groups of Features:
   \item Unit: Unitless
   \item Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”
   \item Processing: Extracting RSS values from raster at soil sampling locations
-  \item Sensing Date: August 2022
+  \item Sampling Date: August 2022
   }
 
   VI - Vegetation Indices
@@ -99,7 +99,7 @@ Groups of Features:
   \item Unit: Unitless
   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04) and \code{GNDVI} as (B08 - B03) / (B08 + B03), extracting VI values from raster at soil sampling locations
-  \item Sensing Date: December 2021
+  \item Sampling Date: December 2021
   }
 
 }

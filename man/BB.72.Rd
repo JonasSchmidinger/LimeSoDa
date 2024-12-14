@@ -5,7 +5,7 @@
 \alias{BB.72}
 \title{BB.72 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+A list with three elements: 'Dataset','Coordinates' and 'Folds'
 }
 \usage{
 BB.72
@@ -27,7 +27,7 @@ BB.72
      \item Sebastian Vogel (SVogel@atb-potsdam.de), Leibniz Institute for Agricultural Engineering and Bioeconomy (ATB)
      \item Jörg Rühlmann (ruehlmann@igzev.de), Leibniz Institute of Vegetable and Ornamental Crops (IGZ)
      }
- \item License: CC BY-NC-SA 4.0
+ \item License: CC BY-SA 4.0
  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
  \item Changelog:
    \itemize{
@@ -65,7 +65,7 @@ Target Soil Properties:
    \itemize{
    \item Code: \code{Clay_target}
    \item Unit: \%
-   \item Protocol: Measured through a combination of wet sieving and sedimentation after dispersion and removal of organic matter through oxidation (DIN ISO 11277)
+   \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaption (DIN ISO 11277)
    \item Sampling Date: August 2022
    \item Sampling Depth: 0 - 30 cm
    }
@@ -80,10 +80,10 @@ Groups of Features:
   \itemize{
   \item Number Features: 2
   \item Code(s): \code{Altitude, Slope}
-  \item Unit: \code{Altitude} (m), \code{Slope } (°)
+  \item Unit: \code{Altitude} in m, \code{Slope } in °
   \item Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from “GeoBasis-DE/LGB”
   \item Processing: Calculating \code{Slope} with \code{\link[raster]{terrain}} function of the \pkg{raster} package, extracting DEM values from raster at soil sampling locations
-  \item Sensing Date: LiDAR March 2011, images for photogrammetry May 2022
+  \item Sampling Date: LiDAR March 2011, images for photogrammetry May 2022
   }
 
   ERa – Apparent Electrical Resistivity
@@ -91,9 +91,9 @@ Groups of Features:
   \item Number Features: 1
   \item Code(s): \code{ERa}
   \item Unit: \eqn{\Omega} m
-  \item Sensing: Array of multiple rolling electrodes(Geophilus company, Caputh, Germany) on Geophilus platform with exploration depth of 0 - 25 cm, in-situ
+  \item Sensing: Array of multiple rolling electrodes (Geophilus company, Caputh, Germany) on Geophilus platform with exploration depth of 0 - 25 cm, in-situ
   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-  \item Sensing Date: August 2021
+  \item Sampling Date: August 2021
   }
 
   Gamma
@@ -101,9 +101,9 @@ Groups of Features:
   \item Number Features: 1
   \item Code(s): \code{G_Total_Counts}
   \item Unit: Unitless
-  \item Sensing: Gamma sensor (gamma sensor model is not commercially available) on Geophilus platform, in-situ
+  \item Sensing: Passive gamma sensor (Gamma sensor model is not commercially available) on Geophilus platform, in-situ
   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-  \item Sensing Date: August 2021
+  \item Sampling Date: August 2021
   }
 
   pH-ISE – Ion Selective Electrodes for pH Determination
@@ -113,7 +113,7 @@ Groups of Features:
   \item Unit: Unitless
   \item Sensing: Soil pH Manager (VERIS Technologies, Salinas, USA) from VerisMSP3, in-situ
   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-  \item Sensing Date: July 2020
+  \item Sampling Date: July 2020
   }
 
   RSS – Remote Sensing Derived Spectral Data
@@ -123,7 +123,7 @@ Groups of Features:
   \item Unit: Unitless
   \item Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”, with bands of 10 - 20 m spatial resolution
   \item Processing: Extracting RSS values from raster at soil sampling locations
-  \item Sensing Date: August 2022
+  \item Sampling Date: August 2022
   }
   VI - Vegetation Indices
   \itemize{
@@ -132,7 +132,7 @@ Groups of Features:
   \item Unit: Unitless
   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04) and \code{GNDVI} as (B08 - B03) / (B08 + B03), extracting VI values from raster at soil sampling locations
-  \item Sensing Date: May 2022
+  \item Sampling Date: May 2022
   }
 }
 \cr

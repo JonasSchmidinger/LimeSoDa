@@ -5,7 +5,7 @@
 \alias{W.50}
 \title{W.50 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+A list with three elements: 'Dataset','Coordinates' and 'Folds'
 }
 \usage{
 W.50
@@ -18,7 +18,7 @@ W.50
  \item Number of Features: 15
  \item Coordinates: Without coordinates because of privacy concerns
  \item Location: Wisconsin, USA
- \item Sampling Design: Conditioned Latin Hypercube Sampling (cLHS) based on electrical conductivity, terrain parameters, and normalized difference vegetation index
+ \item Sampling Design: conditioned Latin Hypercube Sampling based on electrical conductivity, terrain parameters, and normalized difference vegetation index
  \item Study Area Size: 80 ha
  \item Geological Setting: Glacial outwash and sediments of the Johnson End Moraine
  \item Previous Data Publication: None
@@ -26,7 +26,7 @@ W.50
    \itemize{
      \item Jingyi Huang, (jhuang426@wisc.edu), University of Wisconsin-Madison
      }
- \item License: CC BY-NC-SA 4.0
+ \item License: CC BY-SA 4.0
  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
  \item Changelog:
    \itemize{
@@ -78,10 +78,10 @@ Groups of Features:
   \itemize{
   \item Number Features: 2
   \item Code(s): \code{Altitude, Slope}
-  \item Unit: \code{Altitude} (m), \code{Slope } (°)
+  \item Unit: \code{Altitude} in m, \code{Slope } in °
   \item Sensing: Digital elevation model raster (3 m) based on LiDAR from the “Wisconsin Department of Natural Resources”
   \item Processing: Calculating \code{Slope} with \code{\link[raster]{terrain}} function of the \pkg{raster} package, extracting DEM values from raster at soil sampling locations, resampled from the original 3 m resolution to 5 m resolution
-  \item Sensing Date: Unknown
+  \item Sampling Date: Unknown
   }
 
   ERa – Apparent Electrical Resistivity
@@ -91,7 +91,7 @@ Groups of Features:
   \item Unit: \eqn{\Omega} m
   \item Sensing: DUALEM-1HS instrument (DUALEM Inc., Milton, Canada) with exploration depth of 0 - 30 cm, in-situ
   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-  \item Sensing Date: July 2019
+  \item Sampling Date: July 2019
   }
 
   VI - Vegetation Indices
@@ -101,7 +101,7 @@ Groups of Features:
   \item Unit: Unitless
   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04) and \code{GNDVI} as (B08 - B03) / (B08 + B03), extracting VI values from raster at soil sampling locations
-  \item Sensing Date: July 2019
+  \item Sampling Date: July 2019
    }
 
   XRF – X-ray fluorescence derived elemental concentrations
@@ -111,7 +111,7 @@ Groups of Features:
   \item Unit: ppm (estimated through XRF Geochem not ground truth)
   \item Sensing: Delta Premium PXRF spectrometer (Olympus Scientific Solutions Americas Inc., Waltham, USA), on dried and sieved samples (<2 mm) in the laboratory
   \item Processing: Compton normalization method to transform full spectra into estimates of elemental concentrations with accompanied software of the sensor (Geochem mode)
-  \item Sensing Date: July 2019
+  \item Sampling Date: July 2019
   }
 
 }

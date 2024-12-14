@@ -5,7 +5,7 @@
 \alias{CV.98}
 \title{CV.98 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+A list with three elements: 'Dataset','Coordinates' and 'Folds'
 }
 \usage{
 CV.98
@@ -18,15 +18,16 @@ CV.98
  \item Number of Features: 2,151
  \item Coordinates: Without coordinates because dataset was not georeferenced
  \item Location: Canton of Vaud, Switzerland
- \item Sampling Design: Random Stratified Sampling based on different treatments of organic amendments, fertilization, crop rotation and soil cultivation
+ \item Sampling Design: Stratified Random Sampling based on different treatments of organic amendments, fertilization, crop rotation and soil cultivation
  \item Study Area Size: 28 ha
  \item Geological Setting: Glacial or fluvioglacial deposits
  \item Previous Data Publication: Full dataset published in Metzger et al. (2024) but under embargo until June 2025
+ \item Contact Information:
    \itemize{
      \item Konrad Metzger (konrad.metzger@agroscope.admin.ch), Agroscope
      \item Luca Bragazza (luca.bragazza@agroscope.admin.ch), Agroscope
      }
- \item License: CC BY-NC-SA 4.0
+ \item License: CC BY-SA 4.0
  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
  \item Changelog:
    \itemize{
@@ -45,7 +46,7 @@ Target Soil Properties:
    SOC - Soil Organic Carbon
    \itemize{
    \item Code: \code{SOC_target}
-   \item Unit: %
+   \item Unit: \%
    \item Protocol: Measured through titration after oxidization of the organic carbon (Walkley & Black 1934)
    \item Sampling Date: May - June and September - October 2021
    \item Sampling Depth: 0 - 20 cm
@@ -63,7 +64,7 @@ Target Soil Properties:
    Clay
    \itemize{
    \item Code: \code{Clay_target}
-   \item Unit: %
+   \item Unit: \%
    \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water (Gee and Bauder 1986)
    \item Sampling Date: May - June and September - October 2021
    \item Sampling Depth: 0 - 20 cm
@@ -77,14 +78,13 @@ Groups of Features:
   \itemize{
   \item Number Features: 2,151
   \item Code(s): \code{wl_350, wl_351, wl_352} ... \code{wl_2500}
-  \item Unit: Unitless
-  \item Sensing: PSR+3500 (Spectral Evolution, Haverhill, USA), in-situ from Edelman auger (denoted as scantype = a in original dataset publication), spectral range was 350 - 2500 nm at 3 - 8 nm spectral resolution
+  \item Unit: \% (Reflectance)
+  \item Sensing: vis-NIR spectrometer ( PSR+3500, Spectral Evolution, Haverhill, USA), in-situ from Edelman auger (denoted as scantype = a in original dataset publication), spectral range was 350 - 2500 nm at 3 - 8 nm spectral resolution
   \item Processing: Resampling to 1 nm intervals
-  \item Sensing Date: May - June and September - October 2021
+  \item Sampling Date: May - June and September - October 2021
   \item Spectral Information (after data processing):
    \itemize{
      \item Data Representation: Wavelength (in nm)
-     \item Measurement Type: Reflectance
      \item Spectral Resolution: 1 nm
      \item Spectral Range: 350 – 2500 nm
    }

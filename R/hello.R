@@ -17,14 +17,14 @@
 # library(usethis)
 # library(roxygen2)
 # library(Lime.SoDa)
-
+#
 # CV.98_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_dataset_files/CV.98_data_table.rds")
 # CV.98_data_table.rds
 # folds_CV.98_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_split_files/CV.98_folds.rds")
-# CV.98_coordinates.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_dataset_coordinate_files/CV.98_coordinates.rds")
-# CV.98_coordinates.rds
+# # CV.98_coordinates.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_dataset_coordinate_files/CV.98_coordinates.rds")
+# # CV.98_coordinates.rds
 # CV.98_coordinates.rds <- NA
-# # #
+# # # #
 # CV.98 <- list("Dataset" = CV.98_data_table.rds, "Folds" = folds_CV.98_data_table.rds, "Coordinates" = CV.98_coordinates.rds)
 # usethis::use_data(CV.98,overwrite = TRUE)
 # usethis::use_r("data")
@@ -35,12 +35,9 @@
 
 
 #
-#
-#
-
 # library(ggplot2)
 # library(tidyverse)
-# mir_data <- CV.98$Dataset
+# mir_data <- O.32$Dataset
 # #select all columns where column name contains "wl_"
 # tt <- mir_data[, grepl("wn_", colnames(mir_data))]
 # tt
@@ -92,12 +89,12 @@
 # row_to_plot <-tt[150, ]
 # row_to_plot
 # #row_to_plot<- 1/(10^row_to_plot)
+
+
+
+
 #
-
-
-
-
-#Convert the row to a long format for ggplot2
+# #Convert the row to a long format for ggplot2
 # library(ggplot2)
 # library(tidyverse)
 # nir_data <- MG.44$Dataset
@@ -120,7 +117,7 @@
 #   labs(x = "Wavelength (nm)", y = "Reflectance", title = "Spectra Plot") +
 #   theme_minimal() +
 #   theme(legend.title = element_blank())
-
+#
 
 
 

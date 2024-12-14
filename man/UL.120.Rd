@@ -5,7 +5,7 @@
 \alias{UL.120}
 \title{UL.120 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+A list with three elements: 'Dataset','Coordinates' and 'Folds'
 }
 \usage{
 UL.120
@@ -27,7 +27,7 @@ UL.120
      \item Johanna Wetterlind (Johanna.Wetterlind@slu.se), Swedish University of Agricultural Sciences
      \item Bo Stenberg (Bo.Stenberg@slu.se), Swedish University of Agricultural Sciences
      }
- \item License: CC BY-NC-SA 4.0
+ \item License: CC BY-SA 4.0
  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
  \item Changelog:
    \itemize{
@@ -82,22 +82,21 @@ Groups of Features:
   \item Unit: \eqn{\Omega} m
   \item Sensing: EM38 sensor (Geonics Ltd., Mississauga, Canada) with exploration depth of 0 - 150 cm, in-situ
   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations
-  \item Sensing Date: April 2005
+  \item Sampling Date: April 2005
   }
 
 
   vis-NIR – Visible and Near Infrared Spectroscopy
   \itemize{
-  \item Number Features: 2,081 \cr
-  \item Code(s): \code{wl_420, wl_421, wl_422} ... \code{wl_2500} \cr
-  \item Unit: Unitless \cr
-  \item Sensing: vis-NIR spectrometer (FieldSpec Pro FR scanning instrument, Analytical Spectral Devices Inc., Boulder, USA), on dried and sieved samples (<2 mm) in the laboratory, spectral range was 350–2,500 nm at 1.4–2.0 nm intervals \cr
-  \item Processing: Discarding noisy edges of the spectrum (350 - 420 nm), resampling to 1 nm intervals \cr
-  \item Sensing Date: September 2005
+  \item Number Features: 2,081
+  \item Code(s): \code{wl_420, wl_421, wl_422} ... \code{wl_2500}
+  \item Unit: \% (Reflectance)
+  \item Sensing: FieldSpec Pro FR scanning instrument (Analytical Spectral Devices Inc., Boulder, USA), on dried and sieved samples (<2 mm) in the laboratory, spectral range was 350 – 2,500 nm at 1.4 – 2.0 nm intervals
+  \item Processing: Discarding noisy edges of the spectrum (350 - 420 nm), resampling to 1 nm intervals
+  \item Sampling Date: September 2005
   \item Spectral Information (after data processing):
    \itemize{
      \item Data Representation: Wavelength (in nm)
-     \item Measurement Type: Reflectance
      \item Spectral Resolution: 1 nm
      \item Spectral Range: 420 - 2,500 nm
    }

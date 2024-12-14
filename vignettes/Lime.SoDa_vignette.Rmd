@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
-Precision Liming Soil Datasets (Lime.SoDa) is a collection of datasets from a field- and farm-scale soil mapping context. Datasets are ready “ready-to-go” for modelling, meaning they contain target soil properties and features in a tabular format. Target soil properties for all datasets are; soil organic matter (SOM) or -carbon (SOC), pH and clay. Features for modelling are dataset-specific. The goal of `Lime.SoDa` is to make benchmarking and comparison of different modelling approaches in Digital Soil Mapping and Pedometrics more trustworthy by providing an open collection of datasets. This vignette provides an overview of the `Lime.SoDa` package and how to use it for modelling purposes.
+Precision Liming Soil Datasets (Lime.SoDa) is a collection of datasets from a field- and farm-scale soil mapping context. These datasets are 'ready-to-go' for modeling purposes, as they contain target soil properties and features in a tabular format. Target soil properties for all datasets are; soil organic matter (SOM) or -carbon (SOC), pH and clay, while the features for modeling are dataset specific. The goal of `Lime.SoDa` is to enable more reliable benchmarking and comparison of various modeling approaches in Digital Soil Mapping and Pedometrics by providing an open collection of multiple datasets. This vignette offers an overview of the `Lime.SoDa` package and how to use it for modelling purposes.
 
 ### Installation
 Installing `Lime.SoDa` from GitHub by: 
@@ -25,19 +25,19 @@ library(Lime.SoDa)
 ```
 
 ### Lime.SoDa package structure
-`Lime.SoDa` contains 31 entries. This inclues 30 datasets and an overview table.
+`Lime.SoDa` contains 31 entries; 30 datasets and an overview table:
 
 ```{r}
 data(package = "Lime.SoDa")$results[,3] # All entries in Lime.SoDa
 ```
-`Overview_Datasets` provides an overview of the 30 datasets, including the dataset name, number of samples, number of features and further specifics:
+`Overview_Datasets` provides a summary of the specific of the 30 datasets, including the dataset ID, number of samples, number of features and further information:
 
 
 ```{r}
 head(Overview_Datasets)
 ```
 
-Datasets are named according to the geographic region and sample size. For example, `BB.250` refers to a dataset from Brandenburg (BB), Germany, which includes 250 reference soil samples. Additional information about the methodology, sampling procedures, feature codes, and more can be found in the metadata of each dataset which can be accessed through:
+Dataset IDs are named according to the geographic region and sample size. For example, `BB.250` refers to a dataset from Brandenburg (BB), Germany, which includes 250 reference soil samples. Additional information about the methodology, sampling procedures, feature codes, and more can be found in the metadata of each dataset which can be accessed through:
 
 ```{r}
 ?BB.250 #Access metadata

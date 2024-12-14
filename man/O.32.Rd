@@ -5,7 +5,7 @@
 \alias{O.32}
 \title{O.32 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+A list with three elements: 'Dataset','Coordinates' and 'Folds'
 }
 \usage{
 O.32
@@ -19,14 +19,14 @@ O.32
  \item Coordinates: Without coordinates because of privacy concerns
  \item Location: Occitanie, France
  \item Sampling Design: Regular Grid Sampling
- \item Study Area Size: XXX [will be delivered later]
+ \item Study Area Size: XXX [? What was the size of the study area?]
  \item Geological Setting: Pleistocene fluvial deposits and Miocene marine deposits
  \item Previous Data Publication: None
  \item Contact Information:
    \itemize{
      \item Stefan Paetzold (s.paetzold@uni-bonn.de), University of Bonn
      }
- \item License: CC BY-NC-SA 4.0
+ \item License: CC BY-SA 4.0
  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
  \item Changelog:
    \itemize{
@@ -66,7 +66,7 @@ Target Soil Properties:
    \itemize{
    \item Code: \code{Clay_target}
    \item Unit: \%
-   \item Protocol: Measured through a combination of wet sieving and sedimentation after dispersion and removal of organic matter through oxidation (DIN ISO 11277)
+   \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaption (DIN ISO 11277)
    \item Sampling Date: March 2020
    \item Sampling Depth: 0 - 20 cm
    }
@@ -78,16 +78,15 @@ Groups of Features:
 \describe{
   MIR – Mid Infrared Spectroscopy
   \itemize{
-  \item Number Features: 1,637 \cr
+  \item Number Features: 1,637
   \item Code(s): \code{wn_3800, wn_3797.1, wn_3795.1} ... \code{wn_751.1} \cr
-  \item Unit: Unitless \cr
+  \item Unit: \% (Reflectance)
   \item Sensing: Handheld MIR spectrometer (Agilent 4300, Agilent Technologies, Santa Clara, USA), on dried and sieved samples (<2 mm) in the laboratory compressed to soil tablets, spectral range was 5,200 – 650 cm\eqn{^{-1}} at 4 - 16 cm\eqn{^{-1}} intervals \cr
   \item Processing: Discarding irrelevant spectral data of the spectrum (5,200 - 3,800 cm\eqn{^{-1}}) and noisy edges of the spectrum (751.1 - 650 cm\eqn{^{-1}}), resampling to ~2 cm\eqn{^{-1}} intervals\cr
-  \item Sensing Date: March 2020
+  \item Sampling Date: March 2020
   \item Spectral Information (after data processing):
    \itemize{
      \item Data Representation: Wavenumber (in cm\eqn{^{-1}})
-     \item Measurement Type: Reflectance
      \item Spectral Resolution: ~ 2 cm\eqn{^{-1}}
      \item Spectral Range: 3,800 - 751.1 cm\eqn{^{-1}}
    }

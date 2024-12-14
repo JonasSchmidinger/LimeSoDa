@@ -5,7 +5,7 @@
 \alias{SC.50}
 \title{SC.50 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'.
+A list with three elements: 'Dataset','Coordinates' and 'Folds'
 }
 \usage{
 SC.50
@@ -27,7 +27,7 @@ SC.50
      \item Eduardo Bottega (bottega.elb@gmail.com), Federal University of Santa Maria
      \item José Lucas Safanelli (jsafanelli@woodwellclimate.org), Woodwell Climate Research Center
      }
- \item License: CC BY-NC-SA 4.0
+ \item License: CC BY-SA 4.0
  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
  \item Changelog:
    \itemize{
@@ -47,7 +47,7 @@ Target Soil Properties:
    \itemize{
    \item Code: \code{SOC_target}
    \item Unit: \%
-   \item Protocol: Carbon from organic materials is oxidized with K\eqn{_2}Cr\eqn{_2}O\eqn{_7} and then quantified by titration using an ammoniacal ferrous sulphate solution (Walkley & Black 1934)
+   \item Protocol: Measured through titration after oxidization of the organic carbon (Walkley & Black 1934)
    \item Sampling Date: November 2013
    \item Sampling Depth: 0 – 20 cm
    }
@@ -65,7 +65,7 @@ Target Soil Properties:
    \itemize{
    \item Code: \code{Clay_target}
    \item Unit: \%
-   \item Protocol: Measured through a combination of wet sieving and sedimentation after dispersion and removal of organic matter through oxidation (DIN ISO 11277)
+   \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaption (DIN ISO 11277)
    \item Sampling Date: November 2013
    \item Sampling Depth: 0 – 20 cm
    }
@@ -79,10 +79,10 @@ Groups of Features:
   \itemize{
   \item Number Features: 2
   \item Code(s): \code{Altitude, Slope}
-  \item Unit: \code{Altitude} (m), \code{Slope } (°)
+  \item Unit: \code{Altitude} in m, \code{Slope } in °
   \item Sensing: Digital elevation model raster (30 m) based on synthetic aperture radar from “Copernicus Open Access Hub”
   \item Processing: Calculating \code{Slope} with \code{\link[raster]{terrain}} function of the \pkg{raster} package, extracting DEM values from raster at soil sampling locations
-  \item Sensing Date: October 2011
+  \item Sampling Date: October 2011
   }
 
   ERa – Apparent Electrical Resistivity
@@ -92,7 +92,7 @@ Groups of Features:
   \item Unit: \eqn{\Omega} m
   \item Sensing: LandMapper ERM-02 conductivity meter (Landviser, League City, USA) with exploration depth of 0 - 20 cm, in-situ
   \item Processing: None
-  \item Sensing Date: November 2014
+  \item Sampling Date: November 2014
   }
 
 }
