@@ -49,7 +49,7 @@
 #' \itemize{
 #'  \item Target Soil Properties: SOC, pH, Clay
 #'  \item Groups of Features: DEM, ERa, Gamma, pH-ISE, RSS, VI
-#'  \item Sample size: 250
+#'  \item Sample Size: 250
 #'  \item Number of Features: 17
 #'  \item Coordinates: With coordinates (EPSG: 25833)
 #'  \item Location: Brandenburg, Germany
@@ -213,7 +213,7 @@
 #' \itemize{
 #'  \item Target Soil Properties: SOM, pH, Clay
 #'  \item Groups of Features: vis-NIR
-#'  \item Sample size: 231
+#'  \item Sample Size: 231
 #'  \item Number of Features: 271
 #'  \item Coordinates: With coordinates (EPSG: 32654)
 #'  \item Location: Saitama Prefecture, Japan
@@ -342,7 +342,7 @@
 #' \itemize{
 #'  \item Target Soil Properties: SOC, pH, Clay
 #'  \item Groups of Features: DEM, RSS, VI
-#'  \item Sample size: 204
+#'  \item Sample Size: 204
 #'  \item Number of Features: 16
 #'  \item Coordinates: With coordinates (EPSG: 32723)
 #'  \item Location: Bahia, Brazil
@@ -468,20 +468,159 @@
 
 
 
+#' @title G.150 Dataset
+#' @description
+#' \itemize{
+#'  \item Target Soil Properties: SOC, pH, Clay
+#'  \item Groups of Features: DEM, ERa, RSS, VI
+#'  \item Sample Size: 150
+#'  \item Number of Features: 17
+#'  \item Coordinates: With coordinates (EPSG: 32722)
+#'  \item Location: Goias, Brazil
+#'  \item Sampling Design: Regular Grid Sampling
+#'  \item Study Area Size: 79 ha
+#'  \item Geological Setting: unknown [? Add information if known ?]
+#'  \item Previous Data Publication: None
+#'  \item Contact Information:
+#'    \itemize{
+#'      \item Domingos Sarvio Magalhaes Valente (valente@ufv.br), Federal University of Vicosa
+#'      \item Marcelo Marques Costa (marcelo_marques_costa@ufj.edu.br), Federal University of Jatai
+#'      }
+#'  \item License: CC BY-SA 4.0
+#'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
+#'  \item Changelog:
+#'    \itemize{
+#'      \item Version 1.0 (XXX.2025): Initial release
+#'    }
+#' }
+#' \cr
+#' @details
+#' \describe{
+#' \strong{Dataset:}
+#' Dataframe which contains the tabular dataset with the target soil properties and features}
+#' \describe{
+#' Target Soil Properties:
+#'
+#'    SOC - Soil Organic Carbon
+#'    \itemize{
+#'    \item Code: \code{SOC_target}
+#'    \item Unit: \%
+#'    \item Protocol: Measured through titration after oxidization of the organic carbon (Walkley & Black 1934)
+#'    \item Sampling Date: October 2010
+#'    \item Sampling Depth: 0 – 20 cm
+#'    }
+#'
+#'    pH
+#'    \itemize{
+#'    \item Code: \code{pH_target}
+#'    \item Unit: Unitless
+#'    \item Protocol: Measured in water suspension with a glass electrode with a 2.5:1 liquid:soil volumetric ratio
+#'    \item Sampling Date: October 2010
+#'    \item Sampling Depth: 0 – 20 cm
+#' }
+#'
+#'    Clay
+#'    \itemize{
+#'    \item Code: \code{Clay_target}
+#'    \item Unit: \%
+#'    \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water (Gee and Bauder 1986)
+#'    \item Sampling Date: October 2010
+#'    \item Sampling Depth: 0 – 20 cm
+#'    }
+#' }
+#'
+#' \cr
+#' Groups of Features:
+#' \describe{
+#'   DEM – Digital Elevation Model and Terrain Parameters
+#'   \itemize{
+#'   \item Number Features: 2
+#'   \item Code(s): \code{Altitude, Slope}
+#'   \item Unit: \code{Altitude} in m, \code{Slope} in °
+#'   \item Sensing: Digital elevation model raster (30 m) based on synthetic aperture radar from “Copernicus Open Access Hub”
+#'   \item Processing: Calculating \code{Slope} with \code{\link[raster]{terrain}} function of the \pkg{raster} package, extracting DEM values from raster at soil sampling locations
+#'   \item Sampling Date: December 2010
+#'   }
+#'
+#'   ERa – Apparent Electrical Resistivity
+#'   \itemize{
+#'   \item Number Features: 1
+#'   \item Code(s): \code{ERa}
+#'   \item Unit: \eqn{\Omega} m
+#'   \item Sensing: LandMapper ERM-02 conductivity meter (Landviser, League City, USA) with exploration depth of 0 - 20 cm, in-situ
+#'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations [?Was this the case?]
+#'   \item Sampling Date: December 2010
+#'   }
+#'
+#'   RSS – Remote Sensing Derived Spectral Data
+#'   \itemize{
+#'   \item Number Features: 12
+#'   \item Code(s): \code{B01, B02, B03, B04, B05, B06, B07, B08, B8A, B09, B11, B12}
+#'   \item Unit: Unitless
+#'   \item Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”
+#'   \item Processing: Extracting RSS values from raster at soil sampling locations
+#'   \item Sampling Date: July 2017
+#'   }
+#'
+#'   VI - Vegetation Indices
+#'   \itemize{
+#'   \item Number Features: 2
+#'   \item Code(s): \code{NDVI, GNDVI}
+#'   \item Unit: Unitless
+#'   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
+#'   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04) and \code{GNDVI} as (B08 - B03) / (B08 + B03), extracting VI values from raster at soil sampling locations
+#'   \item Sampling Date: January 2019
+#'   }
+#'
+#' }
+#'\cr
+#'
+#' \strong{Folds:}
+#' Vector which contains numerical entries from 1 to 10, each number can be used to index the folds for cross validation \cr
+#'
+#' \strong{Coordinates:}
+#' Dataframe with coordinates (EPSG: 32722)
+#'
+#'
+#' @examples
+#' # Load the dataset list
+#' G.150
+#'
+#' # Access the dataset
+#' G.150$Dataset
+#'
+#' # Access the folds
+#' G.150$Folds
+#'
+#' # Access the coordinates
+#' G.150$Coordinates
+#'
+#' # How to split the dataset into training and testing folds for the example of the first fold
+#' training_data_G.150 <- G.150$Dataset[G.150$Folds != 1,]
+#' testing_data_G.150 <- G.150$Dataset[G.150$Folds == 1,]
+#'
+#' @usage G.150
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
+#' @docType data
+#' @references Gee, G.W. & Bauder, J.W. (1986) Particle-Size Analysis. In: Klute, A., Ed., Methods of Soil Analysis, Part 1. Physical and Mineralogical Methods, Agronomy Monograph No. 9, 2nd Edition, American Society of Agronomy/Soil Science Society of America, Madison, WI, 383-411.\cr
+#' \cr
+#' Walkley, A. & Black, I. A. (1934). An examination of the Degtjareff method for determining soil organic matter, and a proposed modification of the chromic acid titration method. Soil science, 37(1), 29-38.
+"G.150"
+
 
 #' @title H.138 Dataset
 #' @description
 #' \itemize{
 #'  \item Target Soil Properties: SOC, pH, Clay
 #'  \item Groups of Features: MIR
-#'  \item Sample size: 138
+#'  \item Sample Size: 138
 #'  \item Number of Features: 2,489
 #'  \item Coordinates: With coordinates (EPSG: 32649)
 #'  \item Location: Hubei, China
 #'  \item Sampling Design: Two sampling designs: (1) adapted Latin Hypercube Sampling taking into account legacy samples, correlation and accessibility based on terrain parameters and (2) Uncertainty Guided Sampling based on uncertainty predictions from a Random Forest model (Stumpf et al. 2017)
 #'  \item Study Area Size: 420 ha
 #'  \item Geological Setting: Sedimentary rocks, mainly dolomite with silt and limestone formed in the middle and lower Jurassic
-#'  \item Previous Data Publication: Full dataset published in Wadoux et al. (2025) [?Not yet published but planned?]
+#'  \item Previous Data Publication: Full dataset published in Wadoux et al. (2024)
 #'  \item Contact Information:
 #'    \itemize{
 #'      \item Alexandre M.J.-C- Wadoux (Alexandre.Wadoux@inrae.fr), University of Montpellier
@@ -515,7 +654,7 @@
 #'    \itemize{
 #'    \item Code: \code{pH_target}
 #'    \item Unit: Unitless
-#'    \item Protocol: Measured in water suspension with a glass electrode with unspecified [?please add if you the volumetric or gravimetric soil to liquid ratio?] liquid:soil ratio
+#'    \item Protocol: Measured in water suspension with a glass electrode with unspecified liquid:soil ratio
 #'    \item Sampling Date: June 2013, May, 2014 & November 2014
 #'    \item Sampling Depth: 0 - 20 cm
 #' }
@@ -538,7 +677,7 @@
 #'   \item Number Features: 2,489
 #'   \item Code(s): \code{wn_5397.9, wn_5396, wn_5394} ... \code{wn_599.8}
 #'   \item Unit: \% (Reflectance)
-#'   \item Sensing: VERTEX 70v FT-IR Spektrometer (Bruker Optik, Ettlingen, Germany), on dried and sieved samples (<2 mm) in the laboratory, spectral range was 7,500 - 370 cm\eqn{^{-1}} at 0.4 cm\eqn{^{-1}} intervals
+#'   \item Sensing: VERTEX 70v FT-IR Spectrometer (Bruker Optik, Ettlingen, Germany), on dried and sieved samples (<2 mm) in the laboratory, spectral range was 7,500 - 370 cm\eqn{^{-1}} at 0.4 cm\eqn{^{-1}} intervals
 #'   \item Processing: Discarding irrelevant spectral data of the spectrum (7,500 - 5,397.9 cm\eqn{^{-1}}) and noisy edges of the spectrum (599.8 - 370 cm\eqn{^{-1}})
 #'   \item Sampling Date: June 2013, May, 2014 & November 2014
 #'   \item Spectral Information (after data processing):
@@ -580,7 +719,7 @@
 #' @usage H.138
 #' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
-#' @references [ ? Add data publication when published ?]\cr
+#' @references Wadoux, A. M. J.-C., Stumpf, F., & Scholten, T.. (2024). A catchment-scale dataset of soil properties and their mid-infrared spectra. Zenodo repository. https://doi.org/10.5281/zenodo.14557348 \cr
 #' \cr
 #' Stumpf, F., Schmidt, K., Goebes, P., Behrens, T., Schönbrodt-Stitt, S., Wadoux, A., Xiang, W. & Scholten, T. (2017). Uncertainty-guided sampling to improve digital soil maps. Catena, 153, 30-38.
 "H.138"
@@ -594,7 +733,7 @@
 #' \itemize{
 #'  \item Target Soil Properties: SOM, pH, Clay
 #'  \item Groups of Features: ERa, vis-NIR
-#'  \item Sample size: 125
+#'  \item Sample Size: 125
 #'  \item Number of Features: 2,082
 #'  \item Coordinates: Without coordinates because of privacy concerns instead with dummy coordinates (EPSG: 4326)
 #'  \item Location: Skåne Län, Sweden
@@ -726,7 +865,7 @@
 #' \itemize{
 #'  \item Target Soil Properties: SOM, pH, Clay
 #'  \item Groups of Features: ERa, vis-NIR
-#'  \item Sample size: 120
+#'  \item Sample Size: 120
 #'  \item Number of Features: 2,082
 #'  \item Coordinates: Without coordinates because of privacy concerns instead with dummy coordinates (EPSG: 4326)
 #'  \item Location: Uppsala Län, Sweden
@@ -858,7 +997,7 @@
 #' \itemize{
 #'  \item Target Soil Properties: SOC, pH, Clay
 #'  \item Groups of Features: MIR
-#'  \item Sample size: 115
+#'  \item Sample Size: 115
 #'  \item Number of Features: 1,686
 #'  \item Coordinates: Without coordinates because of privacy concerns
 #'  \item Location: North Rhine-Westphalia, Germany
@@ -966,12 +1105,156 @@
 
 
 
+
+
+#' @title MG.112 Dataset
+#' @description
+#' \itemize{
+#'  \item Target Soil Properties: SOC, pH, Clay
+#'  \item Groups of Features: DEM, ERa, RSS, VI
+#'  \item Sample Size: 112
+#'  \item Number of Features: 17
+#'  \item Coordinates: With coordinates (EPSG: 32721)
+#'  \item Location: Mato Grosso, Brazil
+#'  \item Sampling Design: Regular Grid Sampling
+#'  \item Study Area Size: 79 ha
+#'  \item Geological Setting: unknown [? Add if known ?]
+#'  \item Previous Data Publication: None
+#'  \item Contact Information:
+#'    \itemize{
+#'      \item Domingos Sarvio Magalhaes Valente (valente@ufv.br), Federal University of Vicosa
+#'      \item Rodrigo Sinaidi Zandonadi (rodrigo.zandonadi@ufmt.br), Federal University of Mato Grosso
+#'      }
+#'  \item License: CC BY-SA 4.0
+#'  \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
+#'  \item Changelog:
+#'    \itemize{
+#'      \item Version 1.0 (XXX.2025): Initial release
+#'    }
+#' }
+#' \cr
+#' @details
+#' \describe{
+#' \strong{Dataset:}
+#' Dataframe which contains the tabular dataset with the target soil properties and features}
+#' \describe{
+#' Target Soil Properties:
+#'
+#'    SOC - Soil Organic Carbon
+#'    \itemize{
+#'    \item Code: \code{SOC_target}
+#'    \item Unit: \%
+#'    \item Protocol: Measured through titration after oxidization of the organic carbon (Walkley & Black 1934)
+#'    \item Sampling Date: March 2022
+#'    \item Sampling Depth: 0 – 20 cm
+#'    }
+#'
+#'    pH
+#'    \itemize{
+#'    \item Code: \code{pH_target}
+#'    \item Unit: Unitless
+#'    \item Protocol: Measured in water suspension with a glass electrode with a 2.5:1 liquid:soil volumetric ratio
+#'    \item Sampling Date: March 2022
+#'    \item Sampling Depth: 0 – 20 cm
+#' }
+#'
+#'    Clay
+#'    \itemize{
+#'    \item Code: \code{Clay_target}
+#'    \item Unit: \%
+#'    \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water (Gee and Bauder 1986)
+#'    \item Sampling Date: March 2022
+#'    \item Sampling Depth: 0 – 20 cm
+#'    }
+#' }
+#'
+#' \cr
+#' Groups of Features:
+#' \describe{
+#'   DEM – Digital Elevation Model and Terrain Parameters
+#'   \itemize{
+#'   \item Number Features: 2
+#'   \item Code(s): \code{Altitude, Slope}
+#'   \item Unit: \code{Altitude} in m, \code{Slope } in °
+#'   \item Sensing: Digital elevation model raster (30 m) based on synthetic aperture radar from “Copernicus Open Access Hub”
+#'   \item Processing: Calculating \code{Slope} with \code{\link[raster]{terrain}} function of the \pkg{raster} package, extracting DEM values from raster at soil sampling locations
+#'   \item Sampling Date: April 2011
+#'   }
+#'
+#'   ERa – Apparent Electrical Resistivity
+#'   \itemize{
+#'   \item Number Features: 1
+#'   \item Code(s): \code{ERa}
+#'   \item Unit: \eqn{\Omega} m
+#'   \item Sensing: Electrical conductivity disc array (VERIS Technologies, Salinas, USA) on Veris U3 platform with exploration depth of 0 - 30 cm, in-situ
+#'   \item Processing: Ordinary Kriging to align sensing- with soil sampling locations [? Was this the case?]
+#'   \item Sampling Date: March 2022
+#'   }
+#'
+#'   RSS – Remote Sensing Derived Spectral Data
+#'   \itemize{
+#'   \item Number Features: 12
+#'   \item Code(s): \code{B01, B02, B03, B04, B05, B06, B07, B08, B8A, B09, B11, B12}
+#'   \item Unit: Unitless
+#'   \item Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”
+#'   \item Processing: Extracting RSS values from raster at soil sampling locations
+#'   \item Sampling Date: October 2022
+#'   }
+#'
+#'   VI - Vegetation Indices
+#'   \itemize{
+#'   \item Number Features: 2
+#'   \item Code(s): \code{NDVI, GNDVI}
+#'   \item Unit: Unitless
+#'   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
+#'   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04) and \code{GNDVI} as (B08 - B03) / (B08 + B03), extracting VI values from raster at soil sampling locations
+#'   \item Sampling Date: May 2022
+#'   }
+#'
+#' }
+#'\cr
+#'
+#' \strong{Folds:}
+#'  Vector which contains numerical entries from 1 to 10, each number can be used to index the folds for cross validation \cr
+#'
+#' \strong{Coordinates:}
+#' Dataframe with coordinates (EPSG: 32721)
+#'
+#'
+#' @examples
+#' # Load the dataset list
+#' MG.112
+#'
+#' # Access the dataset
+#' MG.112$Dataset
+#'
+#' # Access the folds
+#' MG.112$Folds
+#'
+#' # Access the coordinates
+#' MG.112$Coordinates
+#'
+#' # How to split the dataset into training and testing folds for the example of the first fold
+#' training_data_MG.112 <- MG.112$Dataset[MG.112$Folds != 1,]
+#' testing_data_MG.112 <- MG.112$Dataset[MG.112$Folds == 1,]
+#'
+#' @usage MG.112
+#' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
+#' @docType data
+#' @references Gee, G.W. & Bauder, J.W. (1986) Particle-Size Analysis. In: Klute, A., Ed., Methods of Soil Analysis, Part 1. Physical and Mineralogical Methods, Agronomy Monograph No. 9, 2nd Edition, American Society of Agronomy/Soil Science Society of America, Madison, WI, 383-411.\cr
+#' \cr
+#' Walkley, A. & Black, I. A. (1934). An examination of the Degtjareff method for determining soil organic matter, and a proposed modification of the chromic acid titration method. Soil science, 37(1), 29-38.
+"MG.112"
+
+
+
+
 #' @title SA.112 Dataset
 #' @description
 #' \itemize{
 #'  \item Target Soil Properties: SOC, pH, Clay
 #'  \item Groups of Features: DEM, ERa, Gamma, NIR, pH-ISE, VI
-#'  \item Sample size: 112
+#'  \item Sample Size: 112
 #'  \item Number of Features: 1,412
 #'  \item Coordinates: Without coordinates because of privacy concerns
 #'  \item Location: Saxony-Anhalt, Germany
@@ -1133,7 +1416,7 @@
 #' \itemize{
 #'  \item Target Soil Properties: SOC, pH, Clay
 #'  \item Groups of Features: DEM, RSS, VI
-#'  \item Sample size: 104
+#'  \item Sample Size: 104
 #'  \item Number of Features: 16
 #'  \item Coordinates: With coordinates (EPSG: 32722)
 #'  \item Location: Goias, Brazil
@@ -1265,7 +1548,7 @@
 #' \itemize{
 #'  \item Target Soil Properties: SOC, pH, Clay
 #'  \item Groups of Features: DEM, RSS, VI
-#'  \item Sample size: 101
+#'  \item Sample Size: 101
 #'  \item Number of Features: 16
 #'  \item Coordinates: With coordinates (EPSG: 32721)
 #'  \item Location: Mato Grosso do Sul, Brazil
@@ -1398,7 +1681,7 @@
 #' \itemize{
 #'  \item Target Soil Properties: SOC, pH, Clay
 #'  \item Groups of Features: vis-NIR
-#'  \item Sample size: 98
+#'  \item Sample Size: 98
 #'  \item Number of Features: 2,151
 #'  \item Coordinates: Without coordinates because dataset was not georeferenced
 #'  \item Location: Canton of Vaud, Switzerland
@@ -1524,7 +1807,7 @@
 #' \itemize{
 #'  \item Target Soil Properties: SOC, pH, Clay
 #'  \item Groups of Features: vis-NIR
-#'  \item Sample size: 93
+#'  \item Sample Size: 93
 #'  \item Number of Features: 2,146
 #'  \item Coordinates: With coordinates (EPSG: 32722)
 #'  \item Location: Santa Catarina, Brazil
@@ -1645,7 +1928,7 @@
 #' \itemize{
 #'  \item Target Soil Properties: SOC, pH, Clay
 #'  \item Groups of Features: DEM, ERa, Gamma, pH-ISE, RSS, VI
-#'  \item Sample size: 72
+#'  \item Sample Size: 72
 #'  \item Number of Features: 17
 #'  \item Coordinates: With coordinates (EPSG: 25833)
 #'  \item Location: Brandenburg, Germany
@@ -1806,7 +2089,7 @@
 #' \itemize{
 #'  \item Target Soil Properties: SOC, pH, Clay
 #'  \item Groups of Features: MIR
-#'  \item Sample size: 62
+#'  \item Sample Size: 62
 #'  \item Number of Features: 1,686
 #'  \item Coordinates: Without coordinates because of privacy concerns
 #'  \item Location: North Rhine-Westphalia, Germany
@@ -1924,7 +2207,7 @@
 #' \itemize{
 #'  \item Target Soil Properties: SOC, pH, Clay
 #'  \item Groups of Features: ERa, Gamma, NIR, pH-ISE, VI
-#'  \item Sample size: 62
+#'  \item Sample Size: 62
 #'  \item Number of Features: 1,410
 #'  \item Coordinates: Without coordinates because of privacy concerns
 #'  \item Location: Rhineland-Palatinate, Germany
@@ -2073,29 +2356,12 @@
 
 
 
-
-#' @title BC.58 Dataset
-#' @description
-#' \itemize{
-#'  \item dataset will probably be dropped because I have somer concerns about the data quality
-#'  }
-#' @docType data
-"BC.58"
-
-
-
-
-
-
-
-
-
 #' @title SSP.58 Dataset
 #' @description
 #' \itemize{
 #'  \item Target Soil Properties: SOC, pH, Clay
 #'  \item Groups of Features: vis-NIR
-#'  \item Sample size: 58
+#'  \item Sample Size: 58
 #'  \item Number of Features: 351
 #'  \item Coordinates: Without coordinates because dataset was not georeferenced
 #'  \item Location: State of Sao Paulo, Brazil
@@ -2218,7 +2484,7 @@
 #' \itemize{
 #'  \item Target Soil Properties: SOC, pH, Clay
 #'  \item Groups of Features: DEM, RSS
-#'  \item Sample size: 52
+#'  \item Sample Size: 52
 #'  \item Number of Features: 5
 #'  \item Coordinates: With coordinates (EPSG: 32755)
 #'  \item Location: New South Wales, Australia
@@ -2268,7 +2534,7 @@
 #'    \itemize{
 #'    \item Code: \code{Clay_target}
 #'    \item Unit: \%
-#'    \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water (Gee and Bauder 1986)
+#'    \item Protocol: Hydrometer method; separation of the fractions by sieving and sedimentation. Measurement of the separated fractions by weighing the density of the suspension (Gee and Bauder 1979)
 #'    \item Sampling Date: July 2018 & December 2018
 #'    \item Sampling Depth: 0 - 10 cm
 #'    }
@@ -2327,7 +2593,7 @@
 #' @usage NSW.52
 #' @format A list with three elements: 'Dataset','Coordinates' and 'Folds'
 #' @docType data
-#' @references Gee, G.W. & Bauder, J.W. (1986) Particle-Size Analysis. In: Klute, A., Ed., Methods of Soil Analysis, Part 1. Physical and Mineralogical Methods, Agronomy Monograph No. 9, 2nd Edition, American Society of Agronomy/Soil Science Society of America, Madison, WI, 383-411.\cr
+#' @references #' Gee, G. W., & Bauder, J. W. (1979). Particle size analysis by hydrometer: a simplified method for routine textural analysis and a sensitivity test of measurement parameters. Soil Science Society of America Journal, 43(5), 1004-1007.\cr
 #' \cr
 #' Walkley, A. & Black, I. A. (1934). An examination of the Degtjareff method for determining soil organic matter, and a proposed modification of the chromic acid titration method. Soil science, 37(1), 29-38.
 "NSW.52"
@@ -2344,7 +2610,7 @@
 #' \itemize{
 #'  \item Target Soil Properties: SOC, pH, Clay
 #'  \item Groups of Features: DEM, ERa, pH-ISE
-#'  \item Sample size: 51
+#'  \item Sample Size: 51
 #'  \item Number of Features: 4
 #'  \item Coordinates: With coordinates (EPSG: 25833)
 #'  \item Location: Brandenburg, Germany
@@ -2482,7 +2748,7 @@
 #' \itemize{
 #'  \item Target Soil Properties: SOC, pH, Clay
 #'  \item Groups of Features: DEM, ERa, VI, XRF
-#'  \item Sample size: 50
+#'  \item Sample Size: 50
 #'  \item Number of Features: 15
 #'  \item Coordinates: Without coordinates because of privacy concerns
 #'  \item Location: Wisconsin, USA
@@ -2632,7 +2898,7 @@
 #' \itemize{
 #'  \item Target Soil Properties: SOC, pH, Clay
 #'  \item Groups of Features: DEM, ERa
-#'  \item Sample size: 50
+#'  \item Sample Size: 50
 #'  \item Number of Features: 3
 #'  \item Coordinates: With coordinates (EPSG: 32722)
 #'  \item Location: Santa Catarina, Brazil
@@ -2758,7 +3024,7 @@
 #' \itemize{
 #'  \item Target Soil Properties: SOC, pH, Clay
 #'  \item Groups of Features: CSMoist, ERa
-#'  \item Sample size: 45
+#'  \item Sample Size: 45
 #'  \item Number of Features: 4
 #'  \item Coordinates: Without coordinates as coordinates could not be found anymore
 #'  \item Location: Pest County, Hungary
@@ -2884,7 +3150,7 @@
 #' \itemize{
 #'  \item Target Soil Properties: SOC, pH, Clay
 #'  \item Groups of Features: vis-NIR
-#'  \item Sample size: 44
+#'  \item Sample Size: 44
 #'  \item Number of Features: 351
 #'  \item Coordinates: With coordinates (EPSG: 32721)
 #'  \item Location: Mato Grosso, Brazil
@@ -3007,7 +3273,7 @@
 #' \itemize{
 #'  \item Target Soil Properties: SOC, pH, Clay
 #'  \item Groups of Features: MIR
-#'  \item Sample size: 42
+#'  \item Sample Size: 42
 #'  \item Number of Features: 1,686
 #'  \item Coordinates: Without coordinates because of privacy concerns
 #'  \item Location: North Rhine-Westphalia, Germany
@@ -3129,13 +3395,13 @@
 #' \itemize{
 #'  \item Target Soil Properties: SOC, pH, Clay
 #'  \item Groups of Features: DEM, ERa
-#'  \item Sample size: 40
+#'  \item Sample Size: 40
 #'  \item Number of Features: 3
 #'  \item Coordinates: With coordinates (EPSG: 32633)
 #'  \item Location: South Moravia, Czechia
 #'  \item Sampling Design: Stratified Sampling from previous Regular Grid Sampling, stratification was handpicked to cover contrasting areas
 #'  \item Study Area Size: 53 ha
-#'  \item Geological Setting: Weichselian sandy loess [? Eventually wrong ?]
+#'  \item Geological Setting: Weichselian sandy loess
 #'  \item Previous Data Publication: None
 #'  \item Contact Information:
 #'    \itemize{
@@ -3256,7 +3522,7 @@
 #' \itemize{
 #'  \item Target Soil Properties: SOC, pH, Clay
 #'  \item Groups of Features: DEM, RSS
-#'  \item Sample size: 36
+#'  \item Sample Size: 36
 #'  \item Number of Features: 5
 #'  \item Coordinates: With coordinates (EPSG: 32633)
 #'  \item Location: Mecklenburg-Western Pomerania, Germany
@@ -3380,7 +3646,7 @@
 #' \itemize{
 #'  \item Target Soil Properties: SOC, pH, Clay
 #'  \item Groups of Features: MIR
-#'  \item Sample size: 32
+#'  \item Sample Size: 32
 #'  \item Number of Features: 1,637
 #'  \item Coordinates: Without coordinates because of privacy concerns
 #'  \item Location: Occitanie, France
@@ -3503,7 +3769,7 @@
 #' \itemize{
 #'  \item Target Soil Properties: SOC, pH, Clay
 #'  \item Groups of Features: DEM, ERa, pH-ISE. VI
-#'  \item Sample size: 30
+#'  \item Sample Size: 30
 #'  \item Number of Features: 8
 #'  \item Coordinates: With coordinates (EPSG: 25833)
 #'  \item Location: Brandenburg, Germany
@@ -3641,7 +3907,7 @@
 #' \itemize{
 #'  \item Target Soil Properties: SOC, pH, Clay
 #'  \item Groups of Features: DEM, ERa, Gamma, RSS, VI
-#'  \item Sample size: 30
+#'  \item Sample Size: 30
 #'  \item Number of Features: 13
 #'  \item Coordinates: With coordinates (EPSG: 25833)
 #'  \item Location: Brandenburg, Germany
@@ -3737,7 +4003,7 @@
 #'   \item Code(s): \code{B04}
 #'   \item Unit: Unitless
 #'   \item Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”
-#'   \item Processing: Extracting RSS values from raster at soil sampling locations, selecting single band due to low sample size
+#'   \item Processing: Extracting RSS values from raster at soil sampling locations, selecting single band due to low Sample Size
 #'   \item Sampling Date: September 2022
 #'   }
 #'   VI - Vegetation Indices

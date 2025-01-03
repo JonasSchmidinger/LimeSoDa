@@ -1,7 +1,7 @@
 
 # Lime.SoDa
 
-This R-packages contains field- and farm-scale datasets for digital soil mapping purposes. It overall includes seven datasets. In each dataset, SOC/SOM, pH and clay are the target soil properties but features are dataset-specific.
+This R-packages contains field- and farm-scale datasets for Digial Soil Mapping purposes. It overall includes 31 datasets. In each dataset, SOC/SOM, pH and clay are the target soil properties but features are dataset-specific.
 
 <!-- badges: start -->
 <!-- badges: end -->

@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
-Precision Liming Soil Datasets (Lime.SoDa) is a collection of datasets from a field- and farm-scale soil mapping context. These datasets are 'ready-to-go' for modeling purposes, as they contain target soil properties and features in a tabular format. Target soil properties for all datasets are; soil organic matter (SOM) or -carbon (SOC), pH and clay, while the features for modeling are dataset specific. The goal of `Lime.SoDa` is to enable more reliable benchmarking and comparison of various modeling approaches in Digital Soil Mapping and Pedometrics by providing an open collection of multiple datasets. This vignette offers an overview of the `Lime.SoDa` package and how to use it for modelling purposes.
+Precision Liming Soil Datasets (Lime.SoDa) is a collection of datasets from a field- and farm-scale soil mapping context. These datasets are 'ready-to-go' for modeling purposes, as they contain target soil properties and features in a tabular format. Target soil properties for all datasets are; soil organic matter (SOM) or -carbon (SOC), pH and clay, while the features for modeling are dataset-specific. The goal of `Lime.SoDa` is to enable more reliable benchmarking and comparison of various modeling approaches in Digital Soil Mapping and Pedometrics by providing an open collection of multiple datasets. This vignette offers an overview of the `Lime.SoDa` package and how to use it for modeling purposes.
 
 ### Installation
 Installing `Lime.SoDa` from GitHub by: 
@@ -25,12 +25,12 @@ library(Lime.SoDa)
 ```
 
 ### Lime.SoDa package structure
-`Lime.SoDa` contains 31 entries; 30 datasets and an overview table:
+`Lime.SoDa` contains 32 entries; 31 datasets and an overview table:
 
 ```{r}
 data(package = "Lime.SoDa")$results[,3] # All entries in Lime.SoDa
 ```
-`Overview_Datasets` provides a summary of the specific of the 30 datasets, including the dataset ID, number of samples, number of features and further information:
+`Overview_Datasets` provides a summary of the specific of the 31 datasets, including the dataset ID, number of samples, number of features and further information:
 
 
 ```{r}
@@ -59,7 +59,7 @@ Each dataset has SOM or SOC, pH and Clay as target soil properties, which are al
 str(BB.250$Dataset[1:3]) 
 ```
 
-Features for modelling are dataset-specific and originate from laboratory-based spectroscopy, in-situ proximal soil sensing and remote sensing. They are stored in the columns of the `$Dataset` after the target soil properties:
+Features for modeling are dataset-specific and originate from laboratory-based spectroscopy, in-situ proximal soil sensing and remote sensing. They are stored in the columns of the `$Dataset` after the target soil properties:
 
 ```{r}
 #Features in BB.250
@@ -68,7 +68,7 @@ colnames(BB.250$Dataset[-c(1:3)])
 colnames(W.50$Dataset[-c(1:3)])
 ```
 
-Spatial coordinates where either (1) included, (2) excluded or (3) dummy covariates were added. Reasons on why they were not included are specified in the metadata. For example, in `BB.250` coordinates are included and it can be accessed through `$Coordinates`. The EPSG code is provided in the column name. Conversely, in `SSP.58` coordinates were excluded, so that `$Coordinates` returns an `NA` value. In the case of `UL.120`, `$Coordinates` returns dummy coordinates which is highlighted by the column names:
+Spatial coordinates where either (1) included, (2) excluded or (3) dummy covariates were added. Reasons on why they were not included are specified in the metadata. For example, in `BB.250` coordinates are included and it can be accessed through `$Coordinates`. Conversely, in `SSP.58` coordinates were excluded, so that `$Coordinates` returns an `NA` value. In the case of `UL.120`, `$Coordinates` returns dummy coordinates which is highlighted by the column names:
 
 ```{r}
 #When coordinates are included:
@@ -94,9 +94,9 @@ st_crs(BB.250_dataset.with.coordinates.sf) <- 25833
 plot(BB.250_dataset.with.coordinates.sf[c(1:3)])
 ```
 
-### Modelling with Lime.SoDa
+### Modeling with Lime.SoDa
 
-To ensure comparability between different studies using Lime.SoDa, the pre-defined folds should be used for validation purposes. These folds were created by randomly partitioning of the dataset into 10 equally sized folds, allowing for a 10-fold cross-validation. The training and testing data can be indexed through the `$Folds` vector:
+To ensure comparability between different studies using Lime.SoDa, the pre-defined folds should be used for validation purposes. Folds were created by fully randomly partitioning of the dataset into 10 equally sized folds, allowing for a non-repeated 10-fold cross-validation. The training and testing data can be indexed through the `$Folds` vector:
 
 ```{r}
 BB.250$Folds # Folds are defined through a vector with numbers from 1 - 10 with 1/10 of the data in each fold
@@ -118,7 +118,7 @@ testing_data_BB.250 <- BB.250$Dataset[(BB.250$Folds %in% c(8:10)),]
 nrow(testing_data_BB.250)
 ```
 
-In the following  example, the performance of a multiple linear regression for `BB.250` is evaluated for SOC predictions by looping over the folds (i.e. 10-fold cross validation):
+In the following example, we demonstrate how the folds can be used for a 10-fold CV by predicting SOC with a linear model in `BB.250`. 
 
 ```{r}
 set.seed(2025)
@@ -131,7 +131,7 @@ for (i in 1:10){
   training_data <- BB.250_dataset_predict.SOC[BB.250$Folds != i,] # Exclude testing fold from training data
   testing_data <- BB.250_dataset_predict.SOC[BB.250$Folds == i,] # Define testing fold as testing data
   
-  MLR_model <- lm("SOC_target~.", data = training_data) # Fit MLR to predict SOC
+  MLR_model <- lm("SOC_target~.", data = training_data) # Fit linear model to predict SOC
   MLR_model_predictions <- predict(MLR_model, testing_data) # Predict values of testing fold
   
   predicted_values <- c(predicted_values, MLR_model_predictions) # Store predicted values for testing fold
@@ -145,7 +145,7 @@ for (i in 1:10){
 sqrt(mean((predicted_values - testing_values)^2))
 ```
 
-In this simple example, an R-squared of 0.75 and an RMSE of 0.24 were achieved. Using the same pre-defined folds, it is now possible to evaluate how other learning algorithms perform on the same dataset in comparison to MLR, without the necessity to rerun the code. This is particularly useful when comparing more complex algorithms or methods that are difficult to reproduce.
+In this simple example, an R-squared of 0.75 and an RMSE of 0.24 were achieved. Using the same pre-defined folds, it would be now possible to evaluate different learning algorithms under the same conditions.
 
 ### How to cite Lime.SoDa
 
