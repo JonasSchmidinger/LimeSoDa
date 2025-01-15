@@ -3,21 +3,21 @@
 \docType{data}
 \name{Overview_Datasets}
 \alias{Overview_Datasets}
-\title{Overview of Datasets in Lime.SoDa}
+\title{Overview of Datasets in LimeSoDa}
 \format{
-An object of class \code{data.frame} with 30 rows and 8 columns.
+An object of class \code{data.frame} with 31 rows and 8 columns.
 }
 \usage{
 Overview_Datasets
 }
 \description{
-This table gives an overview of datasets used in Lime.SoDa and containts:
+This table gives an overview of datasets used in LimeSoDa and containts:
 \itemize{
- \item Dataset_ID: The ID (i.e. name) of the dataset
+ \item Dataset_ID: ID (i.e. name) of the dataset
  \item Number_of_samples: The number of analysed soil samples (i.e. rows) in the dataset
- \item Number_of_features: The number of features (i.e. columns) in the dataset
+ \item Number_of_features: The number of features (i.e. feature columns) in the dataset
  \item Sensors: The type of sensors used to create the features in the dataset, see abbrevations below
- \item Coordinates: Specifies whether coordinates or dummy covariates are available for the dataset
+ \item Coordinates: Specifies whether coordinates or dummy covariates are available or excluded for the dataset
  \item Location: The location where the dataset was collected
  \item Study_area_in_ha: The size of the study area in ha
  \item Sampling_Design: The sampling design used to collect the dataset as short description compared to metadata description

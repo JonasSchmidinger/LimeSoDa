@@ -5,7 +5,7 @@
 \alias{NRW.62}
 \title{NRW.62 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'
+A list with three elements: 'Dataset', 'Coordinates' and 'Folds'
 }
 \usage{
 NRW.62
@@ -14,11 +14,11 @@ NRW.62
 \itemize{
  \item Target Soil Properties: SOC, pH, Clay
  \item Groups of Features: MIR
- \item Sample size: 62
+ \item Sample Size: 62
  \item Number of Features: 1,686
  \item Coordinates: Without coordinates because of privacy concerns
  \item Location: North Rhine-Westphalia, Germany
- \item Sampling Design: Stratified Systematic Sampling by sampling rectangular plots which received different fertilizer dosages, samples were taken in the center of the plots
+ \item Sampling Design: Stratified systematic sampling by sampling rectangular plots which received different fertilizer dosages, samples were taken in the center of the plots
  \item Study Area Size: 0.6 ha
  \item Geological Setting: Pleistocene periglacial slope deposits consisting of weathered sand- and claystones from the Upper Bunter sandstone
  \item Previous Data Publication: None
@@ -27,10 +27,10 @@ NRW.62
      \item Stefan Paetzold (s.paetzold@uni-bonn.de), University of Bonn
      }
  \item License: CC BY-SA 4.0
- \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
+ \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
  \item Changelog:
    \itemize{
-     \item Version 1.0 (XXX.2025): Initial release
+     \item Version 1.0 (XXX.03.2025): Initial release
    }
 }
 \cr
@@ -66,7 +66,7 @@ Target Soil Properties:
    \itemize{
    \item Code: \code{Clay_target}
    \item Unit: \%
-   \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaption (DIN ISO 11277)
+   \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaptation (DIN ISO 11277)
    \item Sampling Date: November 2017
    \item Sampling Depth: 0 - 30 cm
    }
@@ -78,16 +78,16 @@ Groups of Features:
 \describe{
   MIR – Mid Infrared Spectroscopy
   \itemize{
-  \item Number Features: 1,686
+  \item Number of Features: 1,686
   \item Code(s): \code{wn_3799, wn_3797.1, wn_3795.1} ... \code{wn_549.6}
   \item Unit: \% (Reflectance)
   \item Sensing: MIR spectrometer (Bruker Optik, Ettlingen, Germany), on dried and sieved samples (<2 mm) in the laboratory, spectral range was 7,500 – 549.6 cm\eqn{^{-1}} at 4 cm\eqn{^{-1}} intervals
   \item Processing: Discarding irrelevant spectral data of the spectrum (7,500 - 3,799 cm\eqn{^{-1}}), resampling to ~2 cm\eqn{^{-1}} intervals
   \item Sampling Date: November 2017
-  \item Spectral Information (after data processing):
+  \item Spectral Information (After Data Processing):
    \itemize{
      \item Data Representation: Wavenumber (in cm\eqn{^{-1}})
-     \item Spectral Resolution: ~ 2 cm\eqn{^{-1}}
+     \item Spectral Resolution: ~2 cm\eqn{^{-1}}
      \item Spectral Range: 3,799 - 549.6 cm\eqn{^{-1}}
    }
   }

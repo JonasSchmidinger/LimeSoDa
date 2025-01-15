@@ -5,7 +5,7 @@
 \alias{SC.93}
 \title{SC.93 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'
+A list with three elements: 'Dataset', 'Coordinates' and 'Folds'
 }
 \usage{
 SC.93
@@ -14,13 +14,13 @@ SC.93
 \itemize{
  \item Target Soil Properties: SOC, pH, Clay
  \item Groups of Features: vis-NIR
- \item Sample size: 93
+ \item Sample Size: 93
  \item Number of Features: 2,146
  \item Coordinates: With coordinates (EPSG: 32722)
  \item Location: Santa Catarina, Brazil
- \item Sampling Design: conditioned Latin Hypercube Sampling based on terrain parameters
+ \item Sampling Design: Conditioned latin hypercube sampling based on terrain parameters
  \item Study Area Size: 108 ha
- \item Geological Setting: Heavily weathered soils originating from volcanic rock of the Serra Geral Formation (basalt, dacit)
+ \item Geological Setting: Heavily weathered soils originating from volcanic rock of the Serra Geral Formation (basalt and dacite)
  \item Previous Data Publication: None
  \item Contact Information:
    \itemize{
@@ -28,10 +28,10 @@ SC.93
      \item Ricardo Simão Diniz Dalmolin (dalmolin@ufsm.br), Federal University of Santa Maria
      }
  \item License: CC BY-SA 4.0
- \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
+ \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
  \item Changelog:
    \itemize{
-     \item Version 1.0 (XXX.2025): Initial release
+     \item Version 1.0 (XXX.03.2025): Initial release
    }
 }
 \cr
@@ -56,7 +56,7 @@ Target Soil Properties:
    \itemize{
    \item Code: \code{pH_target}
    \item Unit: Unitless
-   \item Protocol: Measured in water suspension with a glass electrode ratio with a 1:1 liquid:soil [? volmetric or gravimetric ?] ratio
+   \item Protocol: Measured in water suspension with a glass electrode ratio with a 1:1 liquid:soil volumetric ratio
    \item Sampling Date: December 2016
    \item Sampling Depth: 0 - 20 cm
 }
@@ -76,13 +76,13 @@ Groups of Features:
 \describe{
   vis-NIR – Visible and Near Infrared Spectroscopy
   \itemize{
-  \item Number Features: 2,146
+  \item Number of Features: 2,146
   \item Code(s): \code{wl_355, wl_356, wl_357} ... \code{wl_2500}
   \item Unit: \% (Reflectance)
-  \item Sensing: ASD FieldSpec 4 (Analytical Spectral Devices Inc., Boulder, USA), on dried and sieved samples (<2 mm) in the laboratory, spectral range was 355 - 2,500 nm at 3 - 8 nm spectral resolution
-  \item Processing: Reesampling to 1 nm intervals
+  \item Sensing: ASD FieldSpec 4 (Analytical Spectral Devices Inc., Boulder, USA), on dried and sieved samples (<2 mm) in the laboratory, spectral range was 355 - 2,500 nm at 3 - 8 nm intervals
+  \item Processing: Resampling to 1 nm intervals
   \item Sampling Date: March 2017
-  \item Spectral Information (after data processing):
+  \item Spectral Information (After Data Processing):
    \itemize{
      \item Data Representation: Wavelength (in nm)
      \item Spectral Resolution: 1 nm

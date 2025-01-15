@@ -5,7 +5,7 @@
 \alias{SM.40}
 \title{SM.40 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'
+A list with three elements: 'Dataset', 'Coordinates' and 'Folds'
 }
 \usage{
 SM.40
@@ -14,23 +14,23 @@ SM.40
 \itemize{
  \item Target Soil Properties: SOC, pH, Clay
  \item Groups of Features: DEM, ERa
- \item Sample size: 40
+ \item Sample Size: 40
  \item Number of Features: 3
  \item Coordinates: With coordinates (EPSG: 32633)
  \item Location: South Moravia, Czechia
- \item Sampling Design: Stratified Sampling from previous Regular Grid Sampling, stratification was handpicked to cover contrasting areas
+ \item Sampling Design: Stratified sampling from previous regular grid sampling, stratification was handpicked to cover contrasting areas
  \item Study Area Size: 53 ha
- \item Geological Setting: Weichselian sandy loess [? Eventually wrong ?]
+ \item Geological Setting: Weichselian sandy loess
  \item Previous Data Publication: None
  \item Contact Information:
    \itemize{
      \item Vojtech Lukas (vojtech.lukas@mendelu.cz), Mendel University in Brno
      }
  \item License: CC BY-SA 4.0
- \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
+ \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
  \item Changelog:
    \itemize{
-     \item Version 1.0 (XXX.2025): Initial release
+     \item Version 1.0 (XXX.03.2025): Initial release
    }
 }
 \cr
@@ -55,7 +55,7 @@ Target Soil Properties:
    \itemize{
    \item Code: \code{pH_target}
    \item Unit: Unitless
-   \item Protocol: Measured in KCl suspension with a glass electrode with unspecified [?please add if you the volumetric or gravimetric soil to liquid ratio?] liquid:soil ratio (Zbíral 2002)
+   \item Protocol: Measured in KCl suspension with a glass electrode with unspecified liquid:soil ratio (Zbíral 2002)
    \item Sampling Date: May 2004
    \item Sampling Depth: 0 - 30 cm
 }
@@ -64,7 +64,7 @@ Target Soil Properties:
    \itemize{
    \item Code: \code{Clay_target}
    \item Unit: \%
-   \item Protocol: Hydrometer method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by measuring suspension density using a hydrometer following slight adjustments of the Bouyoucos (1927) method [? Citation ?]
+   \item Protocol: Hydrometer method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by measuring suspension density using a hydrometer following slight adjustments of the Bouyoucos (1927) method
    \item Sampling Date: April 2006
    \item Sampling Depth: 0 - 30 cm
    }
@@ -75,7 +75,7 @@ Groups of Features:
 \describe{
   DEM – Digital Elevation Model and Terrain Parameters
   \itemize{
-  \item Number Features: 2
+  \item Number of Features: 2
   \item Code(s): \code{Altitude, Slope}
   \item Unit: \code{Altitude} in m, \code{Slope } in °
   \item Sensing: Digital elevation model raster (~2 m) based on LiDAR from “Geoportal of the Czech Office for Surveying, Mapping and Cadastre"
@@ -85,7 +85,7 @@ Groups of Features:
 
   ERa – Apparent Electrical Resistivity
   \itemize{
-  \item Number Features: 1
+  \item Number of Features: 1
   \item Code(s): \code{ERa}
   \item Unit: \eqn{\Omega} m
   \item Sensing: EM38 sensor (Geonics Ltd., Mississauga, Canada) drawn by a vehicle with exploration depth of 0 - 75 cm, in-situ

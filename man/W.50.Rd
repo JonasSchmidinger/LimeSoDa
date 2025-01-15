@@ -5,7 +5,7 @@
 \alias{W.50}
 \title{W.50 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'
+A list with three elements: 'Dataset', 'Coordinates' and 'Folds'
 }
 \usage{
 W.50
@@ -14,23 +14,23 @@ W.50
 \itemize{
  \item Target Soil Properties: SOC, pH, Clay
  \item Groups of Features: DEM, ERa, VI, XRF
- \item Sample size: 50
+ \item Sample Size: 50
  \item Number of Features: 15
  \item Coordinates: Without coordinates because of privacy concerns
  \item Location: Wisconsin, USA
- \item Sampling Design: conditioned Latin Hypercube Sampling based on electrical conductivity, terrain parameters, and normalized difference vegetation index
+ \item Sampling Design: Conditioned latin hypercube sampling based on electrical conductivity, terrain parameters, and normalized difference vegetation index
  \item Study Area Size: 80 ha
  \item Geological Setting: Glacial outwash and sediments of the Johnson End Moraine
  \item Previous Data Publication: None
  \item Contact Information:
    \itemize{
-     \item Jingyi Huang, (jhuang426@wisc.edu), University of Wisconsin-Madison
+     \item Jingyi Huang (jhuang426@wisc.edu), University of Wisconsin-Madison
      }
  \item License: CC BY-SA 4.0
- \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
+ \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
  \item Changelog:
    \itemize{
-     \item Version 1.0 (XXX.2025): Initial release
+     \item Version 1.0 (XXX.03.2025): Initial release
    }
 }
 \cr
@@ -76,7 +76,7 @@ Groups of Features:
 \describe{
   DEM – Digital Elevation Model and Terrain Parameters
   \itemize{
-  \item Number Features: 2
+  \item Number of Features: 2
   \item Code(s): \code{Altitude, Slope}
   \item Unit: \code{Altitude} in m, \code{Slope } in °
   \item Sensing: Digital elevation model raster (3 m) based on LiDAR from the “Wisconsin Department of Natural Resources”
@@ -86,7 +86,7 @@ Groups of Features:
 
   ERa – Apparent Electrical Resistivity
   \itemize{
-  \item Number Features: 1
+  \item Number of Features: 1
   \item Code(s): \code{ERa}
   \item Unit: \eqn{\Omega} m
   \item Sensing: DUALEM-1HS instrument (DUALEM Inc., Milton, Canada) with exploration depth of 0 - 30 cm, in-situ
@@ -96,7 +96,7 @@ Groups of Features:
 
   VI - Vegetation Indices
   \itemize{
-  \item Number Features: 2
+  \item Number of Features: 2
   \item Code(s): \code{NDVI, GNDVI}
   \item Unit: Unitless
   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
@@ -104,9 +104,9 @@ Groups of Features:
   \item Sampling Date: July 2019
    }
 
-  XRF – X-ray fluorescence derived elemental concentrations
+  XRF – X-ray Fluorescence Derived Elemental Concentrations
   \itemize{
-  \item Number Features: 10
+  \item Number of Features: 10
   \item Code(s): \code{XRF_Mg, XRF_Al, XRF_Si,  XRF_Ca, XRF_Ti, XRF_Mn, XRF_Fe, XRF_Zn, XRF_Sr, XRF_Zr}
   \item Unit: ppm (estimated through XRF Geochem not ground truth)
   \item Sensing: Delta Premium PXRF spectrometer (Olympus Scientific Solutions Americas Inc., Waltham, USA), on dried and sieved samples (<2 mm) in the laboratory

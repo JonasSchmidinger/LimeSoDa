@@ -5,14 +5,121 @@
 \alias{SSP.460}
 \title{SSP.460 Dataset}
 \format{
-An object of class \code{list} of length 3.
+A list with three elements: 'Dataset', 'Coordinates' and 'Folds'
 }
 \usage{
 SSP.460
 }
 \description{
 \itemize{
- \item Metadata not yet received
- }
+ \item Target Soil Properties: SOC, pH, Clay
+ \item Groups of Features: vis-NIR
+ \item Sample Size: 460
+ \item Number of Features: 830
+ \item Coordinates: Without coordinates because of privacy concerns
+ \item Location: State of Sao Paulo, Brazil
+ \item Sampling Design: Regular grid sampling
+ \item Study Area Size: 473 ha
+ \item Geological Setting: Predominantly sandstones with some basaltic flows
+ \item Previous Data Publication: None
+ \item Contact Information:
+   \itemize{
+     \item Leonardo Ramirez Lopez (Ramirez-Lopez.L@buchi.com), BÜCHI Labortechnik AG
+     }
+ \item License: CC BY-SA 4.0
+ \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+ \item Changelog:
+   \itemize{
+     \item Version 1.0 (XXX.03.2025): Initial release
+   }
+}
+\cr
+}
+\details{
+\describe{
+\strong{Dataset:}
+Dataframe which contains the tabular dataset with the target soil properties and features}
+\describe{
+Target Soil Properties:
+
+   SOC - Soil Organic Carbon
+   \itemize{
+   \item Code: \code{SOC_target}
+   \item Unit: \%
+   \item Protocol: Measured through titration after oxidization of the organic carbon (Walkley & Black 1934)
+   \item Sampling Date: Unknown month 2000
+   \item Sampling Depth: 0 - 20 cm
+   }
+
+   pH
+   \itemize{
+   \item Code: \code{pH_target}
+   \item Unit: Unitless
+   \item Protocol: Measured in water suspension with a glass electrode with unspecified liquid:soil ratio
+   \item Sampling Date: Unknown month 2001
+   \item Sampling Depth: 0 - 20 cm
+}
+
+   Clay
+   \itemize{
+   \item Code: \code{Clay_target}
+   \item Unit: \%
+   \item Protocol: Hydrometer method; separation of the fractions by sieving and sedimentation. Measurement of the separated fractions by weighing the density of the suspension (Gee and Bauder 1979)
+   \item Sampling Date: Unknown month 2001
+   \item Sampling Depth: 0 - 20 cm
+   }
+}
+\cr
+Groups of Features:
+\describe{
+  vis-NIR – Visible and Near Infrared Spectroscopy
+  \itemize{
+  \item Number of Features: 830
+  \item Code(s): \code{wl_350, wl_352, wl_354} ... \code{wl_2498}
+  \item Unit: \% (Reflectance)
+  \item Sensing: Infra-red intelligent spectroradiometer-IRIS MkIV (Geophysical and Environmental Research Corporation, New York, USA), on dried samples in the laboratory, spectral range was 350 – 3,000 nm at 2 - 5 nm intervals
+  \item Processing: Discarding noisy edges of the spectrum (2,458 - 3,000 nm)
+  \item Sampling Date: Unknown month 2001
+  \item Spectral Information (After Data Processing):
+   \itemize{
+     \item Data Representation: Wavelength (in nm)
+     \item Spectral Resolution: 2 - 5 nm depending on wavelength range
+     \item Spectral Range: 350 – 2,498 nm
+   }
+  }
+
+}
+
+\cr
+
+
+\strong{Folds:}
+Vector which contains numerical entries from 1 to 10, each number can be used to index the folds for cross validation \cr
+
+\strong{Coordinates:}
+Empty entry (NA)
+}
+\examples{
+# Load the dataset list
+SSP.460
+
+# Access the dataset
+SSP.460$Dataset
+
+# Access the folds
+SSP.460$Folds
+
+# Access the coordinates but empty for SSP.460 (i.e. NA)
+SSP.460$Coordinates
+
+# How to split the dataset into training and testing folds for the example of the first fold
+training_data_SSP.460 <- SSP.460$Dataset[SSP.460$Folds != 1,]
+testing_data_SSP.460 <- SSP.460$Dataset[SSP.460$Folds == 1,]
+
+}
+\references{
+Gee, G. W., & Bauder, J. W. (1979). Particle size analysis by hydrometer: a simplified method for routine textural analysis and a sensitivity test of measurement parameters. Soil Science Society of America Journal, 43(5), 1004-1007.\cr
+\cr
+Walkley, A. & Black, I. A. (1934). An examination of the Degtjareff method for determining soil organic matter, and a proposed modification of the chromic acid titration method. Soil science, 37(1), 29-38.
 }
 \keyword{datasets}

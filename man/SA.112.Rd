@@ -5,7 +5,7 @@
 \alias{SA.112}
 \title{SA.112 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'
+A list with three elements: 'Dataset', 'Coordinates' and 'Folds'
 }
 \usage{
 SA.112
@@ -14,11 +14,11 @@ SA.112
 \itemize{
  \item Target Soil Properties: SOC, pH, Clay
  \item Groups of Features: DEM, ERa, Gamma, NIR, pH-ISE, VI
- \item Sample size: 112
+ \item Sample Size: 112
  \item Number of Features: 1,412
  \item Coordinates: Without coordinates because of privacy concerns
  \item Location: Saxony-Anhalt, Germany
- \item Sampling Design: Regular Grid Sampling but with missing values in the center of the field
+ \item Sampling Design: Regular grid sampling but with missing values in the center of the field
  \item Study Area Size: 27 ha
  \item Previous Data Publication: None
  \item Geological Setting: Weichselian loess
@@ -28,10 +28,10 @@ SA.112
      \item Hamed Tavakoli (HTavakoli@atb-potsdam.de), Leibniz Institute for Agricultural Engineering and Bioeconomy (ATB)
      }
  \item License: CC BY-SA 4.0
- \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
+ \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
  \item Changelog:
    \itemize{
-     \item Version 1.0 (XXX.2025): Initial release
+     \item Version 1.0 (XXX.03.2025): Initial release
    }
 }
 \cr
@@ -65,7 +65,7 @@ Target Soil Properties:
    \itemize{
    \item Code: \code{Clay_target}
    \item Unit: \%
-   \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaption (DIN ISO 11277)
+   \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaptation (DIN ISO 11277)
    \item Sampling Date: October 2016
    \item Sampling Depth: 0 - 30 cm
    }
@@ -75,7 +75,7 @@ Groups of Features:
 \describe{
   DEM – Digital Elevation Model and Terrain Parameters
   \itemize{
-  \item Number Features: 2
+  \item Number of Features: 2
   \item Code(s): \code{Altitude, Slope}
   \item Unit: \code{Altitude} in m, \code{Slope } in °
   \item Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from “GeoBasis-DE / LVermGeo ST”
@@ -85,7 +85,7 @@ Groups of Features:
 
   ERa – Apparent Electrical Resistivity
   \itemize{
-  \item Number Features: 1
+  \item Number of Features: 1
   \item Code(s): \code{ERa}
   \item Unit: \eqn{\Omega} m
   \item Sensing: Array of multiple rolling electrodes (Geophilus company, Caputh, Germany) on RapidMapper platform with exploration depth of 0 - 50 cm, in-situ
@@ -95,7 +95,7 @@ Groups of Features:
 
   Gamma
   \itemize{
-  \item Number Features: 5
+  \item Number of Features: 5
   \item Code(s): \code{G_Total_Counts, G_K, G_U, G_Th, G_Cs}
   \item Unit: Unitless
   \item Sensing: Passive gamma sensor (MS-2000-CsI-MTS, Medusa Radiometrics BV, Groningen, Netherlands) on RapidMapper platform, in-situ
@@ -105,13 +105,13 @@ Groups of Features:
 
   NIR – Near Infrared Spectroscopy
   \itemize{
-  \item Number Features: 1,401
+  \item Number of Features: 1,401
   \item Code(s): \code{wl_1000, wl_1001, wl_1002} ... \code{wl_2400}
   \item Unit: \% (Reflectance)
   \item Sensing: NIR spectrometer (C11118GA, Hamamatsu Photonics K.K., Shizuoka Prefecture, Japan) on RapidMapper platform, in-situ, spectral range was 900 - 2550 nm at 15 nm intervals
   \item Processing: Kriging to align sensing- with soil sampling locations, discarding noisy edges of the spectrum (900 - 1,000 nm & 2,400 - 2,550 nm), resampling to 1 nm intervals
   \item Sampling Date: August 2021
-  \item Spectral Information (after data processing):
+  \item Spectral Information (After Data Processing):
    \itemize{
      \item Data Representation: Wavelength (in nm)
      \item Spectral Resolution: 1 nm
@@ -121,7 +121,7 @@ Groups of Features:
 
   pH-ISE – Ion Selective Electrodes for pH Determination
   \itemize{
-  \item Number Features: 1
+  \item Number of Features: 1
   \item Code(s): \code{pH-ISE}
   \item Unit: Unitless
   \item Sensing: Soil pH Manager (VERIS Technologies, Salinas, USA) on RapidMapper platform, in-situ
@@ -131,7 +131,7 @@ Groups of Features:
 
   VI - Vegetation Indices
   \itemize{
-  \item Number Features: 2
+  \item Number of Features: 2
   \item Code(s): \code{NDVI, GNDVI}
   \item Unit: Unitless
   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”

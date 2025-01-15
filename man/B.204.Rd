@@ -5,7 +5,7 @@
 \alias{B.204}
 \title{B.204 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'
+A list with three elements: 'Dataset', 'Coordinates' and 'Folds'
 }
 \usage{
 B.204
@@ -14,11 +14,11 @@ B.204
 \itemize{
  \item Target Soil Properties: SOC, pH, Clay
  \item Groups of Features: DEM, RSS, VI
- \item Sample size: 204
+ \item Sample Size: 204
  \item Number of Features: 16
  \item Coordinates: With coordinates (EPSG: 32723)
  \item Location: Bahia, Brazil
- \item Sampling Design: Regular Grid Sampling
+ \item Sampling Design: Regular grid sampling
  \item Study Area Size: 204 ha
  \item Geological Setting: Heavily weathered soils originating from sedimentary rocks (conglomerates, pelite, conglomeratic sandstone)
  \item Previous Data Publication: None
@@ -27,10 +27,10 @@ B.204
      \item Domingos Sarvio Magalhaes Valente (valente@ufv.br), Federal University of Vicosa
      }
  \item License: CC BY-SA 4.0
- \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
+ \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
  \item Changelog:
    \itemize{
-     \item Version 1.0 (XXX.2025): Initial release
+     \item Version 1.0 (XXX.03.2025): Initial release
    }
 }
 \cr
@@ -74,7 +74,7 @@ Groups of Features:
 \describe{
   DEM – Digital Elevation Model and Terrain Parameters
   \itemize{
-  \item Number Features: 2
+  \item Number of Features: 2
   \item Code(s): \code{Altitude, Slope}
   \item Unit: \code{Altitude} in m, \code{Slope } in °
   \item Sensing: Digital elevation model raster (30 m) based on synthetic aperture radar from “Copernicus Open Access Hub”
@@ -84,17 +84,17 @@ Groups of Features:
 
   RSS – Remote Sensing Derived Spectral Data
   \itemize{
-  \item Number Features: 12
+  \item Number of Features: 12
   \item Code(s): \code{B01, B02, B03, B04, B05, B06, B07, B08, B8A, B09, B11, B12}
   \item Unit: Unitless
-  \item Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”
+  \item Sensing: Sentinel-2 bare soil image (Level-2A) from “Copernicus Open Access Hub”
   \item Processing: Extracting RSS values from raster at soil sampling locations
   \item Sampling Date: November 2016
   }
 
   VI - Vegetation Indices
   \itemize{
-  \item Number Features: 2
+  \item Number of Features: 2
   \item Code(s): \code{NDVI, GNDVI}
   \item Unit: Unitless
   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”

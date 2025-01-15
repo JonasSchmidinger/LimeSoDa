@@ -5,7 +5,7 @@
 \alias{BB.30_2}
 \title{BB.30_2 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'
+A list with three elements: 'Dataset', 'Coordinates' and 'Folds'
 }
 \usage{
 BB.30_2
@@ -14,11 +14,11 @@ BB.30_2
 \itemize{
  \item Target Soil Properties: SOC, pH, Clay
  \item Groups of Features: DEM, ERa, Gamma, RSS, VI
- \item Sample size: 30
+ \item Sample Size: 30
  \item Number of Features: 13
  \item Coordinates: With coordinates (EPSG: 25833)
  \item Location: Brandenburg, Germany
- \item Sampling Design: Regular Grid Sampling
+ \item Sampling Design: Regular grid sampling
  \item Study Area Size: 1.4 ha
  \item Geological Setting: Pleistocene young morainic landscape of the Weichselian glaciation with predominantly glacial sand
  \item Previous Data Publication: None
@@ -28,10 +28,10 @@ BB.30_2
      \item Sebastian Vogel (SVogel@atb-potsdam.de), Leibniz Institute for Agricultural Engineering and Bioeconomy (ATB)
      }
  \item License: CC BY-SA 4.0
- \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
+ \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
  \item Changelog:
    \itemize{
-     \item Version 1.0 (XXX.2025): Initial release
+     \item Version 1.0 (XXX.03.2025): Initial release
    }
 }
 \cr
@@ -61,12 +61,11 @@ Target Soil Properties:
    \item Sampling Depth: 0 - 30 cm
 }
 
-
    Clay
    \itemize{
    \item Code: \code{Clay_target}
    \item Unit: \%
-   \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaption (DIN ISO 11277)
+   \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaptation (DIN ISO 11277)
    \item Sampling Date: September 2022
    \item Sampling Depth: 0 - 30 cm
    }
@@ -77,7 +76,7 @@ Groups of Features:
 \describe{
   DEM – Digital Elevation Model and Terrain Parameters
   \itemize{
-  \item Number Features: 2
+  \item Number of Features: 2
   \item Code(s): \code{Altitude, Slope}
   \item Unit: \code{Altitude} in m, \code{Slope } in °
   \item Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from “GeoBasis-DE/LGB”
@@ -87,7 +86,7 @@ Groups of Features:
 
   ERa – Apparent Electrical Resistivity
   \itemize{
-  \item Number Features: 1
+  \item Number of Features: 1
   \item Code(s): \code{ERa}
   \item Unit: \eqn{\Omega} m
   \item Sensing: Array of multiple rolling electrodes (Geophilus company, Caputh, Germany) on RapidMapper platform with exploration depth of 0 - 50 cm, in-situ
@@ -97,7 +96,7 @@ Groups of Features:
 
   Gamma
   \itemize{
-  \item Number Features: 5
+  \item Number of Features: 5
   \item Code(s): \code{G_Total_Counts, G_K, G_U, G_Th, G_Cs}
   \item Unit: Unitless
   \item Sensing: Passive gamma sensor (MS-2000-CsI-MTS, Medusa Radiometrics BV, Groningen, Netherlands) on RapidMapper platform, in-situ
@@ -107,16 +106,16 @@ Groups of Features:
 
   RSS – Remote Sensing Derived Spectral Data
   \itemize{
-  \item Number Features: 1
+  \item Number of Features: 1
   \item Code(s): \code{B04}
   \item Unit: Unitless
-  \item Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”
+  \item Sensing: Sentinel-2 bare soil image (Level-2A) from “Copernicus Open Access Hub”
   \item Processing: Extracting RSS values from raster at soil sampling locations, selecting single band due to low sample size
   \item Sampling Date: September 2022
   }
   VI - Vegetation Indices
   \itemize{
-  \item Number Features: 1
+  \item Number of Features: 1
   \item Code(s): \code{NDVI}
   \item Unit: Unitless
   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”

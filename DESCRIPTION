@@ -1,18 +1,18 @@
-Package: Lime.SoDa
+Package: LimeSoDa
 Type: Package
-Title: Precision Liming Soil Datasets: Lime.SoDa
+Title: Precision Liming Soil Datasets: LimeSoDa
 Version: 0.1.0
 Authors@R: 
   c(person(given = "Jonas",
               family = "Schmidinger",
               role = c("aut", "cre"),
               email = "Jonas.Schmidinger@uni-osnabrueck.de"))
-Description: This R-packages contains field- and farm-scale datasets for digital soil mapping purposes.
+Description: This R-packages contains 31 field- and farm-scale datasets for digital soil mapping.
 License: CC BY-SA 4.0 
 Encoding: UTF-8
 LazyData: true
 LazyDataCompression: gzip 
-URL: https://github.com/JonasSchmidinger/Lime.SoDa
+URL: https://github.com/JonasSchmidinger/LimeSoDa
 Depends: 
     R (>= 2.10),
 RoxygenNote: 7.3.2

@@ -5,7 +5,7 @@
 \alias{SSP.58}
 \title{SSP.58 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'
+A list with three elements: 'Dataset', 'Coordinates' and 'Folds'
 }
 \usage{
 SSP.58
@@ -14,11 +14,11 @@ SSP.58
 \itemize{
  \item Target Soil Properties: SOC, pH, Clay
  \item Groups of Features: vis-NIR
- \item Sample size: 58
+ \item Sample Size: 58
  \item Number of Features: 351
  \item Coordinates: Without coordinates because dataset was not georeferenced
  \item Location: State of Sao Paulo, Brazil
- \item Sampling Design: Stratified Random Sampling based on treatment doses of K\eqn{_2}O and CaO
+ \item Sampling Design: Stratified random sampling based on treatment doses of K\eqn{_2}O and CaO
  \item Study Area Size: 0.7 ha
  \item Geological Setting: Heavily weathered soils originating from diabase
  \item Previous Data Publication: Full dataset published in Tavares et al. (2022)
@@ -28,10 +28,10 @@ SSP.58
      \item José Paulo Molin (jpmolin@usp.br), University of Sao Paulo
      }
  \item License: CC BY-SA 4.0
- \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
+ \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
  \item Changelog:
    \itemize{
-     \item Version 1.0 (XXX.2025): Initial release
+     \item Version 1.0 (XXX.03.2025): Initial release
    }
 }
 \cr
@@ -76,13 +76,13 @@ Groups of Features:
 \describe{
   vis-NIR – Visible and Near Infrared Spectroscopy
   \itemize{
-  \item Number Features: 351
+  \item Number of Features: 351
   \item Code(s): \code{wl_431.6, wl_437.4, wl_449.1} ... \code{wl_2153.1}
   \item Unit: \% (Reflectance)
-  \item Sensing: vis-NIR spectrometer of former Veris MSP3 (Veris Technologies, Salina, Kansas, USA) which is based on two spectrometers (USB4000, Ocean optics, Largo, FL, USA) for the visible region and (C9914GB, Hamamatsu Photonics, Hamamatsu, Japan) for the NIR region, on dried and sieved samples (<2 mm) in the laboratory, spectral range was 343 - 2,200 nm at ~5 nm spectral resolution
-  \item Processing: Discarding noisy edges of the spectrum (343 - 431.6 nm & 2153.1 - 2,200  nm)
+  \item Sensing: vis-NIR spectrometer of former Veris MSP3 (Veris Technologies, Salina, Kansas, USA) which is based on two spectrometers (USB4000, Ocean optics, Largo, FL, USA) for the visible region and (C9914GB, Hamamatsu Photonics, Hamamatsu, Japan) for the NIR region, on dried and sieved samples (<2 mm) in the laboratory, spectral range was 343 - 2,200 nm at ~5 nm intervals
+  \item Processing: Discarding noisy edges of the spectrum (343 - 431.6 nm & 2,153.1 - 2,200 nm)
   \item Sampling Date: September 2015
-  \item Spectral Information (after data processing):
+  \item Spectral Information (After Data Processing):
    \itemize{
      \item Data Representation: Wavelength (in nm)
      \item Spectral Resolution: ~5 nm
@@ -120,8 +120,8 @@ testing_data_SSP.58 <- SSP.58$Dataset[SSP.58$Folds == 1,]
 \references{
 Bouyoucos, G. J. (1927). The hydrometer as a new method for the mechanical analysis of soils. Soil science, 23(5), 343-354.\cr
 \cr
-Walkley, A. & Black, I. A. (1934). An examination of the Degtjareff method for determining soil organic matter, and a proposed modification of the chromic acid titration method. Soil science, 37(1), 29-38.\cr
+Tavares, T. R., Molin, J. P., Nunes, L. C., Alves, E. E. N., Krug, F. J., & de Carvalho, H. W. P. (2022). Spectral data of tropical soils using dry-chemistry techniques (VNIR, XRF, and LIBS): A dataset for soil fertility prediction. Data in Brief, 41, 108004.\cr
 \cr
-Tavares, T. R., Molin, J. P., Nunes, L. C., Alves, E. E. N., Krug, F. J., & de Carvalho, H. W. P. (2022). Spectral data of tropical soils using dry-chemistry techniques (VNIR, XRF, and LIBS): A dataset for soil fertility prediction. Data in Brief, 41, 108004.
+Walkley, A. & Black, I. A. (1934). An examination of the Degtjareff method for determining soil organic matter, and a proposed modification of the chromic acid titration method. Soil science, 37(1), 29-38.
 }
 \keyword{datasets}

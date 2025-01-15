@@ -5,7 +5,7 @@
 \alias{NRW.115}
 \title{NRW.115 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'
+A list with three elements: 'Dataset', 'Coordinates' and 'Folds'
 }
 \usage{
 NRW.115
@@ -14,11 +14,11 @@ NRW.115
 \itemize{
  \item Target Soil Properties: SOC, pH, Clay
  \item Groups of Features: MIR
- \item Sample size: 115
+ \item Sample Size: 115
  \item Number of Features: 1,686
  \item Coordinates: Without coordinates because of privacy concerns
  \item Location: North Rhine-Westphalia, Germany
- \item Sampling Design: Regular Grid Sampling on two adjacent fields in two sampling campaigns
+ \item Sampling Design: Regular grid sampling on two adjacent fields in two sampling campaigns
  \item Study Area Size: 17 ha
  \item Geological Setting: Cretaceous marls partially covered by Saalian glacial till, aeolian sand and fluvial sediments
  \item Previous Data Publication: None
@@ -27,10 +27,10 @@ NRW.115
      \item Stefan Paetzold (s.paetzold@uni-bonn.de), University of Bonn
      }
  \item License: CC BY-SA 4.0
- \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
+ \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
  \item Changelog:
    \itemize{
-     \item Version 1.0 (XXX.2025): Initial release
+     \item Version 1.0 (XXX.03.2025): Initial release
    }
 }
 \cr
@@ -47,7 +47,7 @@ Target Soil Properties:
    \item Code: \code{SOC_target}
    \item Unit: \%
    \item Protocol: Determined by the difference of total carbon and inorganic carbon, where total carbon was obtained through elemental analysis by measuring the CO\eqn{_2} release during dry combustion (DIN ISO 10694) without acid pretreatment and inorganic carbon as 0.12 x the calcium carbonate content, determined by the gas-volumetric Scheibler Method (ISO 10693)
-   \item Sampling Date: October 2013 & November 2015
+   \item Sampling Date: October 2013 and November 2015
    \item Sampling Depth: 0 - 30 cm
    }
 
@@ -56,7 +56,7 @@ Target Soil Properties:
    \item Code: \code{pH_target}
    \item Unit: Unitless
    \item Protocol: Measured in CaCl\eqn{_2} suspension with a glass electrode with a 5:1 liquid:soil volumetric ratio (DIN ISO 10390)
-   \item Sampling Date: October 2013 & November 2015
+   \item Sampling Date: October 2013 and November 2015
    \item Sampling Depth: 0 - 30 cm
 }
 
@@ -64,8 +64,8 @@ Target Soil Properties:
    \itemize{
    \item Code: \code{Clay_target}
    \item Unit: \%
-   \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaption (DIN ISO 11277)
-   \item Sampling Date: October 2013 & November 2015
+   \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaptation (DIN ISO 11277)
+   \item Sampling Date: October 2013 and November 2015
    \item Sampling Depth: 0 - 30 cm
    }
 }
@@ -74,16 +74,16 @@ Groups of Features:
 \describe{
   MIR – Mid Infrared Spectroscopy
   \itemize{
-  \item Number Features: 1,686
+  \item Number of Features: 1,686
   \item Code(s): \code{wn_3799, wn_3797.1, wn_3795.1} ... \code{wn_549.6}
   \item Unit: \% (Reflectance)
   \item Sensing: MIR spectrometer (Bruker Tensor 27 HTS-XT, Bruker Optik, Ettlingen, Germany), on dried and sieved samples (<2 mm) in the laboratory, spectral range was 7,500 – 549.6 cm\eqn{^{-1}} at 4 cm\eqn{^{-1}} intervals
   \item Processing: Discarding irrelevant spectral data of the spectrum (7,500 - 3,799 cm\eqn{^{-1}}), resampling to ~2 cm\eqn{^{-1}} intervals
-  \item Sampling Date: October 2013 & November 2015
-  \item Spectral Information (after data processing):
+  \item Sampling Date: October 2013 and November 2015
+  \item Spectral Information (After Data Processing):
    \itemize{
      \item Data Representation: Wavenumber (in cm\eqn{^{-1}})
-     \item Spectral Resolution: ~ 2 cm\eqn{^{-1}}
+     \item Spectral Resolution: ~2 cm\eqn{^{-1}}
      \item Spectral Range: 3,799 - 549.6 cm\eqn{^{-1}}
    }
   }

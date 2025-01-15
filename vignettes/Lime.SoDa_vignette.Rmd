@@ -1,8 +1,8 @@
 ---
-title: "Lime.SoDa Vignette"
+title: "LimeSoDa Vignette"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Lime.SoDa_vignette}
+  %\VignetteIndexEntry{LimeSoDa_vignette}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -13,146 +13,146 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
-Precision Liming Soil Datasets (Lime.SoDa) is a collection of datasets from a field- and farm-scale soil mapping context. These datasets are 'ready-to-go' for modeling purposes, as they contain target soil properties and features in a tabular format. Target soil properties for all datasets are; soil organic matter (SOM) or -carbon (SOC), pH and clay, while the features for modeling are dataset-specific. The goal of `Lime.SoDa` is to enable more reliable benchmarking and comparison of various modeling approaches in Digital Soil Mapping and Pedometrics by providing an open collection of multiple datasets. This vignette offers an overview of the `Lime.SoDa` package and how to use it for modeling purposes.
+Precision Liming Soil Datasets (LimeSoDa) is a collection of 31 datasets from a field- and farm-scale soil mapping context. These datasets are "ready-to-go" for modeling purposes, as they include target soil properties and features in a tidy tabular format. The target soil properties are soil organic matter (SOM) or soil organic carbon (SOC), pH, and clay content, while the features for modeling are dataset-specific. The primary goal of `LimeSoDa` is to enable more reliable benchmarking of machine learning methods in digital soil mapping and pedometrics. This vignette offers an overview of the `LimeSoDa` package and how to use it for modeling. It is only meant for a quick demonstration of the package's usage. For a more in-depth analysis, please refer to the published paper "LimeSoDa: A Dataset Collection for Benchmarking of Machine Learning Regressors in Digital Soil Mapping" by Schmidinger et al. (2025).
 
 ### Installation
-Installing `Lime.SoDa` from GitHub by: 
+To use `LimeSoDa`, it needs to be installed from GitHub:
 
 ```{r setup}
-#remotes::install_github("JonasSchmidinger/Lime.SoDa") 
+#remotes::install_github("JonasSchmidinger/LimeSoDa") #uncomment this line to install the package from GitHub
 
-library(Lime.SoDa)
+library(LimeSoDa)
 ```
 
-### Lime.SoDa package structure
-`Lime.SoDa` contains 32 entries; 31 datasets and an overview table:
+### LimeSoDa package structure
+`LimeSoDa` contains 32 entries; 31 datasets and an overview table:
 
 ```{r}
-data(package = "Lime.SoDa")$results[,3] # All entries in Lime.SoDa
+data(package = "LimeSoDa")$results[,3] #All entries in LimeSoDa
 ```
-`Overview_Datasets` provides a summary of the specific of the 31 datasets, including the dataset ID, number of samples, number of features and further information:
 
+`Overview_Datasets` provides a summary of the 31 datasets.
 
 ```{r}
 head(Overview_Datasets)
 ```
 
-Dataset IDs are named according to the geographic region and sample size. For example, `BB.250` refers to a dataset from Brandenburg (BB), Germany, which includes 250 reference soil samples. Additional information about the methodology, sampling procedures, feature codes, and more can be found in the metadata of each dataset which can be accessed through:
+Detailed information and documentation about each dataset is available in the metadata. It can be accessed via setting a `?` before the dataset ID:
 
 ```{r}
-?BB.250 #Access metadata
+#Access metadata of dataset BB.250, use other dataset ID than BB.250 for metadata from other datasets:
+?BB.250
 ```
 
-Datasets are stored as a list. This list contains the tabular dataset (`$Dataset`), pre-defined folds (`$Folds`) for a 10-fold cross-validation  and, if available, the spatial coordinates of the soil samples (`$Coordinates`):
+Datasets are organized as a list. This list contains the tabular dataset (`$Dataset`), pre-defined folds (`$Folds`) for a 10-fold cross-validation and, if available, the spatial coordinates of the soil samples (`$Coordinates`):
 
 ```{r}
-head(BB.250$Dataset)
+#Access dataset, folds and coordinates of BB.250:
+head(BB.250$Dataset) #Tabular dataset
 
-BB.250$Folds
+BB.250$Folds #Folds
 
-head(BB.250$Coordinates)
+head(BB.250$Coordinates) #Spatial coordinates
 ```
 
-Each dataset has SOM or SOC, pH and Clay as target soil properties, which are always stored in the first three columns of the `$Dataset`. They can be recognized by their suffix `_target` e.g., `Clay_target`:
+Each dataset has SOM or SOC, pH and Clay as target soil properties. They are stored in the first three columns of the `$Dataset` and can be recognized by their suffix `_target`:
 
 ```{r}
+#Access target soil properties in tabular dataset of BB.250:
 str(BB.250$Dataset[1:3]) 
 ```
 
-Features for modeling are dataset-specific and originate from laboratory-based spectroscopy, in-situ proximal soil sensing and remote sensing. They are stored in the columns of the `$Dataset` after the target soil properties:
+Features for modeling are dataset-specific and were generated by spectroscopy, in-situ proximal soil sensors or remote sensing. They are stored in the remaining columns of the `$Dataset` following the target soil properties:
 
 ```{r}
-#Features in BB.250
+#Access features in tabular dataset of BB.250:
 colnames(BB.250$Dataset[-c(1:3)])
-#Features in W.50
-colnames(W.50$Dataset[-c(1:3)])
 ```
 
-Spatial coordinates where either (1) included, (2) excluded or (3) dummy covariates were added. Reasons on why they were not included are specified in the metadata. For example, in `BB.250` coordinates are included and it can be accessed through `$Coordinates`. Conversely, in `SSP.58` coordinates were excluded, so that `$Coordinates` returns an `NA` value. In the case of `UL.120`, `$Coordinates` returns dummy coordinates which is highlighted by the column names:
+Spatial coordinates were either (1) included, (2) excluded or (3) replaced with anonymous "dummy" coordinates. The reasons for not including coordinates are specified in the metadata. Nonetheless, these coordinates can be requested in certain cases from the dataset's contact person. The contact person can be found in the metadata of the dataset.
+
+In `BB.250`, coordinates are included and can be accessed via `$Coordinates`. Conversely, in `SSP.58` coordinates are excluded, so that `$Coordinates` returns a simple `NA`. For `UL.120`, `$Coordinates` returns dummy coordinates, as highlighted by the column names:
 
 ```{r}
 #When coordinates are included:
 head(BB.250$Coordinates)
 
-#When coordinates are fully excluded:
+#When coordinates are excluded:
 head(SSP.58$Coordinates)
 
-#When dummy coordinates are provided, to provide the spatial structure of the data but anonymize the real locations:
+#When anonymous dummy coordinates are provided:
 head(UL.120$Coordinates)
 ```
 
-The coordinates are arranged in the same order as the tabular dataset. This allows them to be merged with the dataset using a simple `cbind()`:
+Coordinates are arranged in the same order as the tabular dataset. This allows them to be merged with the dataset using a simple `cbind()`:
 
 ```{r}
-BB.250_dataset.with.coordinates <- cbind(BB.250$Coordinates,BB.250$Dataset) # Merge coordinates with dataset
+#Merge coordinates with dataset:
+BB.250_dataset.with.coordinates <- cbind(BB.250$Coordinates,BB.250$Dataset) 
 
-library(sf) # For visualizing spatial data 
+#Make it spatial and visualize the target soil properties:
+library(sf) 
 BB.250_dataset.with.coordinates.sf <- st_as_sf(x = BB.250_dataset.with.coordinates, 
-                         coords = c("x_25833", "y_25833")) # Make it spatial
+                         coords = c("x_25833", "y_25833"))
 st_crs(BB.250_dataset.with.coordinates.sf) <- 25833 
 
 plot(BB.250_dataset.with.coordinates.sf[c(1:3)])
 ```
 
-### Modeling with Lime.SoDa
+### Modeling with LimeSoDa
 
-To ensure comparability between different studies using Lime.SoDa, the pre-defined folds should be used for validation purposes. Folds were created by fully randomly partitioning of the dataset into 10 equally sized folds, allowing for a non-repeated 10-fold cross-validation. The training and testing data can be indexed through the `$Folds` vector:
+To ensure comparability between the results of different studies, 10 pre-defined folds were provided for 10-fold cross validation (CV). Folds were created by simple random partitioning of the dataset into 10 equally sized folds. The training and testing data can be indexed through the `$Folds` vector:
 
 ```{r}
-BB.250$Folds # Folds are defined through a vector with numbers from 1 - 10 with 1/10 of the data in each fold
+BB.250$Folds #Folds are defined through a vector with numbers from 1 - 10
 
 # Splitting the dataset into training and testing folds for the example of the first fold
 training_data_BB.250 <- BB.250$Dataset[BB.250$Folds != 1,] 
-nrow(training_data_BB.250) # Show size of training 9-fold 
+nrow(training_data_BB.250) # Show size of the 9 training folds
 testing_data_BB.250 <- BB.250$Dataset[BB.250$Folds == 1,]
-nrow(testing_data_BB.250) # Show size of validation fold
+nrow(testing_data_BB.250) # Show size of testing fold
 ```
 
-Although not specifically defined for this purpose, the same folds can also be used for a simple train-test split instead of cross-validation. For example, the first 9 folds can be used as training data and the 10th fold as testing data for a 90/10 train-test split. Similarly, one can use 8 folds for training and 2 folds for testing to achieve an 80/20 split, and so on. This also allows comparability when using single-split validation:
+In the following example, we demonstrate how the folds can be used for a 10-fold CV by evaluating SOC predictions of a linear model in `BB.250`. 
 
 ```{r}
-# Splitting the dataset into training and testing sets for a 70:30 split:
-training_data_BB.250 <- BB.250$Dataset[!(BB.250$Folds %in% c(8:10)),]
-nrow(training_data_BB.250)
-testing_data_BB.250 <- BB.250$Dataset[(BB.250$Folds %in% c(8:10)),]
-nrow(testing_data_BB.250)
-```
-
-In the following example, we demonstrate how the folds can be used for a 10-fold CV by predicting SOC with a linear model in `BB.250`. 
-
-```{r}
+#Modeling preperation:
 set.seed(2025)
 BB.250_dataset_predict.SOC <- BB.250$Dataset[-c(2:3)] # In this example, only SOC is predicted. Hence, Clay_target and pH_target are excluded
 
 predicted_values <- c() # To store predicted values in this vector
 testing_values <- c() # To store testing fold values in this vector
 
-for (i in 1:10){
+#Modeling of SOC with a linear model and 10-fold CV:
+for (i in 1:10){ #Loop over the 10 folds for a 10-fold CV
   training_data <- BB.250_dataset_predict.SOC[BB.250$Folds != i,] # Exclude testing fold from training data
   testing_data <- BB.250_dataset_predict.SOC[BB.250$Folds == i,] # Define testing fold as testing data
   
   MLR_model <- lm("SOC_target~.", data = training_data) # Fit linear model to predict SOC
   MLR_model_predictions <- predict(MLR_model, testing_data) # Predict values of testing fold
   
-  predicted_values <- c(predicted_values, MLR_model_predictions) # Store predicted values for testing fold
-  testing_values <- c(testing_values, testing_data$SOC_target) # Store real observed values from testing fold
+  predicted_values <- c(predicted_values, MLR_model_predictions) # Store predicted values 
+  testing_values <- c(testing_values, testing_data$SOC_target) # Store real observed values 
 }
 
-# Since we aggregated the predictions and testing values, we can now calculate the R-squared and RMSE for the model performance with MLR:
+# Calculate the R-squared and RMSE to evaluate the performance of the linear model for predicting SOC:
 # R-squared
 1 - sum((predicted_values - testing_values)^2) / sum((testing_values - mean(testing_values))^2)
 # RMSE
 sqrt(mean((predicted_values - testing_values)^2))
 ```
 
-In this simple example, an R-squared of 0.75 and an RMSE of 0.24 were achieved. Using the same pre-defined folds, it would be now possible to evaluate different learning algorithms under the same conditions.
+In this simple example, an R-squared of 0.75 and an RMSE of 0.24 were achieved. By using the same folds, it is possible to add further learning algorithms and evaluate them under the same conditions, allowing a fair and reproducible comparison.
 
-### How to cite Lime.SoDa
 
-Please cite the associated paper Schmidinger et al. (2025) when using data from Lime.SoDa. We also refer to this paper for more information about the context of Lime.SoDa:
+If you have any questions on the usage of LimeSoDa, you can contact Jonas Schmidinger (Jonas.Schmidinger@uni-osnabrueck.de).
+
+### How to cite LimeSoDa
+  
+Please cite the associated paper Schmidinger et al. (2025) when using data from LimeSoDa:
 
 ```{r}
-citation("Lime.SoDa")
+citation("LimeSoDa")
 ```
 
 

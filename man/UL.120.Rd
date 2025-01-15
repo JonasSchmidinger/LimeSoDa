@@ -5,7 +5,7 @@
 \alias{UL.120}
 \title{UL.120 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'
+A list with three elements: 'Dataset', 'Coordinates' and 'Folds'
 }
 \usage{
 UL.120
@@ -14,11 +14,11 @@ UL.120
 \itemize{
  \item Target Soil Properties: SOM, pH, Clay
  \item Groups of Features: ERa, vis-NIR
- \item Sample size: 120
+ \item Sample Size: 120
  \item Number of Features: 2,082
  \item Coordinates: Without coordinates because of privacy concerns instead with dummy coordinates (EPSG: 4326)
  \item Location: Uppsala Län, Sweden
- \item Sampling Design: Three sampling designs over multiple adjacent fields: (1) Regular Grid Sampling, targeted sampling through Surface Tortoise Sampling (Persson et al. 2023) based on (2) ERa and (3) Reflectance from remote sensing
+ \item Sampling Design: Three sampling designs over multiple adjacent fields: (1) regular grid sampling, targeted sampling through surface tortoise sampling (Persson et al. 2023) based on (2) ERa and (3) reflectance from remote sensing
  \item Study Area Size: 97 ha
  \item Geological Setting: Glacial and postglacial clay with elements of sandy till
  \item Previous Data Publication: None
@@ -28,10 +28,10 @@ UL.120
      \item Bo Stenberg (Bo.Stenberg@slu.se), Swedish University of Agricultural Sciences
      }
  \item License: CC BY-SA 4.0
- \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
+ \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
  \item Changelog:
    \itemize{
-     \item Version 1.0 (XXX.2025): Initial release
+     \item Version 1.0 (XXX.03.2025): Initial release
    }
 }
 \cr
@@ -77,7 +77,7 @@ Groups of Features:
 \describe{
   ERa – Apparent Electrical Resistivity
   \itemize{
-  \item Number Features: 1
+  \item Number of Features: 1
   \item Code(s): \code{ERa}
   \item Unit: \eqn{\Omega} m
   \item Sensing: EM38 sensor (Geonics Ltd., Mississauga, Canada) with exploration depth of 0 - 150 cm, in-situ
@@ -88,13 +88,13 @@ Groups of Features:
 
   vis-NIR – Visible and Near Infrared Spectroscopy
   \itemize{
-  \item Number Features: 2,081
+  \item Number of Features: 2,081
   \item Code(s): \code{wl_420, wl_421, wl_422} ... \code{wl_2500}
   \item Unit: \% (Reflectance)
   \item Sensing: FieldSpec Pro FR scanning instrument (Analytical Spectral Devices Inc., Boulder, USA), on dried and sieved samples (<2 mm) in the laboratory, spectral range was 350 – 2,500 nm at 1.4 – 2.0 nm intervals
   \item Processing: Discarding noisy edges of the spectrum (350 - 420 nm), resampling to 1 nm intervals
   \item Sampling Date: September 2005
-  \item Spectral Information (after data processing):
+  \item Spectral Information (After Data Processing):
    \itemize{
      \item Data Representation: Wavelength (in nm)
      \item Spectral Resolution: 1 nm

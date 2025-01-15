@@ -5,7 +5,7 @@
 \alias{PC.45}
 \title{PC.45 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'
+A list with three elements: 'Dataset', 'Coordinates' and 'Folds'
 }
 \usage{
 PC.45
@@ -14,11 +14,11 @@ PC.45
 \itemize{
  \item Target Soil Properties: SOC, pH, Clay
  \item Groups of Features: CSMoist, ERa
- \item Sample size: 45
+ \item Sample Size: 45
  \item Number of Features: 4
  \item Coordinates: Without coordinates as coordinates could not be found anymore
  \item Location: Pest County, Hungary
- \item Sampling Design: Stratified Systematic Sampling, where three 70 m wide transects were selected based on contrasting environmental settings and soil types ((1) agricultural land, (2) salt affected grassland, (3) forest)
+ \item Sampling Design: Stratified systematic sampling, where three 70 m wide transects were selected based on contrasting environmental settings and soil types ((1) agricultural land, (2) salt affected grassland, (3) forest)
  \item Study Area Size: 4.5 ha
  \item Geological Setting: Alluvial plain of the Danube (2 transects) and wind-blown dune region, where the calcareous sediments are originating from the Danube
  \item Previous Data Publication: None
@@ -28,10 +28,10 @@ PC.45
      \item Tibor Tóth (tibor@rissac.hu), HUN-REN Centre for Agricultural Research
      }
  \item License: CC BY-SA 4.0
- \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
+ \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
  \item Changelog:
    \itemize{
-     \item Version 1.0 (XXX.2025): Initial release
+     \item Version 1.0 (XXX.03.2025): Initial release
    }
 }
 \cr
@@ -65,7 +65,7 @@ Target Soil Properties:
    \itemize{
    \item Code: \code{Clay_target}
    \item Unit: \%
-   \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, Hungarian adaption (MSZ-08-0205-1978)
+   \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, Hungarian adaptation (MSZ-08-0205-1978)
    \item Sampling Date: November 2004
    \item Sampling Depth: 0 – 20 cm
    }
@@ -77,7 +77,7 @@ Groups of Features:
 \describe{
   CSMoist – Capacitive Soil Moisture
   \itemize{
-  \item Number Features: 1
+  \item Number of Features: 1
   \item Code(s): \code{CSMoist}
   \item Unit: \% (volumetric moisture content)
   \item Sensing: Capacitive soil moisture sensor (BR-30, Research Institute of Soil Science and Agricultural Chemistry, Hungary, Budapest) with exploration depth of 10 cm, in-situ
@@ -87,14 +87,14 @@ Groups of Features:
 
   ERa – Apparent Electrical Resistivity
   \itemize{
-  \item Number Features: 3
+  \item Number of Features: 3
   \item Code(s): \code{ERa_EM, ERa_ERS, ERa_P}
   \item Unit: \eqn{\Omega} m
   \item Sensing: Three different devices
    \itemize{
      \item \code{ERa_EM} from Electromagnetic induction sensor (EMRC-120, Geoelectro, Nagykovácsi, Hungary) with exploration depth of 100 cm, in-situ
      \item \code{ERa_ERS} from four electrode resistivity sensors (Martek SCT, Martek Instruments Inc., USA, Raleigh) with exploration depth of 20 cm, in-situ
-     \item \code{ERa_P} from Dielectric probe (Percometer, Adek ltd, Estonia, Tiskre) with exploration depth of 10 to 50 cm, in-situ
+     \item \code{ERa_P} from Dielectric probe (Percometer, Adek Ltd, Estonia, Tiskre) with exploration depth of 10 to 50 cm, in-situ
      }
   \item Processing: None
   \item Sampling Date: November 2004

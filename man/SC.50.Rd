@@ -5,7 +5,7 @@
 \alias{SC.50}
 \title{SC.50 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'
+A list with three elements: 'Dataset', 'Coordinates' and 'Folds'
 }
 \usage{
 SC.50
@@ -14,11 +14,11 @@ SC.50
 \itemize{
  \item Target Soil Properties: SOC, pH, Clay
  \item Groups of Features: DEM, ERa
- \item Sample size: 50
+ \item Sample Size: 50
  \item Number of Features: 3
  \item Coordinates: With coordinates (EPSG: 32722)
  \item Location: Santa Catarina, Brazil
- \item Sampling Design: Regular Grid Sampling
+ \item Sampling Design: Regular grid sampling
  \item Study Area Size: 13 ha
  \item Geological Setting: Heavily weathered soils originating from Mesozoic basalt rocks
  \item Previous Data Publication: Full dataset published in Bottega & Safanelli (2024)
@@ -28,10 +28,10 @@ SC.50
      \item José Lucas Safanelli (jsafanelli@woodwellclimate.org), Woodwell Climate Research Center
      }
  \item License: CC BY-SA 4.0
- \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
+ \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
  \item Changelog:
    \itemize{
-     \item Version 1.0 (XXX.2025): Initial release
+     \item Version 1.0 (XXX.03.2025): Initial release
    }
 }
 \cr
@@ -65,7 +65,7 @@ Target Soil Properties:
    \itemize{
    \item Code: \code{Clay_target}
    \item Unit: \%
-   \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaption (DIN ISO 11277)
+   \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaptation (DIN ISO 11277)
    \item Sampling Date: November 2013
    \item Sampling Depth: 0 – 20 cm
    }
@@ -77,7 +77,7 @@ Groups of Features:
 \describe{
   DEM – Digital Elevation Model and Terrain Parameters
   \itemize{
-  \item Number Features: 2
+  \item Number of Features: 2
   \item Code(s): \code{Altitude, Slope}
   \item Unit: \code{Altitude} in m, \code{Slope } in °
   \item Sensing: Digital elevation model raster (30 m) based on synthetic aperture radar from “Copernicus Open Access Hub”
@@ -87,7 +87,7 @@ Groups of Features:
 
   ERa – Apparent Electrical Resistivity
   \itemize{
-  \item Number Features: 1
+  \item Number of Features: 1
   \item Code(s): \code{ERa}
   \item Unit: \eqn{\Omega} m
   \item Sensing: LandMapper ERM-02 conductivity meter (Landviser, League City, USA) with exploration depth of 0 - 20 cm, in-situ

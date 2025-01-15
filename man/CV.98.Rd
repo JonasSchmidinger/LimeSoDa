@@ -5,7 +5,7 @@
 \alias{CV.98}
 \title{CV.98 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'
+A list with three elements: 'Dataset', 'Coordinates' and 'Folds'
 }
 \usage{
 CV.98
@@ -14,11 +14,11 @@ CV.98
 \itemize{
  \item Target Soil Properties: SOC, pH, Clay
  \item Groups of Features: vis-NIR
- \item Sample size: 98
+ \item Sample Size: 98
  \item Number of Features: 2,151
  \item Coordinates: Without coordinates because dataset was not georeferenced
  \item Location: Canton of Vaud, Switzerland
- \item Sampling Design: Stratified Random Sampling based on different treatments of organic amendments, fertilization, crop rotation and soil cultivation
+ \item Sampling Design: Stratified random sampling based on different treatments of organic amendments, fertilization, crop rotation and soil cultivation
  \item Study Area Size: 28 ha
  \item Geological Setting: Glacial or fluvioglacial deposits
  \item Previous Data Publication: Full dataset published in Metzger et al. (2024) but under embargo until June 2025
@@ -28,10 +28,10 @@ CV.98
      \item Luca Bragazza (luca.bragazza@agroscope.admin.ch), Agroscope
      }
  \item License: CC BY-SA 4.0
- \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
+ \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
  \item Changelog:
    \itemize{
-     \item Version 1.0 (XXX.2025): Initial release
+     \item Version 1.0 (XXX.03.2025): Initial release
    }
 }
 \cr
@@ -76,13 +76,13 @@ Groups of Features:
 \describe{
   vis-NIR – Visible and Near Infrared Spectroscopy
   \itemize{
-  \item Number Features: 2,151
+  \item Number of Features: 2,151
   \item Code(s): \code{wl_350, wl_351, wl_352} ... \code{wl_2500}
   \item Unit: \% (Reflectance)
-  \item Sensing: vis-NIR spectrometer ( PSR+3500, Spectral Evolution, Haverhill, USA), in-situ from Edelman auger (denoted as scantype = a in original dataset publication), spectral range was 350 - 2500 nm at 3 - 8 nm spectral resolution
+  \item Sensing: vis-NIR spectrometer ( PSR+3500, Spectral Evolution, Haverhill, USA), in-situ from Edelman auger (denoted as scantype = a in original dataset publication), spectral range was 350 - 2500 nm at 3 - 8 nm intervals
   \item Processing: Resampling to 1 nm intervals
   \item Sampling Date: May - June and September - October 2021
-  \item Spectral Information (after data processing):
+  \item Spectral Information (After Data Processing):
    \itemize{
      \item Data Representation: Wavelength (in nm)
      \item Spectral Resolution: 1 nm

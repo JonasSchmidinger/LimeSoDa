@@ -5,7 +5,7 @@
 \alias{SP.231}
 \title{SP.231 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'
+A list with three elements: 'Dataset', 'Coordinates' and 'Folds'
 }
 \usage{
 SP.231
@@ -14,23 +14,23 @@ SP.231
 \itemize{
  \item Target Soil Properties: SOM, pH, Clay
  \item Groups of Features: vis-NIR
- \item Sample size: 231
+ \item Sample Size: 231
  \item Number of Features: 271
  \item Coordinates: With coordinates (EPSG: 32654)
  \item Location: Saitama Prefecture, Japan
- \item Sampling Design: Two sampling designs over multiple fields depending on the soil conditions: (1) Systematic Sampling, in which samples are taken in the corners and middle of the field and (2) Fully Random Sampling
+ \item Sampling Design: Two sampling designs over multiple fields depending on the soil conditions: (1) systematic sampling, in which samples are taken in the corners and middle of the field and (2) simple random sampling
  \item Study Area Size: 3.1 ha
- \item Geological Setting: Silandic Andosols
+ \item Geological Setting: Volcanic ash (Andosols)
  \item Previous Data Publication: None
  \item Contact Information:
    \itemize{
      \item Masakazu Kodaira (kodaira@cc.tuat.ac.jp), Tokyo University of Agriculture and Technology
      }
  \item License: CC BY-SA 4.0
- \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
+ \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
  \item Changelog:
    \itemize{
-     \item Version 1.0 (XXX.2025): Initial release
+     \item Version 1.0 (XXX.03.2025): Initial release
    }
 }
 \cr
@@ -76,13 +76,13 @@ Groups of Features:
 \describe{
   vis-NIR – Visible and Near Infrared Spectroscopy
   \itemize{
-  \item Number Features: 2,081
+  \item Number of Features: 2,081
   \item Code(s): \code{wl_350, wl_355, wl_360} ... \code{wl_1700}
   \item Unit: \% (Reflectance)
-  \item Sensing: mounted vis-NIR spectrometer (SAS3000, Shibuya Seiki Co. Ltd., Ehime Prefecture, Japan), in-situ, spectral range was 320 – 1,700 nm at 1 - 7 nm intervals [?metadata per email said 0.33 to 1.56 nm but in the paper it says 1 to 7 nm, which is correct?]
+  \item Sensing: Mounted vis-NIR spectrometer (SAS3000, Shibuya Seiki Co. Ltd., Ehime Prefecture, Japan), in-situ, spectral range was 320 – 1,700 nm at 1 - 7 nm intervals
   \item Processing: Discarding noisy edges of the spectrum (320 - 350 nm), resampling to 5 nm intervals
   \item Sampling Date: February 2017, December 2017 and February 2018
-  \item Spectral Information (after data processing):
+  \item Spectral Information (After Data Processing):
    \itemize{
      \item Data Representation: Wavelength (in nm)
      \item Spectral Resolution: 1 nm
@@ -120,6 +120,6 @@ testing_data_SP.231 <- SP.231$Dataset[SP.231$Folds == 1,]
 
 }
 \references{
-Walkley, A. & Black, I. A. (1934). An examination of the Degtjareff method for determining soil organic matter, and a proposed modification of the chromic acid titration method. Soil science, 37(1), 29-38.
+Gee, G.W. & Bauder, J.W. (1986) Particle-Size Analysis. In: Klute, A., Ed., Methods of Soil Analysis, Part 1. Physical and Mineralogical Methods, Agronomy Monograph No. 9, 2nd Edition, American Society of Agronomy/Soil Science Society of America, Madison, WI, 383-411.
 }
 \keyword{datasets}

@@ -5,7 +5,7 @@
 \alias{O.32}
 \title{O.32 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'
+A list with three elements: 'Dataset', 'Coordinates' and 'Folds'
 }
 \usage{
 O.32
@@ -14,12 +14,12 @@ O.32
 \itemize{
  \item Target Soil Properties: SOC, pH, Clay
  \item Groups of Features: MIR
- \item Sample size: 32
+ \item Sample Size: 32
  \item Number of Features: 1,637
  \item Coordinates: Without coordinates because of privacy concerns
  \item Location: Occitanie, France
- \item Sampling Design: Regular Grid Sampling
- \item Study Area Size: XXX [? What was the size of the study area?]
+ \item Sampling Design: Regular grid sampling
+ \item Study Area Size: 1.5 ha
  \item Geological Setting: Pleistocene fluvial deposits and Miocene marine deposits
  \item Previous Data Publication: None
  \item Contact Information:
@@ -27,10 +27,10 @@ O.32
      \item Stefan Paetzold (s.paetzold@uni-bonn.de), University of Bonn
      }
  \item License: CC BY-SA 4.0
- \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
+ \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
  \item Changelog:
    \itemize{
-     \item Version 1.0 (XXX.2025): Initial release
+     \item Version 1.0 (XXX.03.2025): Initial release
    }
 }
 \cr
@@ -66,7 +66,7 @@ Target Soil Properties:
    \itemize{
    \item Code: \code{Clay_target}
    \item Unit: \%
-   \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaption (DIN ISO 11277)
+   \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaptation (DIN ISO 11277)
    \item Sampling Date: March 2020
    \item Sampling Depth: 0 - 20 cm
    }
@@ -78,16 +78,16 @@ Groups of Features:
 \describe{
   MIR – Mid Infrared Spectroscopy
   \itemize{
-  \item Number Features: 1,637
+  \item Number of Features: 1,637
   \item Code(s): \code{wn_3800, wn_3797.1, wn_3795.1} ... \code{wn_751.1} \cr
   \item Unit: \% (Reflectance)
-  \item Sensing: Handheld MIR spectrometer (Agilent 4300, Agilent Technologies, Santa Clara, USA), on dried and sieved samples (<2 mm) in the laboratory compressed to soil tablets, spectral range was 5,200 – 650 cm\eqn{^{-1}} at 4 - 16 cm\eqn{^{-1}} intervals \cr
+  \item Sensing: Handheld MIR spectrometer (Agilent 4300, Agilent Technologies, Santa Clara, USA), on dried and sieved samples (<2 mm) in the laboratory, spectral range was 5,200 – 650 cm\eqn{^{-1}} at 4 - 16 cm\eqn{^{-1}} intervals \cr
   \item Processing: Discarding irrelevant spectral data of the spectrum (5,200 - 3,800 cm\eqn{^{-1}}) and noisy edges of the spectrum (751.1 - 650 cm\eqn{^{-1}}), resampling to ~2 cm\eqn{^{-1}} intervals\cr
   \item Sampling Date: March 2020
-  \item Spectral Information (after data processing):
+  \item Spectral Information (After Data Processing):
    \itemize{
      \item Data Representation: Wavenumber (in cm\eqn{^{-1}})
-     \item Spectral Resolution: ~ 2 cm\eqn{^{-1}}
+     \item Spectral Resolution: ~2 cm\eqn{^{-1}}
      \item Spectral Range: 3,800 - 751.1 cm\eqn{^{-1}}
    }
   }

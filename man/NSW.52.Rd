@@ -5,7 +5,7 @@
 \alias{NSW.52}
 \title{NSW.52 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'
+A list with three elements: 'Dataset', 'Coordinates' and 'Folds'
 }
 \usage{
 NSW.52
@@ -14,11 +14,11 @@ NSW.52
 \itemize{
  \item Target Soil Properties: SOC, pH, Clay
  \item Groups of Features: DEM, RSS
- \item Sample size: 52
+ \item Sample Size: 52
  \item Number of Features: 5
  \item Coordinates: With coordinates (EPSG: 32755)
  \item Location: New South Wales, Australia
- \item Sampling Design: Two sampling designs and campaigns over multiple fields: (1) Random Sampling from k-means clustering based on digital soil maps, digital elevation model, air-borne gamma radiometric data and remote sensing satellite images, and (2) Stratified Random Sampling based on soil type and land use parameters
+ \item Sampling Design: Two sampling designs and campaigns over multiple fields: (1) random sampling from k-means clustering based on digital soil maps, digital elevation model, air-borne gamma radiometric data and remote sensing satellite images, and (2) stratified random sampling based on soil type and land use parameters
  \item Study Area Size: 1,158 ha
  \item Geological Setting: Alluvial deposits of basaltic sediments
  \item Previous Data Publication: None
@@ -28,10 +28,10 @@ NSW.52
      \item Edward Jones (edjones1684@gmail.com), University of Sydney
      }
  \item License: CC BY-SA 4.0
- \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
+ \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
  \item Changelog:
    \itemize{
-     \item Version 1.0 (XXX.2025): Initial release
+     \item Version 1.0 (XXX.03.2025): Initial release
    }
 }
 \cr
@@ -48,7 +48,7 @@ Target Soil Properties:
    \item Code: \code{SOC_target}
    \item Unit: \%
    \item Protocol: Measured through titration after oxidization of the organic carbon (Walkley & Black 1934)
-   \item Sampling Date: July 2018 & December 2018
+   \item Sampling Date: July 2018 and December 2018
    \item Sampling Depth: 0 - 10 cm
    }
 
@@ -57,7 +57,7 @@ Target Soil Properties:
    \item Code: \code{pH_target}
    \item Unit: Unitless
    \item Protocol: Measured in CaCl\eqn{_2} suspension with a glass electrode with a 5:1 liquid:soil volumetric ratio
-   \item Sampling Date: July 2018 & December 2018
+   \item Sampling Date: July 2018 and December 2018
    \item Sampling Depth: 0 – 10 cm
    }
 
@@ -65,8 +65,8 @@ Target Soil Properties:
    \itemize{
    \item Code: \code{Clay_target}
    \item Unit: \%
-   \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water (Gee and Bauder 1986)
-   \item Sampling Date: July 2018 & December 2018
+   \item Protocol: Hydrometer method; separation of the fractions by sieving and sedimentation. Measurement of the separated fractions by weighing the density of the suspension (Gee and Bauder 1979)
+   \item Sampling Date: July 2018 and December 2018
    \item Sampling Depth: 0 - 10 cm
    }
 }
@@ -76,7 +76,7 @@ Groups of Features:
 \describe{
   DEM – Digital Elevation Model and Terrain Parameters
   \itemize{
-  \item Number Features: 2
+  \item Number of Features: 2
   \item Code(s): \code{Altitude, Slope}
   \item Unit: \code{Altitude} in m, \code{Slope } in °
   \item Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from the “Elevation and Depth – Foundation Spatial Data (ELVIS)”
@@ -86,11 +86,11 @@ Groups of Features:
 
   RSS – Remote Sensing Derived Spectral Data
   \itemize{
-  \item Number Features: 3
+  \item Number of Features: 3
   \item Code(s): \code{B02, B8A, B11}
   \item Unit: Unitless
-  \item Sensing: Sentinel-2 bare soil Image (Level-2A) from “Copernicus Open Access Hub”, with bands of 10 - 20 m spatial resolution
-  \item Processing: Extracting RSS values from raster at soil sampling locations, selecting bands spread throughout the spectral range with lower intercorrelation
+  \item Sensing: Sentinel-2 bare soil image (Level-2A) from “Copernicus Open Access Hub”, with bands of 10 - 20 m spatial resolution
+  \item Processing: Extracting RSS values from raster at soil sampling locations, selecting bands spread throughout the spectral range with lower intercorrelation due to low sample size
   \item Sampling Date: July 2018
   }
 
@@ -122,7 +122,7 @@ testing_data_NSW.52 <- NSW.52$Dataset[NSW.52$Folds == 1,]
 
 }
 \references{
-Gee, G.W. & Bauder, J.W. (1986) Particle-Size Analysis. In: Klute, A., Ed., Methods of Soil Analysis, Part 1. Physical and Mineralogical Methods, Agronomy Monograph No. 9, 2nd Edition, American Society of Agronomy/Soil Science Society of America, Madison, WI, 383-411.\cr
+Gee, G. W., & Bauder, J. W. (1979). Particle size analysis by hydrometer: a simplified method for routine textural analysis and a sensitivity test of measurement parameters. Soil Science Society of America Journal, 43(5), 1004-1007.\cr
 \cr
 Walkley, A. & Black, I. A. (1934). An examination of the Degtjareff method for determining soil organic matter, and a proposed modification of the chromic acid titration method. Soil science, 37(1), 29-38.
 }

@@ -5,7 +5,7 @@
 \alias{BB.51}
 \title{BB.51 Dataset}
 \format{
-A list with three elements: 'Dataset','Coordinates' and 'Folds'
+A list with three elements: 'Dataset', 'Coordinates' and 'Folds'
 }
 \usage{
 BB.51
@@ -14,23 +14,23 @@ BB.51
 \itemize{
  \item Target Soil Properties: SOC, pH, Clay
  \item Groups of Features: DEM, ERa, pH-ISE
- \item Sample size: 51
+ \item Sample Size: 51
  \item Number of Features: 4
  \item Coordinates: With coordinates (EPSG: 25833)
  \item Location: Brandenburg, Germany
- \item Sampling Design: Multi Criteria Sampling (Bönecke et al. 2021) based on quantile coverage of the sensing-features (ECa and pH-ISE), clustering of large and low values of sensing-features and spatial coverage
+ \item Sampling Design: Multi criteria sampling (Bönecke et al. 2021) based on quantile coverage of sensing features (ERa and pH-ISE), clustering of large and low values of sensing features and spatial coverage
  \item Study Area Size: 40 ha
  \item Geological Setting: Pleistocene young morainic landscape of the Weichselian glaciation with predominantly glacial sand
- \item Previous Data Publication: Target soil properties published but under boycott in Vogel et al. 2022
+ \item Previous Data Publication: Target soil properties published but under embargo in Vogel et al. 2022
  \item Contact Information:
    \itemize{
      \item Sebastian Vogel (SVogel@atb-potsdam.de), Leibniz Institute for Agricultural Engineering and Bioeconomy (ATB)
      }
  \item License: CC BY-SA 4.0
- \item Publication/Modification Date (d/m/y): XXX.2025, version 1.0
+ \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
  \item Changelog:
    \itemize{
-     \item Version 1.0 (XXX.2025): Initial release
+     \item Version 1.0 (XXX.03.2025): Initial release
    }
 }
 \cr
@@ -64,7 +64,7 @@ Target Soil Properties:
    \itemize{
    \item Code: \code{Clay_target}
    \item Unit: \%
-   \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaption (DIN ISO 11277)
+   \item Protocol: Sieve-Pipette method, measured through fractioning the soil into the sand fractions by sieving, and the silt and clay fractions by sedimentation in water, German adaptation (DIN ISO 11277)
    \item Sampling Date: September - November 2017
    \item Sampling Depth: 0 - 30 cm
    }
@@ -75,7 +75,7 @@ Groups of Features:
 \describe{
   DEM – Digital Elevation Model and Terrain Parameters
   \itemize{
-  \item Number Features: 2
+  \item Number of Features: 2
   \item Code(s): \code{Altitude, Slope}
   \item Unit: \code{Altitude} in m, \code{Slope } in °
   \item Sensing: Digital elevation model raster (5 m) based on LiDAR and photogrammetry from “GeoBasis-DE/LGB”
@@ -85,7 +85,7 @@ Groups of Features:
 
   ERa – Apparent Electrical Resistivity
   \itemize{
-  \item Number Features: 1
+  \item Number of Features: 1
   \item Code(s): \code{ERa}
   \item Unit: \eqn{\Omega} m
   \item Sensing: EC Surveyor (VERIS Technologies, Salinas, USA) from VerisMSP3 with exploration depth of 0 - 30 cm, in-situ
@@ -95,7 +95,7 @@ Groups of Features:
 
   pH-ISE – Ion Selective Electrodes for pH Determination
   \itemize{
-  \item Number Features: 1
+  \item Number of Features: 1
   \item Code(s): \code{pH-ISE}
   \item Unit: Unitless
   \item Sensing: Soil pH Manager (VERIS Technologies, Salinas, USA) from VerisMSP3, in-situ

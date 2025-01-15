@@ -1,6 +1,6 @@
 bibentry(
   bibtype  = "Article",
-  title    = "Lime.SoDa: A Dataset Collection for Benchmarking of Machine Learning Regressors in Digital Soil Mapping",
+  title    = "LimeSoDa: A Dataset Collection for Benchmarking of Machine Learning Regressors in Digital Soil Mapping",
   author   = c(
       person(given = "J", family = "Schmidinger"),
       person(given = "XXX", family = "XXX")
