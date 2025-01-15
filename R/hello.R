@@ -61,6 +61,7 @@
 #
 #
 #devtools::document()
+<<<<<<< HEAD
 # library(devtools)
 # library(usethis)
 # library(roxygen2)
@@ -75,6 +76,26 @@
 # SSP.460 <- list("Dataset" = SSP.460_data_table.rds, "Folds" = folds_SSP.460_data_table.rds, "Coordinates" = SSP.460_coordinates.rds)
 # usethis::use_data(SSP.460,overwrite = TRUE)
 # usethis::use_r("data")
+=======
+#library(devtools)
+#library(usethis)
+#library(roxygen2)
+#library(Lime.SoDa)
+
+#MG.112_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_dataset_files/MG.112_data_table.rds")
+#MG.112_data_table.rds
+#folds_MG.112_data_table.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_split_files/MG.112_folds.rds")
+#MG.112_coordinates.rds <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_dataset_coordinate_files/MG.112_coordinates.rds")#
+
+# # #
+#MG.112 <- list("Dataset" = MG.112_data_table.rds, "Folds" = folds_MG.112_data_table.rds, "Coordinates" = MG.112_coordinates.rds)
+#usethis::use_data(MG.112,overwrite = TRUE)
+#usethis::use_r("data")
+
+#Overview_Datasets <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_dataset_files/Overview_table.rds")
+#usethis::use_data(Overview_Datasets,overwrite = TRUE)
+#usethis::use_r("data")
+>>>>>>> 658609a9374d6aef7878d0dd2b4a558ef2ba8ebf
 
 # Overview_Datasets <- readRDS("C:/Users/Jonas/Desktop/Benchmark_datasets/R/Benchmarks/R_script/Stored_dataset_files/Overview_table.rds")
 # usethis::use_data(Overview_Datasets,overwrite = TRUE)
