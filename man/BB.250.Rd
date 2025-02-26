@@ -28,10 +28,10 @@ BB.250
      \item Joerg Ruehlmann (ruehlmann@igzev.de), Leibniz Institute of Vegetable and Ornamental Crops (IGZ)
      }
  \item License: CC BY-SA 4.0
- \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+ \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
  \item Changelog:
    \itemize{
-     \item Version 1.0 (XXX.03.2025): Initial release
+     \item Version 1.0 (28.02.2025): Initial release
    }
 }
 \cr
@@ -129,7 +129,7 @@ Groups of Features:
   \item Number of Features: 2
   \item Code(s): \code{NDVI, GNDVI}
   \item Unit: Unitless
-  \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
+  \item Sensing: Sentinel-2 image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04) and \code{GNDVI} as (B08 - B03) / (B08 + B03), extracting VI values from raster at soil sampling locations
   \item Sampling Date: August 2020
   }
@@ -162,6 +162,6 @@ testing_data_BB.250 <- BB.250$Dataset[BB.250$Folds == 1,]
 
 }
 \references{
-Vogel S., Bönecke E., Kling C., Kramer E., Lück K., Nagel A., Philipp G., Rühlmann J., Schröter I. & Gebbers, R. (2022), Base neutralizing capacity from agricultural fields in the quaternary landscape of North-East Germany, BONARES Repository, https://doi.org/10.20387/bonares-zh3x-nd80
+Vogel S., Boenecke E., Kling C., Kramer E., Lueck K., Nagel A., Philipp G., Ruehlmann J., Schroeter I. & Gebbers, R. (2022), Base neutralizing capacity from agricultural fields in the quaternary landscape of North-East Germany, BONARES Repository, https://doi.org/10.20387/bonares-zh3x-nd80
 }
 \keyword{datasets}

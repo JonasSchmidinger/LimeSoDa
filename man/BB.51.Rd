@@ -18,7 +18,7 @@ BB.51
  \item Number of Features: 4
  \item Coordinates: With coordinates (EPSG: 25833)
  \item Location: Brandenburg, Germany
- \item Sampling Design: Multi criteria sampling (Bönecke et al. 2021) based on quantile coverage of sensing features (ERa and pH-ISE), clustering of large and low values of sensing features and spatial coverage
+ \item Sampling Design: Multi criteria sampling (Boenecke et al. 2021) based on quantile coverage of sensing features (ERa and pH-ISE), clustering of large and low values of sensing features and spatial coverage
  \item Study Area Size: 40 ha
  \item Geological Setting: Pleistocene young morainic landscape of the Weichselian glaciation with predominantly glacial sand
  \item Previous Data Publication: Target soil properties published but under embargo in Vogel et al. 2022
@@ -27,10 +27,10 @@ BB.51
      \item Sebastian Vogel (SVogel@atb-potsdam.de), Leibniz Institute for Agricultural Engineering and Bioeconomy (ATB)
      }
  \item License: CC BY-SA 4.0
- \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+ \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
  \item Changelog:
    \itemize{
-     \item Version 1.0 (XXX.03.2025): Initial release
+     \item Version 1.0 (28.02.2025): Initial release
    }
 }
 \cr
@@ -132,8 +132,8 @@ testing_data_BB.51 <- BB.51$Dataset[BB.51$Folds == 1,]
 
 }
 \references{
-Vogel S., Bönecke E., Kling C., Kramer E., Lück K., Nagel A., Philipp G., Rühlmann J., Schröter I. & Gebbers, R. (2022), Base neutralizing capacity from agricultural fields in the quaternary landscape of North-East Germany, BONARES Repository, https://doi.org/10.20387/bonares-zh3x-nd80 \cr
+Vogel S., Boenecke E., Kling C., Kramer E., Lueck K., Nagel A., Philipp G., Ruehlmann J., Schroeter I. & Gebbers, R. (2022), Base neutralizing capacity from agricultural fields in the quaternary landscape of North-East Germany, BONARES Repository, https://doi.org/10.20387/bonares-zh3x-nd80 \cr
 \cr
-Bönecke, E., Meyer, S., Vogel, S., Schröter, I., Gebbers, R., Kling, C., Kramer, E., Lück, K., Nagel A., Philipp, G., Gerlach F., Palme S., Scheibe D., Ziegler K. & Rühlmann, J. (2021). Guidelines for precise lime management based on high-resolution soil pH, texture and SOM maps generated from proximal soil sensing data. Precision Agriculture, 22, 493-523.
+Boenecke, E., Meyer, S., Vogel, S., Schroeter, I., Gebbers, R., Kling, C., Kramer, E., Lueck, K., Nagel A., Philipp, G., Gerlach F., Palme S., Scheibe D., Ziegler K. & Ruehlmann, J. (2021). Guidelines for precise lime management based on high-resolution soil pH, texture and SOM maps generated from proximal soil sensing data. Precision Agriculture, 22, 493-523.
 }
 \keyword{datasets}

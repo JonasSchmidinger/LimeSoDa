@@ -28,10 +28,10 @@ G.150
      \item Marcelo Marques Costa (marcelo_marques_costa@ufj.edu.br), Federal University of Jatai
      }
  \item License: CC BY-SA 4.0
- \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+ \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
  \item Changelog:
    \itemize{
-     \item Version 1.0 (XXX.03.2025): Initial release
+     \item Version 1.0 (28.02.2025): Initial release
    }
 }
 \cr
@@ -109,7 +109,7 @@ Groups of Features:
   \item Number of Features: 2
   \item Code(s): \code{NDVI, GNDVI}
   \item Unit: Unitless
-  \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
+  \item Sensing: Sentinel-2 image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04) and \code{GNDVI} as (B08 - B03) / (B08 + B03), extracting VI values from raster at soil sampling locations
   \item Sampling Date: January 2019
   }

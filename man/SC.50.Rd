@@ -28,10 +28,10 @@ SC.50
      \item José Lucas Safanelli (jsafanelli@woodwellclimate.org), Woodwell Climate Research Center
      }
  \item License: CC BY-SA 4.0
- \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+ \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
  \item Changelog:
    \itemize{
-     \item Version 1.0 (XXX.03.2025): Initial release
+     \item Version 1.0 (28.02.2025): Initial release
    }
 }
 \cr

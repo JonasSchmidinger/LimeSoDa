@@ -49,10 +49,10 @@
 #'      \item Leonardo Ramirez Lopez (Ramirez-Lopez.L@buchi.com), BÜCHI Labortechnik AG
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -170,10 +170,10 @@
 #'      \item Joerg Ruehlmann (ruehlmann@igzev.de), Leibniz Institute of Vegetable and Ornamental Crops (IGZ)
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -270,7 +270,7 @@
 #'   \item Number of Features: 2
 #'   \item Code(s): \code{NDVI, GNDVI}
 #'   \item Unit: Unitless
-#'   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
+#'   \item Sensing: Sentinel-2 image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
 #'   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04) and \code{GNDVI} as (B08 - B03) / (B08 + B03), extracting VI values from raster at soil sampling locations
 #'   \item Sampling Date: August 2020
 #'   }
@@ -305,7 +305,7 @@
 #' @usage BB.250
 #' @format A list with three elements: 'Dataset', 'Coordinates' and 'Folds'
 #' @docType data
-#' @references Vogel S., Bönecke E., Kling C., Kramer E., Lück K., Nagel A., Philipp G., Rühlmann J., Schröter I. & Gebbers, R. (2022), Base neutralizing capacity from agricultural fields in the quaternary landscape of North-East Germany, BONARES Repository, https://doi.org/10.20387/bonares-zh3x-nd80
+#' @references Vogel S., Boenecke E., Kling C., Kramer E., Lueck K., Nagel A., Philipp G., Ruehlmann J., Schroeter I. & Gebbers, R. (2022), Base neutralizing capacity from agricultural fields in the quaternary landscape of North-East Germany, BONARES Repository, https://doi.org/10.20387/bonares-zh3x-nd80
 "BB.250"
 
 
@@ -332,10 +332,10 @@
 #'      \item Masakazu Kodaira (kodaira@cc.tuat.ac.jp), Tokyo University of Agriculture and Technology
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -461,10 +461,10 @@
 #'      \item Domingos Sarvio Magalhaes Valente (valente@ufv.br), Federal University of Vicosa
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -530,7 +530,7 @@
 #'   \item Number of Features: 2
 #'   \item Code(s): \code{NDVI, GNDVI}
 #'   \item Unit: Unitless
-#'   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
+#'   \item Sensing: Sentinel-2 image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
 #'   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04) and \code{GNDVI} as (B08 - B03) / (B08 + B03), extracting VI values from raster at soil sampling locations
 #'   \item Sampling Date: January 2017
 #'   }
@@ -593,10 +593,10 @@
 #'      \item Marcelo Marques Costa (marcelo_marques_costa@ufj.edu.br), Federal University of Jatai
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -673,7 +673,7 @@
 #'   \item Number of Features: 2
 #'   \item Code(s): \code{NDVI, GNDVI}
 #'   \item Unit: Unitless
-#'   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
+#'   \item Sensing: Sentinel-2 image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
 #'   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04) and \code{GNDVI} as (B08 - B03) / (B08 + B03), extracting VI values from raster at soil sampling locations
 #'   \item Sampling Date: January 2019
 #'   }
@@ -729,13 +729,13 @@
 #'  \item Previous Data Publication: Full dataset published in Wadoux et al. (2024)
 #'  \item Contact Information:
 #'    \itemize{
-#'      \item Alexandre M.J.-C- Wadoux (Alexandre.Wadoux@inrae.fr), University of Montpellier
+#'      \item Alexandre M.J.-C. Wadoux (Alexandre.Wadoux@inrae.fr), French National Institute for Agriculture, Food, and Environment (INRAE)
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -750,7 +750,7 @@
 #'    \itemize{
 #'    \item Code: \code{SOC_target}
 #'    \item Unit: \%
-#'    \item Protocol: Determined by the difference of total carbon and inorganic carbon, where total carbon was obtained through elemental analysis by measuring the CO2 release during dry combustion (DIN ISO 10694) without acid pretreatment and inorganic carbon as 0.12 x the calcium carbonate content,  determined by the gas-volumetric Scheibler Method (ISO 10693)
+#'    \item Protocol: Determined by the difference of total carbon and inorganic carbon, where total carbon was obtained through elemental analysis by measuring the CO\eqn{_2} release during dry combustion (DIN ISO 10694) without acid pretreatment and inorganic carbon as 0.12 x the calcium carbonate content, determined by the gas-volumetric Scheibler Method (ISO 10693)
 #'    \item Sampling Date: June 2013, May, 2014 and November 2014
 #'    \item Sampling Depth: 0 - 20 cm
 #'    }
@@ -827,7 +827,7 @@
 #' @docType data
 #' @references Wadoux, A. M. J.-C., Stumpf, F., & Scholten, T.. (2024). A catchment-scale dataset of soil properties and their mid-infrared spectra. Zenodo repository. https://doi.org/10.5281/zenodo.14557348 \cr
 #' \cr
-#' Stumpf, F., Schmidt, K., Goebes, P., Behrens, T., Schönbrodt-Stitt, S., Wadoux, A., Xiang, W. & Scholten, T. (2017). Uncertainty-guided sampling to improve digital soil maps. Catena, 153, 30-38.
+#' Stumpf, F., Schmidt, K., Goebes, P., Behrens, T., Schoenbrodt-Stitt, S., Wadoux, A., Xiang, W. & Scholten, T. (2017). Uncertainty-guided sampling to improve digital soil maps. Catena, 153, 30-38.
 "H.138"
 
 
@@ -853,10 +853,10 @@
 #'      \item Bo Stenberg (Bo.Stenberg@slu.se), Swedish University of Agricultural Sciences
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -871,7 +871,7 @@
 #'    \itemize{
 #'    \item Code: \code{SOM_target}
 #'    \item Unit: \%
-#'    \item Protocol: Measured through the weight difference before and after ignition of the soil with additional correction for structural water from clay by using the formula: SOM = LI − 0.46 − 0.047 × clay content (\%) (Ekström 1927)
+#'    \item Protocol: Measured through the weight difference before and after ignition of the soil with additional correction for structural water from clay by using the formula: SOM = LI − 0.46 − 0.047 × clay content (\%) (Ekstroem 1927)
 #'    \item Sampling Date: September 2006
 #'    \item Sampling Depth: 0 - 20 cm
 #'    }
@@ -957,11 +957,11 @@
 #' @usage SL.125
 #' @format A list with three elements: 'Dataset', 'Coordinates' and 'Folds'
 #' @docType data
-#' @references Ekström, G. (1927). Klassifikation av Svenska Åkerjordar (Classification of Swedish arable soils). Sveriges Geologiska Undersökning, Ser C. 345, 161 pp. \cr
+#' @references Ekstroem, G. (1927). Klassifikation av Svenska Åkerjordar (Classification of Swedish arable soils). Sveriges Geologiska Undersoekning, Ser C. 345, 161 pp. \cr
 #' \cr
 #' Gee, G.W. & Bauder, J.W. (1986) Particle-Size Analysis. In: Klute, A., Ed., Methods of Soil Analysis, Part 1. Physical and Mineralogical Methods, Agronomy Monograph No. 9, 2nd Edition, American Society of Agronomy/Soil Science Society of America, Madison, WI, 383-411.\cr
 #' \cr
-#' Persson, K., Söderström, M. & Mutua, J. (2023). SurfaceTortoise: Find Optimal Sampling Locations Based on Spatial Covariate(s). R package version 2.0.1.
+#' Persson, K., Soederstroem, M. & Mutua, J. (2023). SurfaceTortoise: Find Optimal Sampling Locations Based on Spatial Covariate(s). R package version 2.0.1.
 "SL.125"
 
 
@@ -985,10 +985,10 @@
 #'      \item Bo Stenberg (Bo.Stenberg@slu.se), Swedish University of Agricultural Sciences
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -1003,7 +1003,7 @@
 #'    \itemize{
 #'    \item Code: \code{SOM_target}
 #'    \item Unit: \%
-#'    \item Protocol: Measured through the weight difference before and after ignition of the soil with additional correction for structural water from clay by using the formula: SOM = LI − 0.46 − 0.047 × clay content (\%) (Ekström 1927)
+#'    \item Protocol: Measured through the weight difference before and after ignition of the soil with additional correction for structural water from clay by using the formula: SOM = LI − 0.46 − 0.047 × clay content (\%) (Ekstroem 1927)
 #'    \item Sampling Date: September 2005
 #'    \item Sampling Depth: 0 - 20 cm
 #'    }
@@ -1089,11 +1089,11 @@
 #' @usage UL.120
 #' @format A list with three elements: 'Dataset', 'Coordinates' and 'Folds'
 #' @docType data
-#' @references Ekström, G. (1927). Klassifikation av Svenska Åkerjordar (Classification of Swedish arable soils). Sveriges Geologiska Undersökning, Ser C. 345, 161 pp. \cr
+#' @references Ekstroem, G. (1927). Klassifikation av Svenska Åkerjordar (Classification of Swedish arable soils). Sveriges Geologiska Undersoekning, Ser C. 345, 161 pp. \cr
 #' \cr
 #' Gee, G.W. & Bauder, J.W. (1986) Particle-Size Analysis. In: Klute, A., Ed., Methods of Soil Analysis, Part 1. Physical and Mineralogical Methods, Agronomy Monograph No. 9, 2nd Edition, American Society of Agronomy/Soil Science Society of America, Madison, WI, 383-411.\cr
 #' \cr
-#' Persson, K., Söderström, M. & Mutua, J. (2023). SurfaceTortoise: Find Optimal Sampling Locations Based on Spatial Covariate(s). R package version 2.0.1.
+#' Persson, K., Soederstroem, M. & Mutua, J. (2023). SurfaceTortoise: Find Optimal Sampling Locations Based on Spatial Covariate(s). R package version 2.0.1.
 "UL.120"
 
 
@@ -1116,10 +1116,10 @@
 #'      \item Stefan Paetzold (s.paetzold@uni-bonn.de), University of Bonn
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -1232,10 +1232,10 @@
 #'      \item Rodrigo Sinaidi Zandonadi (rodrigo.zandonadi@ufmt.br), Federal University of Mato Grosso
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -1312,7 +1312,7 @@
 #'   \item Number of Features: 2
 #'   \item Code(s): \code{NDVI, GNDVI}
 #'   \item Unit: Unitless
-#'   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
+#'   \item Sensing: Sentinel-2 image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
 #'   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04) and \code{GNDVI} as (B08 - B03) / (B08 + B03), extracting VI values from raster at soil sampling locations
 #'   \item Sampling Date: May 2022
 #'   }
@@ -1374,10 +1374,10 @@
 #'      \item Hamed Tavakoli (HTavakoli@atb-potsdam.de), Leibniz Institute for Agricultural Engineering and Bioeconomy (ATB)
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -1479,7 +1479,7 @@
 #'   \item Number of Features: 2
 #'   \item Code(s): \code{NDVI, GNDVI}
 #'   \item Unit: Unitless
-#'   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
+#'   \item Sensing: Sentinel-2 image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
 #'   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04) and \code{GNDVI} as (B08 - B03) / (B08 + B03), extracting VI values from raster at soil sampling locations
 #'   \item Sampling Date: April 2018
 #'   }
@@ -1535,10 +1535,10 @@
 #'      \item Domingos Sarvio Magalhaes Valente (valente@ufv.br), Federal University of Vicosa
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -1605,7 +1605,7 @@
 #'   \item Number of Features: 2
 #'   \item Code(s): \code{NDVI, GNDVI}
 #'   \item Unit: Unitless
-#'   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
+#'   \item Sensing: Sentinel-2 image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
 #'   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04) and \code{GNDVI} as (B08 - B03) / (B08 + B03), extracting VI values from raster at soil sampling locations
 #'   \item Sampling Date: December 2023
 #'   }
@@ -1667,10 +1667,10 @@
 #'      \item Domingos Sarvio Magalhaes Valente (valente@ufv.br), Federal University of Vicosa
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -1736,7 +1736,7 @@
 #'   \item Number of Features: 2
 #'   \item Code(s): \code{NDVI, GNDVI}
 #'   \item Unit: Unitless
-#'   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
+#'   \item Sensing: Sentinel-2 image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
 #'   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04) and \code{GNDVI} as (B08 - B03) / (B08 + B03), extracting VI values from raster at soil sampling locations
 #'   \item Sampling Date: December 2021
 #'   }
@@ -1801,10 +1801,10 @@
 #'      \item Luca Bragazza (luca.bragazza@agroscope.admin.ch), Agroscope
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -1927,10 +1927,10 @@
 #'      \item Ricardo Simão Diniz Dalmolin (dalmolin@ufsm.br), Federal University of Santa Maria
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -2045,13 +2045,13 @@
 #'  \item Contact Information:
 #'    \itemize{
 #'      \item Sebastian Vogel (SVogel@atb-potsdam.de), Leibniz Institute for Agricultural Engineering and Bioeconomy (ATB)
-#'      \item Jörg Rühlmann (ruehlmann@igzev.de), Leibniz Institute of Vegetable and Ornamental Crops (IGZ)
+#'      \item Joerg Ruehlmann (ruehlmann@igzev.de), Leibniz Institute of Vegetable and Ornamental Crops (IGZ)
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -2149,7 +2149,7 @@
 #'   \item Number of Features: 2
 #'   \item Code(s): \code{NDVI, GNDVI}
 #'   \item Unit: Unitless
-#'   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
+#'   \item Sensing: Sentinel-2 image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
 #'   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04) and \code{GNDVI} as (B08 - B03) / (B08 + B03), extracting VI values from raster at soil sampling locations
 #'   \item Sampling Date: May 2022
 #'   }
@@ -2184,7 +2184,7 @@
 #' @usage BB.72
 #' @format A list with three elements: 'Dataset', 'Coordinates' and 'Folds'
 #' @docType data
-#' @references Vogel S., Bönecke E., Kling C., Kramer E., Lück K., Nagel A., Philipp G., Rühlmann J., Schröter I. & Gebbers, R. (2022), Base neutralizing capacity from agricultural fields in the quaternary landscape of North-East Germany, BONARES Repository, https://doi.org/10.20387/bonares-zh3x-nd80
+#' @references Vogel S., Boenecke E., Kling C., Kramer E., Lueck K., Nagel A., Philipp G., Ruehlmann J., Schroeter I. & Gebbers, R. (2022), Base neutralizing capacity from agricultural fields in the quaternary landscape of North-East Germany, BONARES Repository, https://doi.org/10.20387/bonares-zh3x-nd80
 "BB.72"
 
 
@@ -2208,10 +2208,10 @@
 #'      \item Stefan Paetzold (s.paetzold@uni-bonn.de), University of Bonn
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -2327,10 +2327,10 @@
 #'      \item Hamed Tavakoli (HTavakoli@atb-potsdam.de), Leibniz Institute for Agricultural Engineering and Bioeconomy (ATB)
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -2420,7 +2420,7 @@
 #'   \item Number of Features: 2
 #'   \item Code(s): \code{NDVI, GNDVI}
 #'   \item Unit: Unitless
-#'   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
+#'   \item Sensing: Sentinel-2 image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
 #'   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04) and \code{GNDVI} as (B08 - B03) / (B08 + B03), extracting VI values from raster at soil sampling locations
 #'   \item Sampling Date: March 2017
 #'    }
@@ -2481,10 +2481,10 @@
 #'      \item José Paulo Molin (jpmolin@usp.br), University of Sao Paulo
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -2498,7 +2498,7 @@
 #'    SOC - Soil Organic Carbon
 #'    \itemize{
 #'    \item Code: \code{SOC_target}
-#'    \item Unit: mmol\eqn{_c} dm\eqn{^{-3}}
+#'    \item Unit: g dm\eqn{^{-3}}
 #'    \item Protocol: Measured through titration after oxidization of the organic carbon (Walkley & Black 1934)
 #'    \item Sampling Date: September 2015
 #'    \item Sampling Depth: 0 - 20 cm
@@ -2605,10 +2605,10 @@
 #'      \item Edward Jones (edjones1684@gmail.com), University of Sydney
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -2721,7 +2721,7 @@
 #'  \item Number of Features: 4
 #'  \item Coordinates: With coordinates (EPSG: 25833)
 #'  \item Location: Brandenburg, Germany
-#'  \item Sampling Design: Multi criteria sampling (Bönecke et al. 2021) based on quantile coverage of sensing features (ERa and pH-ISE), clustering of large and low values of sensing features and spatial coverage
+#'  \item Sampling Design: Multi criteria sampling (Boenecke et al. 2021) based on quantile coverage of sensing features (ERa and pH-ISE), clustering of large and low values of sensing features and spatial coverage
 #'  \item Study Area Size: 40 ha
 #'  \item Geological Setting: Pleistocene young morainic landscape of the Weichselian glaciation with predominantly glacial sand
 #'  \item Previous Data Publication: Target soil properties published but under embargo in Vogel et al. 2022
@@ -2730,10 +2730,10 @@
 #'      \item Sebastian Vogel (SVogel@atb-potsdam.de), Leibniz Institute for Agricultural Engineering and Bioeconomy (ATB)
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -2836,9 +2836,9 @@
 #' @usage BB.51
 #' @format A list with three elements: 'Dataset', 'Coordinates' and 'Folds'
 #' @docType data
-#' @references Vogel S., Bönecke E., Kling C., Kramer E., Lück K., Nagel A., Philipp G., Rühlmann J., Schröter I. & Gebbers, R. (2022), Base neutralizing capacity from agricultural fields in the quaternary landscape of North-East Germany, BONARES Repository, https://doi.org/10.20387/bonares-zh3x-nd80 \cr
+#' @references Vogel S., Boenecke E., Kling C., Kramer E., Lueck K., Nagel A., Philipp G., Ruehlmann J., Schroeter I. & Gebbers, R. (2022), Base neutralizing capacity from agricultural fields in the quaternary landscape of North-East Germany, BONARES Repository, https://doi.org/10.20387/bonares-zh3x-nd80 \cr
 #' \cr
-#' Bönecke, E., Meyer, S., Vogel, S., Schröter, I., Gebbers, R., Kling, C., Kramer, E., Lück, K., Nagel A., Philipp, G., Gerlach F., Palme S., Scheibe D., Ziegler K. & Rühlmann, J. (2021). Guidelines for precise lime management based on high-resolution soil pH, texture and SOM maps generated from proximal soil sensing data. Precision Agriculture, 22, 493-523.
+#' Boenecke, E., Meyer, S., Vogel, S., Schroeter, I., Gebbers, R., Kling, C., Kramer, E., Lueck, K., Nagel A., Philipp, G., Gerlach F., Palme S., Scheibe D., Ziegler K. & Ruehlmann, J. (2021). Guidelines for precise lime management based on high-resolution soil pH, texture and SOM maps generated from proximal soil sensing data. Precision Agriculture, 22, 493-523.
 "BB.51"
 
 
@@ -2868,10 +2868,10 @@
 #'      \item Jingyi Huang (jhuang426@wisc.edu), University of Wisconsin-Madison
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -2939,7 +2939,7 @@
 #'   \item Number of Features: 2
 #'   \item Code(s): \code{NDVI, GNDVI}
 #'   \item Unit: Unitless
-#'   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
+#'   \item Sensing: Sentinel-2 image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
 #'   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04) and \code{GNDVI} as (B08 - B03) / (B08 + B03), extracting VI values from raster at soil sampling locations
 #'   \item Sampling Date: July 2019
 #'    }
@@ -3019,10 +3019,10 @@
 #'      \item José Lucas Safanelli (jsafanelli@woodwellclimate.org), Woodwell Climate Research Center
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -3135,7 +3135,7 @@
 #'  \item Number of Features: 4
 #'  \item Coordinates: Without coordinates as coordinates could not be found anymore
 #'  \item Location: Pest County, Hungary
-#'  \item Sampling Design: Stratified systematic sampling, where three 70 m wide transects were selected based on contrasting environmental settings and soil types ((1) agricultural land, (2) salt affected grassland, (3) forest)
+#'  \item Sampling Design: Stratified systematic sampling, where three 70 m wide transects were selected based on contrasting environmental settings and soil types (agricultural land, salt affected grassland, forest)
 #'  \item Study Area Size: 4.5 ha
 #'  \item Geological Setting: Alluvial plain of the Danube (2 transects) and wind-blown dune region, where the calcareous sediments are originating from the Danube
 #'  \item Previous Data Publication: None
@@ -3145,10 +3145,10 @@
 #'      \item Tibor Tóth (tibor@rissac.hu), HUN-REN Centre for Agricultural Research
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -3271,10 +3271,10 @@
 #'      \item José Paulo Molin (jpmolin@usp.br), University of Sao Paulo
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -3288,7 +3288,7 @@
 #'    SOC - Soil Organic Carbon
 #'    \itemize{
 #'    \item Code: \code{SOC_target}
-#'    \item Unit: mmol\eqn{_c} dm\eqn{^{-3}}
+#'    \item Unit: g dm\eqn{^{-3}}
 #'    \item Protocol: Measured through titration after oxidization of the organic carbon (Walkley & Black 1934)
 #'    \item Sampling Date: March 2016
 #'    \item Sampling Depth: 0 - 20 cm
@@ -3393,10 +3393,10 @@
 #'      \item Stefan Paetzold (s.paetzold@uni-bonn.de), University of Bonn
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -3515,10 +3515,10 @@
 #'      \item Vojtech Lukas (vojtech.lukas@mendelu.cz), Mendel University in Brno
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -3642,10 +3642,10 @@
 #'      \item Alexander Steiger (alexander.steiger@uni-rostock.de), University of Rostock
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -3766,10 +3766,10 @@
 #'      \item Stefan Paetzold (s.paetzold@uni-bonn.de), University of Bonn
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -3880,7 +3880,7 @@
 #'  \item Number of Features: 8
 #'  \item Coordinates: With coordinates (EPSG: 25833)
 #'  \item Location: Brandenburg, Germany
-#'  \item Sampling Design: Multi criteria sampling (Bönecke et al. 2021) based on quantile coverage of sensing features (ERa and pH-ISE), clustering of large and low values of sensing features and spatial coverage
+#'  \item Sampling Design: Multi criteria sampling (Boenecke et al. 2021) based on quantile coverage of sensing features (ERa and pH-ISE), clustering of large and low values of sensing features and spatial coverage
 #'  \item Study Area Size: 19 ha
 #'  \item Geological Setting: Pleistocene young morainic landscape of the Weichselian glaciation with predominantly glacial sand
 #'  \item Previous Data Publication: Target soil properties published but under embargo in Vogel et al. 2022
@@ -3889,10 +3889,10 @@
 #'      \item Sebastian Vogel (SVogel@atb-potsdam.de), Leibniz Institute for Agricultural Engineering and Bioeconomy (ATB)
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -3968,7 +3968,7 @@
 #'   \item Number of Features: 1
 #'   \item Code(s): \code{NDVI}
 #'   \item Unit: Unitless
-#'   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
+#'   \item Sensing: Sentinel-2 image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
 #'   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04), extracting VI values from raster at soil sampling locations
 #'   \item Sampling Date: May 2017
 #'    }
@@ -4003,9 +4003,9 @@
 #' @usage BB.30_1
 #' @format A list with three elements: 'Dataset', 'Coordinates' and 'Folds'
 #' @docType data
-#' @references Vogel S., Bönecke E., Kling C., Kramer E., Lück K., Nagel A., Philipp G., Rühlmann J., Schröter I. & Gebbers, R. (2022), Base neutralizing capacity from agricultural fields in the quaternary landscape of North-East Germany, BONARES Repository, https://doi.org/10.20387/bonares-zh3x-nd80 \cr
+#' @references Vogel S., Boenecke E., Kling C., Kramer E., Lueck K., Nagel A., Philipp G., Ruehlmann J., Schroeter I. & Gebbers, R. (2022), Base neutralizing capacity from agricultural fields in the quaternary landscape of North-East Germany, BONARES Repository, https://doi.org/10.20387/bonares-zh3x-nd80 \cr
 #' \cr
-#' Bönecke, E., Meyer, S., Vogel, S., Schröter, I., Gebbers, R., Kling, C., Kramer, E., Lück, K., Nagel A., Philipp, G., Gerlach F., Palme S., Scheibe D., Ziegler K. & Rühlmann, J. (2021). Guidelines for precise lime management based on high-resolution soil pH, texture and SOM maps generated from proximal soil sensing data. Precision Agriculture, 22, 493-523.
+#' Boenecke, E., Meyer, S., Vogel, S., Schroeter, I., Gebbers, R., Kling, C., Kramer, E., Lueck, K., Nagel A., Philipp, G., Gerlach F., Palme S., Scheibe D., Ziegler K. & Ruehlmann, J. (2021). Guidelines for precise lime management based on high-resolution soil pH, texture and SOM maps generated from proximal soil sensing data. Precision Agriculture, 22, 493-523.
 "BB.30_1"
 
 
@@ -4028,10 +4028,10 @@
 #'      \item Sebastian Vogel (SVogel@atb-potsdam.de), Leibniz Institute for Agricultural Engineering and Bioeconomy (ATB)
 #'      }
 #'  \item License: CC BY-SA 4.0
-#'  \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+#'  \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
 #'  \item Changelog:
 #'    \itemize{
-#'      \item Version 1.0 (XXX.03.2025): Initial release
+#'      \item Version 1.0 (28.02.2025): Initial release
 #'    }
 #' }
 #' \cr
@@ -4117,7 +4117,7 @@
 #'   \item Number of Features: 1
 #'   \item Code(s): \code{NDVI}
 #'   \item Unit: Unitless
-#'   \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
+#'   \item Sensing: Sentinel-2 image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
 #'   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04), extracting VI values from raster at soil sampling locations
 #'   \item Sampling Date: April 2023
 #'    }

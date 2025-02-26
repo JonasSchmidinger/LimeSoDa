@@ -28,10 +28,10 @@ BB.30_2
      \item Sebastian Vogel (SVogel@atb-potsdam.de), Leibniz Institute for Agricultural Engineering and Bioeconomy (ATB)
      }
  \item License: CC BY-SA 4.0
- \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+ \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
  \item Changelog:
    \itemize{
-     \item Version 1.0 (XXX.03.2025): Initial release
+     \item Version 1.0 (28.02.2025): Initial release
    }
 }
 \cr
@@ -118,7 +118,7 @@ Groups of Features:
   \item Number of Features: 1
   \item Code(s): \code{NDVI}
   \item Unit: Unitless
-  \item Sensing: Sentinel-2 Image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
+  \item Sensing: Sentinel-2 image during vegetative period (Level-2A) from “Copernicus Open Access Hub”
   \item Processing: Calculating \code{NDVI} as (B08 - B04) / (B08 + B04), extracting VI values from raster at soil sampling locations
   \item Sampling Date: April 2023
    }

@@ -1,3 +1,3 @@
-# Lime.SoDa 0.1.0
+# LimeSoDa 1.0.0
 
 * Initial R-package

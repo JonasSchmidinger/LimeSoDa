@@ -18,7 +18,7 @@ PC.45
  \item Number of Features: 4
  \item Coordinates: Without coordinates as coordinates could not be found anymore
  \item Location: Pest County, Hungary
- \item Sampling Design: Stratified systematic sampling, where three 70 m wide transects were selected based on contrasting environmental settings and soil types ((1) agricultural land, (2) salt affected grassland, (3) forest)
+ \item Sampling Design: Stratified systematic sampling, where three 70 m wide transects were selected based on contrasting environmental settings and soil types (agricultural land, salt affected grassland, forest)
  \item Study Area Size: 4.5 ha
  \item Geological Setting: Alluvial plain of the Danube (2 transects) and wind-blown dune region, where the calcareous sediments are originating from the Danube
  \item Previous Data Publication: None
@@ -28,10 +28,10 @@ PC.45
      \item Tibor Tóth (tibor@rissac.hu), HUN-REN Centre for Agricultural Research
      }
  \item License: CC BY-SA 4.0
- \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+ \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
  \item Changelog:
    \itemize{
-     \item Version 1.0 (XXX.03.2025): Initial release
+     \item Version 1.0 (28.02.2025): Initial release
    }
 }
 \cr

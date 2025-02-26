@@ -28,10 +28,10 @@ SL.125
      \item Bo Stenberg (Bo.Stenberg@slu.se), Swedish University of Agricultural Sciences
      }
  \item License: CC BY-SA 4.0
- \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+ \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
  \item Changelog:
    \itemize{
-     \item Version 1.0 (XXX.03.2025): Initial release
+     \item Version 1.0 (28.02.2025): Initial release
    }
 }
 \cr
@@ -47,7 +47,7 @@ Target Soil Properties:
    \itemize{
    \item Code: \code{SOM_target}
    \item Unit: \%
-   \item Protocol: Measured through the weight difference before and after ignition of the soil with additional correction for structural water from clay by using the formula: SOM = LI − 0.46 − 0.047 × clay content (\%) (Ekström 1927)
+   \item Protocol: Measured through the weight difference before and after ignition of the soil with additional correction for structural water from clay by using the formula: SOM = LI − 0.46 − 0.047 × clay content (\%) (Ekstroem 1927)
    \item Sampling Date: September 2006
    \item Sampling Depth: 0 - 20 cm
    }
@@ -131,10 +131,10 @@ testing_data_SL.125 <- SL.125$Dataset[SL.125$Folds == 1,]
 
 }
 \references{
-Ekström, G. (1927). Klassifikation av Svenska Åkerjordar (Classification of Swedish arable soils). Sveriges Geologiska Undersökning, Ser C. 345, 161 pp. \cr
+Ekstroem, G. (1927). Klassifikation av Svenska Åkerjordar (Classification of Swedish arable soils). Sveriges Geologiska Undersoekning, Ser C. 345, 161 pp. \cr
 \cr
 Gee, G.W. & Bauder, J.W. (1986) Particle-Size Analysis. In: Klute, A., Ed., Methods of Soil Analysis, Part 1. Physical and Mineralogical Methods, Agronomy Monograph No. 9, 2nd Edition, American Society of Agronomy/Soil Science Society of America, Madison, WI, 383-411.\cr
 \cr
-Persson, K., Söderström, M. & Mutua, J. (2023). SurfaceTortoise: Find Optimal Sampling Locations Based on Spatial Covariate(s). R package version 2.0.1.
+Persson, K., Soederstroem, M. & Mutua, J. (2023). SurfaceTortoise: Find Optimal Sampling Locations Based on Spatial Covariate(s). R package version 2.0.1.
 }
 \keyword{datasets}

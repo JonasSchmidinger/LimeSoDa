@@ -28,10 +28,10 @@ SSP.58
      \item José Paulo Molin (jpmolin@usp.br), University of Sao Paulo
      }
  \item License: CC BY-SA 4.0
- \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+ \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
  \item Changelog:
    \itemize{
-     \item Version 1.0 (XXX.03.2025): Initial release
+     \item Version 1.0 (28.02.2025): Initial release
    }
 }
 \cr
@@ -46,7 +46,7 @@ Target Soil Properties:
    SOC - Soil Organic Carbon
    \itemize{
    \item Code: \code{SOC_target}
-   \item Unit: mmol\eqn{_c} dm\eqn{^{-3}}
+   \item Unit: g dm\eqn{^{-3}}
    \item Protocol: Measured through titration after oxidization of the organic carbon (Walkley & Black 1934)
    \item Sampling Date: September 2015
    \item Sampling Depth: 0 - 20 cm

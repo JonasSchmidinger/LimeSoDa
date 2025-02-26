@@ -24,13 +24,13 @@ H.138
  \item Previous Data Publication: Full dataset published in Wadoux et al. (2024)
  \item Contact Information:
    \itemize{
-     \item Alexandre M.J.-C- Wadoux (Alexandre.Wadoux@inrae.fr), University of Montpellier
+     \item Alexandre M.J.-C. Wadoux (Alexandre.Wadoux@inrae.fr), French National Institute for Agriculture, Food, and Environment (INRAE)
      }
  \item License: CC BY-SA 4.0
- \item Publication/Modification Date (d/m/y): XXX.03.2025, version 1.0
+ \item Publication/Modification Date (d/m/y): 28.02.2025, version 1.0
  \item Changelog:
    \itemize{
-     \item Version 1.0 (XXX.03.2025): Initial release
+     \item Version 1.0 (28.02.2025): Initial release
    }
 }
 \cr
@@ -46,7 +46,7 @@ Target Soil Properties:
    \itemize{
    \item Code: \code{SOC_target}
    \item Unit: \%
-   \item Protocol: Determined by the difference of total carbon and inorganic carbon, where total carbon was obtained through elemental analysis by measuring the CO2 release during dry combustion (DIN ISO 10694) without acid pretreatment and inorganic carbon as 0.12 x the calcium carbonate content,  determined by the gas-volumetric Scheibler Method (ISO 10693)
+   \item Protocol: Determined by the difference of total carbon and inorganic carbon, where total carbon was obtained through elemental analysis by measuring the CO\eqn{_2} release during dry combustion (DIN ISO 10694) without acid pretreatment and inorganic carbon as 0.12 x the calcium carbonate content, determined by the gas-volumetric Scheibler Method (ISO 10693)
    \item Sampling Date: June 2013, May, 2014 and November 2014
    \item Sampling Depth: 0 - 20 cm
    }
@@ -121,6 +121,6 @@ testing_data_H.138 <- H.138$Dataset[H.138$Folds == 1,]
 \references{
 Wadoux, A. M. J.-C., Stumpf, F., & Scholten, T.. (2024). A catchment-scale dataset of soil properties and their mid-infrared spectra. Zenodo repository. https://doi.org/10.5281/zenodo.14557348 \cr
 \cr
-Stumpf, F., Schmidt, K., Goebes, P., Behrens, T., Schönbrodt-Stitt, S., Wadoux, A., Xiang, W. & Scholten, T. (2017). Uncertainty-guided sampling to improve digital soil maps. Catena, 153, 30-38.
+Stumpf, F., Schmidt, K., Goebes, P., Behrens, T., Schoenbrodt-Stitt, S., Wadoux, A., Xiang, W. & Scholten, T. (2017). Uncertainty-guided sampling to improve digital soil maps. Catena, 153, 30-38.
 }
 \keyword{datasets}
