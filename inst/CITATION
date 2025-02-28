@@ -41,5 +41,6 @@ bibentry(
 ),
   title = "LimeSoDa: A Dataset Collection for Benchmarking of Machine Learning Regressors in Digital Soil Mapping",
   year = 2025,
+  journal = "arXiv",
   doi    = "https://doi.org/10.48550/arXiv.2502.20139"
 )
