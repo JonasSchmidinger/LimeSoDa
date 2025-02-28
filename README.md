@@ -11,7 +11,7 @@ Precision Liming Soil Datasets (LimeSoDa) is a collection of 31 datasets from a 
 
 ``` r
 library(remotes)
-install_github("JonasSchmidinger/LimeSoDa")
+install_github("JonasSchmidinger/LimeSoDa",build_vignettes = TRUE)
 # CRAN release may follow
 
 ```
