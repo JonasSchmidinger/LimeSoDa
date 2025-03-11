@@ -1,6 +1,8 @@
 
 # LimeSoDa
 
+R package of LimeSoDa. See also the [Python package implementation](https://github.com/a11to1n3/LimeSoDa).
+
 Precision Liming Soil Datasets (LimeSoDa) is a collection of 31 datasets from a field- and farm-scale soil mapping context. These datasets are "ready-to-use" for modeling purposes, as they include target soil properties and features in a tidy tabular format. The target soil properties are soil organic matter (SOM) or soil organic carbon (SOC), pH, and clay content, while the features for modeling are dataset-specific. The primary goal of `LimeSoDa` is to enable more reliable benchmarking of machine learning methods in digital soil mapping and pedometrics.
 <!-- badges: start -->
 <!-- badges: end -->
