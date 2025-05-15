@@ -1,6 +1,6 @@
 #' @title Overview of Datasets in LimeSoDa
 #' @description
-#' This table gives an overview of datasets used in LimeSoDa and containts:
+#' This table gives an overview of datasets used in LimeSoDa and contains:
 #' \itemize{
 #'  \item Dataset_ID: ID (i.e. name) of the dataset
 #'  \item Number_of_samples: The number of analysed soil samples (i.e. rows) in the dataset
