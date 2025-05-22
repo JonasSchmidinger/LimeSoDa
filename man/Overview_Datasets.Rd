@@ -11,7 +11,7 @@ An object of class \code{data.frame} with 31 rows and 8 columns.
 Overview_Datasets
 }
 \description{
-This table gives an overview of datasets used in LimeSoDa and containts:
+This table gives an overview of datasets used in LimeSoDa and contains:
 \itemize{
  \item Dataset_ID: ID (i.e. name) of the dataset
  \item Number_of_samples: The number of analysed soil samples (i.e. rows) in the dataset
