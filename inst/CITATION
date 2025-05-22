@@ -39,8 +39,9 @@ bibentry(
   person("J.", "Wetterlind"),
   person("M.", "Atzmueller")
 ),
-  title = "LimeSoDa: A Dataset Collection for Benchmarking of Machine Learning Regressors in Digital Soil Mapping",
+  title = "LimeSoDa: A dataset collection for benchmarking of machine learning regressors in digital soil mapping",
   year = 2025,
-  journal = "arXiv",
-  doi    = "https://doi.org/10.48550/arXiv.2502.20139"
+  journal = "Geoderma",
+  volume = 432,
+  doi    = "https://doi.org/10.1016/j.geoderma.2025.117337"
 )
