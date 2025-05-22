@@ -31,6 +31,7 @@ SP.231
  \item Changelog:
    \itemize{
      \item Version 1.0 (28.02.2025): Initial release
+     \item Version 1.1 (15.05.2025): Documentation for dimensionality bug fix
    }
 }
 \cr
@@ -76,7 +77,7 @@ Groups of Features:
 \describe{
   vis-NIR – Visible and Near Infrared Spectroscopy
   \itemize{
-  \item Number of Features: 2,081
+  \item Number of Features: 271
   \item Code(s): \code{wl_350, wl_355, wl_360} ... \code{wl_1700}
   \item Unit: \% (Reflectance)
   \item Sensing: Mounted vis-NIR spectrometer (SAS3000, Shibuya Seiki Co. Ltd., Ehime Prefecture, Japan), in-situ, spectral range was 320 – 1,700 nm at 1 - 7 nm intervals
